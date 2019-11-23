@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Courses</title>
+    <style>
+            ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+       background-color: #white;
+     }
+     
+     li {
+       float: left;
+     }
+     
+     li a {
+       display: block;
+       color: black;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+     }
+     
+     li a:hover {
+       background-color: gainsboro;
+     }
+     .active
+{
+    background-color: gray;
+}
+     
+             h1{
+                 text-align: center;
+                 text-shadow: 2px 1px gray;   
+                  }
+
+                  form{
+                     display: none;
+                     
+                        
+                  }
+                  button{
+                    background-color: gray;
+                  }
+                 
+                 
+         </style>
+</head>
+<body>
+        <!-- <script src="courseClass.js"></script> -->
+ 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active"  href="#news">Courses</a></li>
+                <li><a href="#contact">Students</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+
+              <h1>Courses</h1>
+
+              <button id="showForm" onclick="myFunction()">Add Courses</button>
+
+<form id="myCourseForm">
+        <label for="courseTitle">Title:</label>
+        <input id="courseTitle" type="text" placeholder="Enter a Course name">
+        <label for="courseStream">Stream:</label>
+        <input id="courseStream" type="text" placeholder="Enter a Stream name">
+        <label for="courseType">Type:</label>
+        <input id="courseType" type="text" placeholder="Enter a type name">
+        <label for="courseStartDate">Start Date:</label>
+        <input id="courseStartDate" type="date" placeholder="Enter a start date">
+        <label for="courseEndDate">End Date:</label>
+        <input id="courseEndDate" type="date" placeholder="Enter a end date">
+        <input type="button" value="Add" onclick="updateValue()">
+</form>
+
+<!-- list -->
+
+<ol>
+        
+</ol>
+
+
+
+<script>
+
+        function myFunction() {
+          var x = document.getElementById("myCourseForm");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+
+
+        function updateValue() {
+   courseTitle = $("#courseTitle").val();
+   courseStream = $("#courseStream").val();
+   courseType = $("#courseType").val();
+   courseStartDate = $("#courseStartDate").val();
+   courseEndDate = $("#courseEndDate").val();
+
+   $("ol").append("<li>",courseTitle, " ", courseStream, " ", courseType, " ", courseStartDate," ", courseEndDate, "</li>","<br>");
+}
+
+ 
+
+        
+        </script>
+</body>
+</html>
