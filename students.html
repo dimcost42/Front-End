@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Students</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a class="active" href="students.html">Students</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+    <h1>Students</h1>
+
+
+    <center>
+        <button id="showForm" onclick="myFunction()">Add Students</button>
+    </center>
+    <br><br>
+    <form id="myStudentForm">
+        <label for="studentName">First Name:</label><br>
+        <input id="studentName" type="text" placeholder="Enter a student name"><br>
+        <label for="lastName">Last name:</label><br>
+        <input id="lastName" type="text" placeholder="Enter a last name"><br>
+        <label for="dateOfBirth">Date of birthday:</label><br>
+        <input id="dateOfBirth" type="date" placeholder="Enter a birth day"><br>
+        <label for="tuitionFees">Fees:</label><br>
+        <input id="tuitionFees" type="number" placeholder="Enter fees"><br>
+
+        <input type="button" value="Add" onclick="updateValue()">
+    </form>
+
+    <!-- list -->
+
+    <ol class="fixed2">
+    </ol>
+
+
+
+    <script>
+
+        function myFunction() {
+            var x = document.getElementById("myStudentForm");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function myLoadHide() {
+            var x = document.getElementById("ol");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function updateValue() {
+            studentName = $("#studentName").val();
+            lastName = $("#lastName").val();
+            dateOfBirth = $("#dateOfBirth").val();
+            tuitionFees = $("#tuitionFees").val();
+
+
+            $("ol").append("<li>", studentName, " ", lastName, " ", dateOfBirth, " ", tuitionFees, "</li>", "<br>");
+        }
+
+
+
+    </script>
+
+    <img src="students.png" alt="students" width="25%" align="right" class="fixed">
+
+</body>
+
+</html>

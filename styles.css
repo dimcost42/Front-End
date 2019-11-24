@@ -1,0 +1,72 @@
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: white;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: gainsboro;
+}
+.active
+{
+background-color: gray;
+}
+
+ h1{
+     text-align: center;
+     text-shadow: 2px 1px 1px darkgrey;   
+      }
+      button:hover
+           {
+             cursor: pointer;
+           }
+     
+           button:hover {
+            cursor: pointer;
+          }
+          label {
+            cursor: pointer;
+          }
+      
+          input {
+            cursor: pointer;
+          }
+          form {
+            display: none;
+            position: fixed;
+      
+          }
+          img.sticky {
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+          }
+          img.fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            
+           
+          }
+          ol.fixed2 {
+            /* position: fixed; */
+            margin-left: 30%;
+          }
+          ul{
+              position: fixed;
+          }
