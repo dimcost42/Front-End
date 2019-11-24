@@ -48,6 +48,9 @@ background-color: gray;
       
           input {
             cursor: pointer;
+            width: auto;
+            min-width: 3;
+            max-width: 20;
           }
           form {
             /* display: none; */
