@@ -47,7 +47,7 @@ background-color: gray;
             cursor: pointer;
           }
           form {
-            display: none;
+            /* display: none; */
             position: fixed;
       
           }
