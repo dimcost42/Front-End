@@ -79,4 +79,16 @@ background-color: gray;
           ul{
               position: fixed;
           }
-          
+          @media screen and (max-width: 500px) {
+            input {
+              width: 50%;
+              min-width: 3;
+              max-width: 20;
+            }
+
+            ol.fixed2 {
+              /* position: fixed; */
+              width: 50%;
+              margin-left: 30%;
+            }
+         }
