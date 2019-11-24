@@ -52,6 +52,7 @@ background-color: gray;
           form {
             /* display: none; */
             position: fixed;
+            
       
           }
           img.sticky {
@@ -68,7 +69,9 @@ background-color: gray;
           }
           ol.fixed2 {
             /* position: fixed; */
+            width: auto;
             margin-left: 30%;
+            
           }
           ul{
               position: fixed;
