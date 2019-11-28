@@ -48,6 +48,12 @@
       course1 = new CoursesConst(courseTitle, courseStream, courseType, courseStartDate, courseEndDate);
       courseList.push(course1);
       updatedBoolean = true;
+
+      courseTitle = $("#courseTitle").val("");
+         courseStream = $("#courseStream").val("");
+         courseType = $("#courseType").val("");
+         courseStartDate = $("#courseStartDate").val("");
+         courseEndDate = $("#courseEndDate").val("");
     }
 
     i=0;

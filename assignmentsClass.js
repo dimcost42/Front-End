@@ -21,6 +21,9 @@
       updatedBoolean = false;
       assignmentList= [];
         function updateValue(){
+            
+           
+            
             title = $("#title").val();
             description = $("#description").val();
             subdate = $("#subdate").val();
@@ -42,7 +45,14 @@
         updatedBoolean = true;
       console.log(assignment1);
       console.log(assignmentList.length);
-      }
+
+            title = $("#title").val("");
+          description = $("#description").val("");
+          subdate = $("#subdate").val("");
+          oralmark = $("#oralmark").val("");
+          totalmark = $("#totalmark").val("");
+      
+    }
   
       i=0;
       currentPrintingPosition =0;

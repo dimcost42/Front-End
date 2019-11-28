@@ -40,6 +40,10 @@
       updatedBoolean = true;
     console.log(student1);
     console.log(studentList.length);
+    studentName = $("#studentName").val("");
+            lastName = $("#lastName").val("");
+            dateOfBirth = $("#dateOfBirth").val("");
+            tuitionFees = $("#tuitionFees").val("");
     }
 
     i=0;

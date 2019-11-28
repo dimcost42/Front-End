@@ -30,18 +30,18 @@
   
 
 <br><br>
-  <form id="myCourseForm">
+  <form id="myCourseForm" required="required">
     <hr>
     <label for="courseTitle">Title:</label><br>
-    <input id="courseTitle" type="text" placeholder="Enter a Course name"><br>
+    <input id="courseTitle" type="text" placeholder="Enter a Course name" required><br>
     <label for="courseStream">Stream:</label><br>
-    <input id="courseStream" type="text" placeholder="Enter a Stream name"><br>
+    <input id="courseStream" type="text" placeholder="Enter a Stream name" required><br>
     <label for="courseType">Type:</label><br>
-    <input id="courseType" type="text" placeholder="Enter a type name"><br>
+    <input id="courseType" type="text" placeholder="Enter a type name" required><br>
     <label for="courseStartDate">Start Date:</label><br>
-    <input id="courseStartDate" type="date" placeholder="Enter a start date"><br>
+    <input id="courseStartDate" type="date" placeholder="Enter a start date" required><br>
     <label for="courseEndDate">End Date:</label><br>
-    <input id="courseEndDate" type="date" placeholder="Enter a end date"><br>
+    <input id="courseEndDate" type="date" placeholder="Enter a end date" required><br>
     <input type="button" value="Add" onclick="updateValue()">
     <!-- <input type="button" value="Load Courses" onclick="printCourseList()"> -->
     <input type="button" value="Load Courses" onclick="loadCourseList()">
