@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Private School</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+      body
+      {
+        opacity: 0;
+      }
+    </style>
 </head>
 <body>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -17,6 +23,7 @@
                 <li><a href="assignments.html">AssignmentsAbout</a></li>
                 <li><a href="trainerspercourse.html">TrainersPerCourse</a></li>
                 <li><a href="studentspercourse.html">StudentsPerCourse</a></li>
+                <li><a href=studentspercourseperassignment.html>StudentsPerCoursePerAssignment</a></li>
               </ul>
             <br>
               
@@ -26,7 +33,7 @@
         <h3>designed by Costas Dimitriou</h3>
        
         
-        <img src="privateSchoolLogo.png"  width="45%">
+        <img id="logoSchool" src="privateSchoolLogo.png"  width="45%">
 
       </center>
            
@@ -36,6 +43,12 @@
       opacity: '0.5'
      
     }, 2500);
+        $("body").animate({
+      opacity: '1'
+     
+    }, 3000);
+
+ 
    
     </script>
     

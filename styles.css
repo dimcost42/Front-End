@@ -98,6 +98,8 @@ background-color: gray;
           }
           ul{
               position: fixed;
+            
+
           }
           @media screen and (max-width: 500px) {
             input {
@@ -124,5 +126,9 @@ background-color: gray;
              position: static;
              width: 100%;
            }
-        
+    
+
+
          }
+
+         

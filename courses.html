@@ -7,6 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Courses</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    form{
+        width:18%;
+        position: fixed;
+    }
+    body
+      {
+        opacity: 0;
+      }
+  </style>
  
 </head>
 
@@ -23,6 +33,7 @@
     <li><a href="assignments.html">Assignments</a></li>
     <li><a href="trainerspercourse.html">TrainersPerCourse</a></li>
     <li><a href="studentspercourse.html">StudentsPerCourse</a></li>
+    <li><a href=studentspercourseperassignment.html>StudentsPerCoursePerAssignment</a></li>
   </ul>
   <br>
   <h1>Courses</h1>
@@ -52,11 +63,11 @@
     <label for="editCourse">Edit update delete Course by id:</label><br>
     <input id="editCourse" type="number" placeholder="Enter a course id"><br>
     <input type="button" value="Edit Course" onclick="courseEdit()">
-
+    <input type="button" value="Save Course" onclick="courseSave()">
 
   <input type="button" value="Delete Course" onclick="courseDelete()"> 
-    <!-- <input type="button" value="Save Course" onclick="courseSave()">
-    <input type="button" value="Erase Courses" onclick="erase()"> -->
+    
+    <!-- <input type="button" value="Erase Courses" onclick="erase()"> -->
     
   </form>
 
@@ -69,6 +80,13 @@
   
 
 <img src="coursesKid.png" alt="kid with course" width="20%" align="right" class="fixed">
+<script>
+    $("body").animate({
+  opacity: '1'
+ 
+}, 500);
+
+</script>
 </body>
 
 </html>

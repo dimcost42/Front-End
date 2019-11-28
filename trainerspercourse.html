@@ -1,55 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Input trainers in course</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            opacity: 0;
+        }
+    </style>
 </head>
+
 <body>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="assignments.html">Assignments</a></li>
-                <li><a class="active" onclick="myFunction()">TrainersPerCourse</a></li>
-                <li><a href="studentspercourse.html">StudentsPerCourse</a></li>
-              </ul>
-
-              
-              
-            
-
-              
-              <br><br>
-              <h1>Trainers Per Course</h1>
-              <form id="trainerPerCourseForm">
-                  <hr>
-                  <label for="trainerID">Trainer ID:</label><br>
-                  <input id="trainerID" type="number" placeholder="Enter trainer id"><br>
-                  <label for="courseID">Course ID:</label><br>
-                  <input id="courseID" type="number" placeholder="Enter course id"><br>
-                 
-                  <input type="button" value="Add to course" onclick="updateValue()"><br>
-                  <hr>
-                  <input type="button" value="Load Trainers" onclick="loadTrainers()"><br>
-                  <input type="button" value="Load Courses" onclick="loadCourses()"><br>
-                  <hr>
-                  </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="assignments.html">Assignments</a></li>
+        <li><a class="active" onclick="myFunction()">TrainersPerCourse</a></li>
+        <li><a href="studentspercourse.html">StudentsPerCourse</a></li>
+        <li><a href=studentspercourseperassignment.html>StudentsPerCoursePerAssignment</a></li>
+    </ul>
 
 
-                  <script>
-                        function myFunction() {
-                            var x = document.getElementById("trainerPerCourseForm");
-                            if (x.style.display === "none") {
-                                x.style.display = "block";
-                            } else {
-                                x.style.display = "none";
-                            }
-                        }
-                        </script>
-                  <img src="training.jpg" alt="students" width="27%" align="right" class="fixed">
-                </body>               
+
+
+
+
+    <br><br>
+    <h1>Trainers Per Course</h1>
+    <form id="trainerPerCourseForm">
+        <hr>
+        <label for="trainerID">Trainer ID:</label><br>
+        <input id="trainerID" type="number" placeholder="Enter trainer id"><br>
+        <label for="courseID">Course ID:</label><br>
+        <input id="courseID" type="number" placeholder="Enter course id"><br>
+
+        <input type="button" value="Add to course" onclick="updateValue()"><br>
+        <hr>
+        <input type="button" value="Load Trainers" onclick="loadTrainers()"><br>
+        <input type="button" value="Load Courses" onclick="loadCourses()"><br>
+        <hr>
+    </form>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("trainerPerCourseForm");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    <img src="training.jpg" alt="students" width="27%" align="right" class="fixed">
+
+
+    <script>
+        $("body").animate({
+            opacity: '1'
+
+        }, 500);
+
+    </script>
+</body>
+
 </html>

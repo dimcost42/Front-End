@@ -11,6 +11,10 @@
         width:18%;
         position: fixed;
     }
+    body
+      {
+        opacity: 0;
+      }
  
     </style>
 </head>
@@ -24,6 +28,7 @@
             <li><a class="active" onclick="myFunction()">Assignments</a></li>
             <li><a href="trainerspercourse.html">TrainersPerCourse</a></li>
             <li><a href="studentspercourse.html">StudentsPerCourse</a></li>
+            <li><a href=studentspercourseperassignment.html>StudentsPerCoursePerAssignment</a></li>
         </ul>
         <br>
         <h1>Assignments</h1>
@@ -49,6 +54,7 @@
             <label for="editStudent">Edit Assignments by id:</label><br>
         <input id="editAssignments" type="number" placeholder="Enter a Assignment id"><br>
         <input type="button" value="Edit Assignment" onclick="assignementEdit()">
+        <input type="button" value="Save Assignment" onclick="assignementSave()">
         <input type="button" value="Delete Assignment" onclick="assignmentDelete()">
            
         </form>
@@ -69,5 +75,12 @@
                 </script>
 
         <img src="assignments-png.png" alt="students" width="25%" align="right" class="fixed">
+        <script>
+                $("body").animate({
+              opacity: '1'
+             
+            }, 500);
+        
+            </script>
 </body>
 </html>
