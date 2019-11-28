@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignments</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    form{
+        width:18%;
+        position: fixed;
+    }
+ 
+    </style>
+</head>
+<body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="assignmentsClass.js"></script>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a class="active" onclick="myFunction()">Assignments</a></li>
+            <li><a href="trainerspercourse.html">TrainersPerCourse</a></li>
+            <li><a href="studentspercourse.html">StudentsPerCourse</a></li>
+        </ul>
+        <br>
+        <h1>Assignments</h1>
+
+        
+
+        <br><br>
+        <form id="myAssignmentsForm">
+            <hr>
+            <label for="title">Title:</label><br>
+            <input id="title" type="text" placeholder="Enter a title name"><br>
+            <label for="description">Description:</label><br>
+            <input id="description" type="text" placeholder="Enter a description"><br>
+            <label for="subdate">Submission date:</label><br>
+            <input id="subdate" type="date" placeholder="Enter a Submission date"><br>
+            <label for="oralmark">Oral Mark:</label><br>
+            <input id="oralmark" type="number" placeholder="Enter oral mark"><br>
+            <label for="totalmark">Total Mark:</label><br>
+            <input id="totalmark" type="number" placeholder="Enter total mark"><br>
+            <input type="button" value="Add" onclick="updateValue()"><br>
+            <input type="button" value="Load" onclick="printassignmentList()"><br>
+            <hr>
+            <label for="editStudent">Edit Assignments by id:</label><br>
+        <input id="editAssignments" type="number" placeholder="Enter a Assignment id"><br>
+        <input type="button" value="Edit Assignment" onclick="assignementEdit()">
+        <input type="button" value="Delete Assignment" onclick="assignmentDelete()">
+           
+        </form>
+       
+        <ol class="fixed2">
+
+        </ol>
+
+                 <script>
+                function myFunction() {
+                    var x = document.getElementById("myAssignmentsForm");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }
+                </script>
+
+        <img src="assignments-png.png" alt="students" width="25%" align="right" class="fixed">
+</body>
+</html>

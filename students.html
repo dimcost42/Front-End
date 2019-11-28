@@ -12,12 +12,14 @@
 <body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <script src="studentClass.js"></script>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a class="active" onclick="myFunction()">Students</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="assignments.html">Assignments</a></li>
+        <li><a href="trainerspercourse.html">TrainersPerCourse</a></li>
+        <li><a href="studentspercourse.html">StudentsPerCourse</a></li>
     </ul>
     <br>
     <h1>Students</h1>
@@ -26,6 +28,7 @@
     
     <br><br>
     <form id="myStudentForm">
+        <hr>
         <label for="studentName">First Name:</label><br>
         <input id="studentName" type="text" placeholder="Enter a student name"><br>
         <label for="lastName">Last name:</label><br>
@@ -34,8 +37,14 @@
         <input id="dateOfBirth" type="date" placeholder="Enter a birth day"><br>
         <label for="tuitionFees">Fees:</label><br>
         <input id="tuitionFees" type="number" placeholder="Enter fees"><br>
-
-        <input type="button" value="Add" onclick="updateValue()">
+        <input type="button" value="Add" onclick="updateValue()"><br>
+        <input type="button" value="Load" onclick="printStudentList()"><br>
+        <hr>
+        <label for="editStudent">Edit Student by id:</label><br>
+    <input id="editStudent" type="number" placeholder="Enter a student id"><br>
+    <input type="button" value="Edit Student" onclick="studentEdit()">
+    <input type="button" value="Delete Student" onclick="studentDelete()">
+       
     </form>
 
     <!-- <center>
@@ -48,7 +57,7 @@
     </ol>
 
 
-
+<!-- 
     <script>
 
         function myFunction() {
@@ -79,29 +88,8 @@
             $("ol").append("<li>", studentName, " ", lastName, " ", dateOfBirth, " ", tuitionFees, "</li>", "<br>");
         }
 
-
-    //     function Student (studentName, lastName, dateOfBirth, tuitionFees)
-    //     {
-    //         this.studentName = studentName;
-    //         this.lastName = lastName;
-    //         this.dateOfBirth = dateOfBirth;
-    //         this.tuitionFees = tuitionFees;
-    //     }
-    //     array =[];
-    //     student1 = new Student (studentName, lastName, dateOfBirth, tuitionFees)
-    //     array.push(student1);
-        
-    //     function printArray()
-    //     {console.log(student1);
-    //         $.each(array, function(studentName, lastName, dateOfBirth, tuitionFees){
-    //             $("ol").append("<li>", studentName, " ", lastName, " ", dateOfBirth, " ", tuitionFees, "</li>", "<br>");
-    //     });
-    //     {
-
-    //     }
-    //  }
-
-    </script>
+   
+    </script> -->
 
     <img src="students.png" alt="students" width="30%" align="right" class="fixed">
 

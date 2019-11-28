@@ -11,23 +11,27 @@
 </head>
 
 <body>
-  <!-- <script src="courseClass.js"></script> -->
+  
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  
+  <script src="courseClass.js"></script>
 
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a class="active" onclick="myFunction()">Courses</a></li>
     <li><a href="students.html">Students</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="assignments.html">Assignments</a></li>
+    <li><a href="trainerspercourse.html">TrainersPerCourse</a></li>
+    <li><a href="studentspercourse.html">StudentsPerCourse</a></li>
   </ul>
   <br>
   <h1>Courses</h1>
   
+  
 
 <br><br>
   <form id="myCourseForm">
+    <hr>
     <label for="courseTitle">Title:</label><br>
     <input id="courseTitle" type="text" placeholder="Enter a Course name"><br>
     <label for="courseStream">Stream:</label><br>
@@ -39,48 +43,30 @@
     <label for="courseEndDate">End Date:</label><br>
     <input id="courseEndDate" type="date" placeholder="Enter a end date"><br>
     <input type="button" value="Add" onclick="updateValue()">
+    <!-- <input type="button" value="Load Courses" onclick="printCourseList()"> -->
+    <input type="button" value="Load Courses" onclick="loadCourseList()">
+
+    <!-- Edit delete fields -->
+    <br>
+    <hr>
+    <label for="editCourse">Edit update delete Course by id:</label><br>
+    <input id="editCourse" type="number" placeholder="Enter a course id"><br>
+    <input type="button" value="Edit Course" onclick="courseEdit()">
+
+
+  <input type="button" value="Delete Course" onclick="courseDelete()"> 
+    <!-- <input type="button" value="Save Course" onclick="courseSave()">
+    <input type="button" value="Erase Courses" onclick="erase()"> -->
+    
   </form>
 
   <!-- list -->
 
+ 
   <ol class="fixed2">
   </ol>
 
-
-
-  <script>
-
-    function myFunction() {
-      var x = document.getElementById("myCourseForm");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
-
-    function myLoadHide() {
-      var x = document.getElementById("ol");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
-
-    function updateValue() {
-      courseTitle = $("#courseTitle").val();
-      courseStream = $("#courseStream").val();
-      courseType = $("#courseType").val();
-      courseStartDate = $("#courseStartDate").val();
-      courseEndDate = $("#courseEndDate").val();
-
-      $("ol").append("<li>", courseTitle, " ", courseStream, " ", courseType, " ", courseStartDate, " ", courseEndDate, "</li>", "<br>");
-    }
-    
-
-
-  </script>
+  
 
 <img src="coursesKid.png" alt="kid with course" width="20%" align="right" class="fixed">
 </body>
