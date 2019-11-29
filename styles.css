@@ -61,7 +61,7 @@ background-color: gray;
             
           }
           form {
-            /* display: none; */
+            width:18%;
             position: fixed;
            text-align: center;
            padding: 5px;
