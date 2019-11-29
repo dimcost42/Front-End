@@ -11,7 +11,11 @@
     <style>
         body {
             opacity: 0;
+            background-image: url('underCostruction.png');
+            background-repeat: no-repeat;
+            background-size: cover;
         }
+        
     </style>
 </head>
 
@@ -47,6 +51,16 @@
         <hr>
         <input type="button" value="Load students" onclick="loadStudents()"><br>
         <input type="button" value="Load Courses" onclick="loadCourses()"><br>
+
+
+        <input type="button" value="Load Train/cour/assign" onclick=""><br>
+        <hr>
+        <label for="TrainerPerCoursePerAssignmentID">Train/cour/assign ID:</label><br>
+        <input id="TrainerPerCoursePerAssignmentID" type="number" placeholder="Enter trainerCourseAssignmentID"><br>
+        <input type="button" value="Edit" onclick=""><br>
+        <input type="button" value="Save changes" onclick=""><br>
+        <input type="button" value="Delete Train/cour/assign" onclick=""><br>
+
         <hr>
     </form>
 
