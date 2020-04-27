@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Converter</title>
+    <style>
+    ol{
+        background-color:lightgray;
+        box-shadow: 2px 2px 2px 2px gray;
+        margin-left: 25%;
+    margin-right:25%;
+        width:50%;
+    }
+    form{
+        box-shadow: 2px 2px 2px 2px gray;
+        margin-left: 25%;
+    margin-right:25%;
+        width:50%;
+    }
+    </style>
+
+</head>
+<body>
+    <script src="jsconverter.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <center><h1> My JASON converter</h1> 
+    <h3>developed by: dimcost42</h3></center>
+
+<form id="myForm" align="center">
+    <hr>
+    <label for="quizname">Name of quiz:</label>
+    <input type="text" id="quizname" placeholder="Type the quiz name" required>
+    <hr>
+    <br>
+    <label for="question">Question</label><br>
+    <input type="text" id="question" placeholder="Type your question"><br>
+    <label for="answera">Answer A</label><br>
+    <input type="text" id="answera" placeholder="Answer A"><br>
+    <label for="answerb">Answer B</label><br>
+    <input type="text" id="answerb" placeholder="Answer B"><br>
+    <label for="answerc">Answer C</label><br>
+    <input type="text" id="answerc" placeholder="Answer C"><br>
+    <label for="answerd">Answer D</label><br>
+    <input type="text" id="answerd" placeholder="Answer D"><br>
+    <label for="correctanswer">Correct Answer</label><br>
+    <input type="text" id="correctanswer" placeholder="Correct Answer" maxlength="1">
+    <br><br>
+   <input type="button" value="add" onclick="addValue()"><input type="button" value="erase" onclick="erase()">
+   <br>
+   <input type="button" value="convert now" onclick="printQuestionList()">
+
+</form>
+<hr>
+<ol>
+
+</ol>
+
+<hr>
+    <div align="center"><a href="https://www.npoint.io/">Host JASON</a></div>
+</body>
+</html>
