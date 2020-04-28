@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        /* here starts navbar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+background-color: white;
+  width:max-content;
+  position: fixed;
+box-shadow: 2px 2px 2px 2px black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:red;
+}
+        /* here ends navbar */
+    div{
+        padding:5px;
+        width: 50%;
+        box-shadow: 2px 2px 2px 2px gray;
+        margin-left: 25%;
+    margin-right:25%;
+        width:50%;
+    }
+    .active{
+        background-color: red;
+    }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <script src="readjason.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <ul>
+        <li><a  href="/converter.html">Home</a></li>
+        <li><a class="active" href="/readfromjason.html">Load live jason</a></li>
+      </ul>
+        <h1 align="center"> READ FROM JSON</h1>
+
+        <center>
+        <input type="text" placeholder="your jason link" id="jsonlink">
+    </center>
+    <br>
+    <div id="demo"></div>
+
+<br>
+    <center>
+    <button onclick="next()" id="next" type="button">start</button>
+</center>
+</body>
+</html>
