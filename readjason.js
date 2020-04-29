@@ -26,8 +26,11 @@ xmlhttp.onreadystatechange = function() {
 if($("#jsonlink").val().length==0){
 xmlhttp.open("GET", "https://dimcost42.github.io/Front-End/questionsFoundationCorrectz.json", true);
 }
+
+ 
 else{
     xmlhttp.open("GET", $("#jsonlink").val(), true);
+    console.log($("#jsonlink").val());
 }
 xmlhttp.send();
 
