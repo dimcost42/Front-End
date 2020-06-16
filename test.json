@@ -1,12 +1,1 @@
-{
-"test": [
-{
-"QUESTION": "What is a correct syntax to output \n \"Hello World\" in Java?",
-"ANSWERA": "Console.WriteLine(\"Hello World\");",
-"ANSWERB": "echo(\"Hello World\");",
-"ANSWERC": "print(\"Hello World\");",
-"ANSWERD": "System.out.println(\"Hello World\");",
-"ANSWERCORRECT": "D"
-}
-]
-}
+{"asdadsads":[{"QUESTION":"asdasdasdasd","ANSWERA":"asdasd","ANSWERB":"asdasd","ANSWERC":"asdasd","ANSWERD":"asdasd","ANSWERCORRECT":""},{"QUESTION":"asdasd","ANSWERA":"asdasd","ANSWERB":"asdasd","ANSWERC":"asdasd","ANSWERD":"asdasd","ANSWERCORRECT":""}]}
