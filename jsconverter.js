@@ -14,10 +14,15 @@ questionsList = [];
 function addValue() {
     quizname = $("#quizname").val();
     question = $("#question").val();
+    question = question.split('"').join('\\"');
     answera = $("#answera").val();
+    answera = answera.split('"').join('\\"');
     answerb = $("#answerb").val();
+    answerb = answerb.split('"').join('\\"');
     answerc = $("#answerc").val();
+    answerc = answerc.split('"').join('\\"');
     answerd = $("#answerd").val();
+    answerd = answerd.split('"').join('\\"');
     correctanswer = $("#correctanswer").val();
 
   function QuestionsConstructor(quizname, question, answera, answerb, answerc, answerd, correctanswer) {
