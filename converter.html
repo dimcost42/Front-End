@@ -161,5 +161,9 @@ li a:hover {
     }
 });
 });
+
+$(window).bind('beforeunload', function(){
+    return "You are going to loose everything";
+});
 </script>
 </html>
