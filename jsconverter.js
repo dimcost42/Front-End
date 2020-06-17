@@ -10,6 +10,10 @@
 // }
 
 questionsList = [];
+let questionsNumber = 0;
+function countQuestions(){
+  $("#counter").text(questionsList.length)
+}
 
 function addValue() {
     quizname = $("#quizname").val();
@@ -39,6 +43,7 @@ function addValue() {
   questionsList.push(js1);
   printQuestionList();
   cleanFields();
+  countQuestions();
 }
 
 
@@ -63,6 +68,7 @@ function printQuestionList() {
   }
   $("#jsonarea").append("]}");
   cleanFields();
+  
 }
 
 /*
@@ -95,6 +101,7 @@ function undo()
   questionsList.splice(questionsList.length-1, 1);
   printQuestionList();
   cleanFields();
+  countQuestions();
 }
 }
 
@@ -104,6 +111,7 @@ function erase()
     $("#jsonarea").empty();
     questionsList=[];
     cleanFields();
+    countQuestions();
   }
 }
 
