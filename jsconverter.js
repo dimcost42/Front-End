@@ -47,6 +47,29 @@ function printQuestionList() {
  
     $("#jsonarea").empty();
 
+    $("#jsonarea").append("{\"","questions","\":[");
+    // $("#jsonarea").append("{\"",questionsList[questionsList.length-1].quizname,"\":[");
+    for (i = 0; i < questionsList.length; i++) {
+        $("#jsonarea").append("{\"QUESTION\":\"",  questionsList[i].question,"\",");
+        $("#jsonarea").append("\"ANSWERA\":\"",  questionsList[i].answera,"\",");
+        $("#jsonarea").append("\"ANSWERB\":\"",  questionsList[i].answerb,"\",");
+        $("#jsonarea").append("\"ANSWERC\":\"",  questionsList[i].answerc,"\",");
+        $("#jsonarea").append("\"ANSWERD\":\"",  questionsList[i].answerd,"\",");
+        $("#jsonarea").append("\"ANSWERCORRECT\":\"",  questionsList[i].correctanswer,"\"");
+     if ((i<questionsList.length-1))
+     {
+      $("#jsonarea").append("},");
+    }else{ $("#jsonarea").append("}");}
+  }
+  $("#jsonarea").append("]}");
+  cleanFields();
+}
+
+/*
+function printQuestionList() {
+ 
+    $("#jsonarea").empty();
+
     $("#jsonarea").append("{ <br>\"",questionsList[questionsList.length-1].quizname,"\": [");
 
     for (i = 0; i < questionsList.length; i++) {
@@ -64,6 +87,7 @@ function printQuestionList() {
   $("#jsonarea").append("<br>]<br>}");
   cleanFields();
 }
+*/
 
 function undo()
 {

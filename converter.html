@@ -1,169 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Converter</title>
     <style>
+        /* here starts navbar */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: white;
+            width: 100%;
+            /* position: fixed; */
+            box-shadow: 2px 2px 2px 2px black;
+        }
 
-/* here starts navbar */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-background-color: white;
-  width:100%;
-  /* position: fixed; */
-box-shadow: 2px 2px 2px 2px black;
-}
+        li {
+            float: left;
+        }
 
-li {
-  float: left;
-}
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+        li a:hover {
+            background-color: red;
+        }
 
-li a:hover {
-  background-color:red;
-}
-.active{
-        background-color: red;
-    }
+        .active {
+            background-color: red;
+        }
+
         /* here ends navbar */
 
-        
-    #jsonarea{
-        background-color:lightgray;
-        box-shadow: 2px 2px 2px 2px gray;
-        margin-left: 25%;
-    margin-right:25%;
-        width:50%;
-    }
-    form{
-        box-shadow: 2px 2px 2px 2px gray;
-        margin-left: 25%;
-    margin-right:25%;
-        width:50%;
-        padding: 5px;
-    }
-    input{
-        padding:5px;
-        box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
-    }
-    form:hover{
-        box-shadow: 2px 2px 2px 2px black;
-    }
-    label{
-        padding: 5px;
-    }
- 
+
+        #jsonarea {
+            /* background-color:lightgray; */
+            /* box-shadow: 2px 2px 2px 2px gray; */
+            margin-left: 25%;
+            margin-right: 25%;
+            width: 50%;
+        }
+
+        form {
+            box-shadow: 2px 2px 2px 2px gray;
+            margin-left: 25%;
+            margin-right: 25%;
+            width: 50%;
+            padding: 5px;
+        }
+
+        input {
+            padding: 5px;
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+        }
+
+        form:hover {
+            box-shadow: 2px 2px 2px 2px black;
+        }
+
+        label {
+            padding: 5px;
+        }
 
 
-    @media only screen and (max-width: 768px) {
-        #jsonarea{
-        background-color:lightgray;
-        box-shadow: 2px 2px 2px 2px gray;
-        margin-left: 1%;
-    margin-right: 1%;
-        width: 98%;
-    }
-    form{
-        box-shadow: 2px 2px 2px 2px gray;
-        margin-left: 1%;
-    margin-right: 1%;
-        width:98%;
-        padding: 5px;
-    }
-    ul{
-        position:absolute;
-        width:100%;
-    }
-}
+
+        @media only screen and (max-width: 768px) {
+            #jsonarea {
+                background-color: lightgray;
+                box-shadow: 2px 2px 2px 2px gray;
+                margin-left: 1%;
+                margin-right: 1%;
+                width: 98%;
+            }
+
+            form {
+                box-shadow: 2px 2px 2px 2px gray;
+                margin-left: 1%;
+                margin-right: 1%;
+                width: 98%;
+                padding: 5px;
+            }
+
+            ul {
+                position: absolute;
+                width: 100%;
+            }
+        }
     </style>
 
 </head>
+
 <body>
     <script src="jsconverter.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- 
+    <!-- 
     <ul>
         <li><a class="active" href="converter.html">Home</a></li>
         <li><a href="readfromjason.html">Load live jason</a></li>
       </ul> -->
 
-    <center><h1> My JASON converter</h1> 
-    <h3>developed by: dimcost42</h3>
-</center>
-<br>
-<form id="myForm" align="center">
-    <hr>
-    <label for="quizname">Name of quiz:</label>
-    <input type="text" id="quizname" placeholder="Type the quiz name" required>
-    <hr>
+    <center>
+        <h1> My JSON converter</h1>
+        <h3>developed by: dimcost42</h3>
+    </center>
     <br>
-    <label for="question">Question</label><br>
-    <!-- <input type="text" id="question" placeholder="Type your question" style="height:200px; width:500px; overflow:scroll;"><br> -->
-    <textarea id="question" style="height:100px; width:700px;"></textarea><br>
-    <label for="answera">Answer A</label><br>
-    <!-- <input type="text" id="answera" placeholder="Answer A"><br> -->
-    <textarea id="answera" style="height:50px; width:700px;"></textarea><br>
-    <label for="answerb">Answer B</label><br>
-    <!-- <input type="text" id="answerb" placeholder="Answer B"><br> -->
-    <textarea id="answerb" style="height:50px; width:700px;"></textarea><br>
-    <label for="answerc">Answer C</label><br>
-    <!-- <input type="text" id="answerc" placeholder="Answer C"><br> -->
-    <textarea id="answerc" style="height:50px; width:700px;"></textarea><br>
-    <label for="answerd">Answer D</label><br>
-    <!-- <input type="text" id="answerd" placeholder="Answer D"><br> -->
-    <textarea id="answerd" style="height:50px; width:700px;"></textarea><br>
-    <label for="correctanswer">Correct Answer</label><br>
-    <input type="text" id="correctanswer" placeholder="e.g. A" maxlength="1">
-    <br><br>
-   <input type="button" value="ADD QUESTION" onclick="addValue()">
-   <br>
-   <br>
-   <input type="button"value="UNDO" onclick="undo()">   <input type="button" value="DELETE ALL" onclick="erase()">   
+    <form id="myForm" align="center">
+        <hr>
+        <!-- <label for="quizname">Name of quiz:</label>
+    <input type="text" id="quizname" placeholder="Type the quiz name" required>
+    <hr> 
+    <br>-->
+        <label for="question">Question</label><br>
+        <!-- <input type="text" id="question" placeholder="Type your question" style="height:200px; width:500px; overflow:scroll;"><br> -->
+        <textarea id="question" style="height:100px; width:700px;"></textarea><br>
+        <label for="answera">Answer A</label><br>
+        <!-- <input type="text" id="answera" placeholder="Answer A"><br> -->
+        <textarea id="answera" style="height:50px; width:700px;"></textarea><br>
+        <label for="answerb">Answer B</label><br>
+        <!-- <input type="text" id="answerb" placeholder="Answer B"><br> -->
+        <textarea id="answerb" style="height:50px; width:700px;"></textarea><br>
+        <label for="answerc">Answer C</label><br>
+        <!-- <input type="text" id="answerc" placeholder="Answer C"><br> -->
+        <textarea id="answerc" style="height:50px; width:700px;"></textarea><br>
+        <label for="answerd">Answer D</label><br>
+        <!-- <input type="text" id="answerd" placeholder="Answer D"><br> -->
+        <textarea id="answerd" style="height:50px; width:700px;"></textarea><br>
+        <br>
+        <hr width="150">
+        <label for="correctanswer">Correct Answer</label><br>
+        <!-- <input type="text" id="correctanswer" placeholder="e.g. A" maxlength="1">
+     -->
+
+        <select id="correctanswer" name="correctanswer">
+            <option value="">Choose</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+        </select>
+        <hr width="150">
+        <br>
+        <input type="button" value="ADD QUESTION" onclick="addValue()">
+        <br>
+        <br>
+        <input type="button" value="UNDO" onclick="undo()"> <input type="button" value="DELETE ALL" onclick="erase()">
 
 
-</form>
-<hr>
-<div id="jsonarea">
+    </form>
+    <hr>
+    <div id="jsonarea">
 
-</div>
+    </div>
 
-<br>
+    <br>
 
 
-<center>
-<button onclick="CopyToClipboard('jsonarea')">Copy Jason</button>
-<hr>
-<a href="https://play.google.com/store/apps/details?id=com.dimcost42.myquestions" target="_blank">My Questionnaire</a>
-<br><img src="questionAndroidApp.png" width="100" height="100">
-</center>
-<hr>
-    <div align="center"><a href="https://www.npoint.io/" target="_blank">Host JASON</a></div>
+    <center>
+        <button onclick="CopyToClipboard('jsonarea')">Copy Json</button>
+        <hr>
+        <a href="https://play.google.com/store/apps/details?id=com.dimcost42.myquestions" target="_blank">My
+            Questionnaire</a>
+        <br><img src="questionAndroidApp.png" width="100" height="100">
+    </center>
+    <hr>
+    <div align="center"><a href="https://www.npoint.io/" target="_blank">Host JSON</a></div>
 </body>
 
 <script>
     var holdFocus;
- $(document).ready(function(){
-    $(document).keypress(function (e) {
-    if (e.which == 13) {
-        $(document.activeElement).val($(document.activeElement).val()+ "\\n" );
-    }
-});
-});
+    $(document).ready(function () {
+        $(document).keypress(function (e) {
+            if (e.which == 13) {
+                $(document.activeElement).val($(document.activeElement).val() + "\\n");
+            }
+        });
+    });
 
-$(window).bind('beforeunload', function(){
-    return "You are going to loose everything";
-});
+    $(window).bind('beforeunload', function () {
+        return "You are going to loose everything";
+    });
 </script>
+
 </html>
