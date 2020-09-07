@@ -1,0 +1,83 @@
+{
+  "menu": [
+    {
+      "category":"Cofee",
+      "values":[
+        {
+          "product_id":1,
+          "product":"Freddo Espresso",
+          "price":3.40,
+          "currency":"EUR",
+          "description":"Arabica with caramel flavor",
+          "imageURL":"https://mysandbox.com/images/fredo_espresso"
+        },
+        {
+          "product_id":3,
+          "product":"Filter Coffe",
+          "price":3.20,
+          "currency":"EUR",
+          "description":"French coffee hot drink",
+          "imageURL":"https://mysandbox.com/images/filter_coffee"
+        }
+      ]
+    },
+    {
+      "category":"Sandwiches & Burgers",
+      "values":[
+        {
+          "product_id":5,
+          "product":"Simple Toast",
+          "price":3.50,
+          "currency":"EUR",
+          "description":"Toast with cheddar cheese and bacon",
+          "imageURL":"https://mysandbox.com/images/simple_toast"
+        },
+        {
+          "product_id":6,
+          "product":"Premium Sandwich",
+          "price":4.50,
+          "currency":"EUR",
+          "description":"Bagguette with graviera cheese and salami aeros",
+          "imageURL":"https://mysandbox.com/images/premium_sandwich"
+        },
+        {
+          "product_id":8,
+          "product":"Jack Daniels' Burger",
+          "price":6.50,
+          "currency":"EUR",
+          "description":"Burger with cheddar cheese, carameled onions, beef meat and hot sauce",
+          "imageURL":"https://mysandbox.com/images/jack_daniels_burger"
+        }
+      ]
+    },
+    {
+      "category":"Souvlakia",
+      "values":[
+        {
+          "product_id":10,
+          "product":"Pita Giros Xoirino Apola",
+          "price":2.50,
+          "currency":"EUR",
+          "description":"Gyros xoirino, patates, tzatziki, ntomata, kremmydi",
+          "imageURL":"https://mysandbox.com/images/pita_gyros_xoirino"
+        },
+        {
+          "product_id":11,
+          "product":"Pita Giros Kotopoulo Apola",
+          "price":2.60,
+          "currency":"EUR",
+          "description":"Gyros kotopoulo, patates, sauce mayo, ntomata, marouli",
+          "imageURL":"https://mysandbox.com/images/pita_gyros_kotopoulo"
+        },
+        {
+          "product_id":12,
+          "product":"Kalamaki kotopoulo",
+          "price":1.90,
+          "currency":"EUR",
+          "description":"Kalamaki kotopoulo me pita kai patates",
+          "imageURL":"https://mysandbox.com/images/kalamaki_kotopoulo"
+        }
+      ]
+    }
+  ]
+}
