@@ -1,0 +1,802 @@
+{
+"menu": [
+{
+"category": "Salates",
+"values": [
+{
+"product_id": 1,
+"product": "Xoriatiki",
+"price": 7,
+"currency": "EUR",
+"description": "Ntomata, aggoyri, kremmydi, piperia, feta, elaiolado",
+"imageURL": "https://mysandbox.com/images/fredo_espresso"
+},
+{
+"product_id": 2,
+"product": "Ntakos",
+"price": 6,
+"currency": "EUR",
+"description": "Ntomata, feta, elaiolado",
+"imageURL": "https://mysandbox.com/images/fredo_espresso"
+},
+{
+"product_id": 4,
+"product": "GALINI",
+"price": 8,
+"currency": "EUR",
+"description": "Salata anameikti, kalampoki, kalampoki, prasino milo, ntomatinia, sos mpalsamikoy me meli",
+"imageURL": "https://mysandbox.com/images/fredo_espresso"
+},
+{
+"product_id": 7,
+"product": "Xorta epoxis",
+"price": 4.5,
+"currency": "EUR",
+"description": "Diafora xorta epoxis, elaiolado, alati",
+"imageURL": "https://mysandbox.com/images/fredo_espresso"
+},
+{
+"product_id": 5,
+"product": "Epoxis",
+"price": 4.5,
+"currency": "EUR",
+"description": "Maroyli, fresko kremmydaki, anitho",
+"imageURL": "https://mysandbox.com/images/fredo_espresso"
+},
+{
+"product_id": 3,
+"product": "Aggoyrontomata",
+"price": 5,
+"currency": "EUR",
+"description": "Aggoyri, ntomata",
+"imageURL": "https://mysandbox.com/images/filter_coffee"
+}
+]
+},
+{
+"category": "Saganakia",
+"values": [
+{
+"product_id": 10,
+"product": "Methysmeni feta",
+"price": 4.5,
+"currency": "EUR",
+"description": "feta, piperies, elies, kokkini saltsa, sbismeni me oyzo",
+"imageURL": "https://mysandbox.com/images/simple_toast"
+},
+{
+"product_id": 6,
+"product": "Saganaki tyri",
+"price": 5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/premium_sandwich"
+},
+{
+"product_id": 14,
+"product": "Garides saganaki",
+"price": 10.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/premium_sandwich"
+},
+{
+"product_id": 15,
+"product": "Feta saganaki me fyllo",
+"price": 5,
+"currency": "EUR",
+"description": "meli, soysami",
+"imageURL": "https://mysandbox.com/images/premium_sandwich"
+},
+{
+"product_id": 8,
+"product": "Mydia saganaki",
+"price": 11,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/jack_daniels_burger"
+}
+]
+},
+{
+"category": "Mezedakia",
+"values": [
+{
+"product_id": 13,
+"product": "Tigania",
+"price": 8,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 11,
+"product": "Keftedakia tis giagias",
+"price": 6,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 12,
+"product": "Loykaniko xoriatiko",
+"price": 6,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+},
+{
+"category": "Orektika",
+"values": [
+{
+"product_id": 16,
+"product": "Tzatziki",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 17,
+"product": "Skordalia",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 18,
+"product": "Tyrokayteri",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 19,
+"product": "Melitzanosalata",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 20,
+"product": "Kaboyrosalata",
+"price": 5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 21,
+"product": "Faba",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 22,
+"product": "Patates freskies",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 23,
+"product": "Feta",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 24,
+"product": "Mpakaliarokeftedes",
+"price": 6,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 25,
+"product": "Tyropitari",
+"price": 6,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 26,
+"product": "Xortopita",
+"price": 6,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 27,
+"product": "Melitzanes tiganites",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 28,
+"product": "Kolokythakia tiganita",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 29,
+"product": "Piperies psites",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 30,
+"product": "Kolokythokeftedes",
+"price": 4.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 31,
+"product": "Flogeres",
+"price": 4.5,
+"currency": "EUR",
+"description": "aromatika xorta, feta",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 32,
+"product": "Gayro marinato",
+"price": 7,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 33,
+"product": "Xtapodi xydato",
+"price": 9.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+},
+{
+"category": "sta karboyna",
+"values": [
+{
+"product_id": 34,
+"product": "Sardela",
+"price": 8,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 35,
+"product": "Xtapodi fresko",
+"price": 12.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 36,
+"product": "Garides*",
+"price": 13,
+"currency": "EUR",
+"description": "6 tmx. No 1",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+},
+{
+"category": "Toy tiganieri",
+"values": [
+{
+"product_id": 37,
+"product": "Gayro",
+"price": 8,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 38,
+"product": "Marida",
+"price": 8,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 39,
+"product": "Atherina",
+"price": 8.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 40,
+"product": "Kalamarakia*",
+"price": 9,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 41,
+"product": "Mpakaliaro skordalia",
+"price": 9,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 42,
+"product": "Salaxi",
+"price": 8,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 43,
+"product": "Garidaki Symiako",
+"price": 6,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+},
+{
+"category": "Foyrnista",
+"values": [
+{
+"product_id": 44,
+"product": "Kritharoto garides",
+"price": 13,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 45,
+"product": "Melitzanes imam",
+"price": 7,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+}
+]
+},
+{
+"category": "Poikilies",
+"values": [
+{
+"product_id": 46,
+"product": "PSarikon 2 atomon",
+"price": 17,
+"currency": "EUR",
+"description": "gayro, marida, kalamari, garides, sardela, gopa, patates",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 47,
+"product": "PSarikon 4 atomon",
+"price": 34,
+"currency": "EUR",
+"description": "gayro, marida, kalamari, garides, sardela, gopa, patates",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 48,
+"product": "Kreatikon 2 atomon",
+"price": 18,
+"currency": "EUR",
+"description": "panseta, mprizolakia, filetakia kotopoylo, loykaniko, kempap, patates",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 49,
+"product": "Kreatikon 4 atomon",
+"price": 36,
+"currency": "EUR",
+"description": "panseta, mprizolakia, filetakia kotopoylo, loykaniko, kempap, patates",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+},
+{
+"category": "Mezedakia",
+"values": [
+{
+"product_id": 50,
+"product": "Makaronia me kima",
+"price": 6.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 51,
+"product": "Garidomakaronada 2 atomon",
+"price": 23,
+"currency": "EUR",
+"description": "8 tmx. garides No 2",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 52,
+"product": "Mydomakaronada 2 atomon",
+"price": 19,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+},
+{
+"category": "Kreatika",
+"values": [
+{
+"product_id": 53,
+"product": "Mprizola mosxarisia",
+"price": 13,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 54,
+"product": "Mprizola xoirini",
+"price": 8.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 55,
+"product": "Panseta",
+"price": 8.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 56,
+"product": "Mprizolakia",
+"price": 8.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 57,
+"product": "Fileto kotopoylo",
+"price": 9,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 58,
+"product": "Keftedakia kokkinista",
+"price": 6.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 59,
+"product": "PaIdakia arnisia (kilo)",
+"price": 28,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+},
+{
+"category": "Anapsyktika",
+"values": [
+{
+"product_id": 60,
+"product": "Coca cola 250ml",
+"price": 2,
+"currency": "EUR",
+"description": "Zero, Light, me zaxari",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 61,
+"product": "Sprite",
+"price": 2,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 62,
+"product": "Lemonada",
+"price": 2,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 63,
+"product": "Portokalada",
+"price": 2,
+"currency": "EUR",
+"description": "Mple, Kokkini",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 64,
+"product": "Soda",
+"price": 2,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 65,
+"product": "Emfial. nero 1 litro",
+"price": 1,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+},
+{
+"category": "Mpyres",
+"values": [
+{
+"product_id": 66,
+"product": "Barelisia Fix",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 67,
+"product": "Mythos",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 68,
+"product": "Kaizer",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 69,
+"product": "Amstel",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 70,
+"product": "Fix",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 71,
+"product": "Mamos",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 72,
+"product": "Alfa",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 73,
+"product": "Amstel Free",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 74,
+"product": "Ficher",
+"price": 4,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 75,
+"product": "Bergina",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+},
+{
+"category": "Pota",
+"values": [
+{
+"product_id": 76,
+"product": "Tsipoyro Dekaraki",
+"price": 8.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 77,
+"product": "Tsipoyro Tsilili",
+"price": 8,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 78,
+"product": "Tsipoyro xyma (200ml)",
+"price": 5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 79,
+"product": "Oyzo Barbagianni",
+"price": 9,
+"currency": "EUR",
+"description": "Mple, Prasino",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 80,
+"product": "Oyzo Plomari",
+"price": 8,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 81,
+"product": "Oyzo Xatzopoylos",
+"price": 7,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 82,
+"product": "Oyzo Apalarina",
+"price": 9,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 83,
+"product": "Raki xyma (200ml)",
+"price": 5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 84,
+"product": "Oyzo potiri",
+"price": 3,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 85,
+"product": "Tsipoyro potiri",
+"price": 3,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+},
+{
+"category": "Krasia",
+"values": [
+{
+"product_id": 86,
+"product": "Xyma 250ml",
+"price": 3,
+"currency": "EUR",
+"description": "Leyko, Roze, Kokkino",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 87,
+"product": "Xyma 500ml",
+"price": 4.5,
+"currency": "EUR",
+"description": "Leyko, Roze, Kokkino",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 88,
+"product": "Xyma 1 litro",
+"price": 8,
+"currency": "EUR",
+"description": "Leyko, Roze, Kokkino",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 89,
+"product": "Roditis Leyko",
+"price": 11,
+"currency": "EUR",
+"description": "Emfialomeno",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 90,
+"product": "Agiorgitiko Roze",
+"price": 14,
+"currency": "EUR",
+"description": "Emfialomeno",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 91,
+"product": "Agiorgitiko Kokkino",
+"price": 14,
+"currency": "EUR",
+"description": "Emfialomeno",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 92,
+"product": "Asyrtiko Leyko",
+"price": 16,
+"currency": "EUR",
+"description": "Emfialomeno",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+}
+]
+}
