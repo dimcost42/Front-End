@@ -1,0 +1,814 @@
+{
+"menu": [
+{
+"category": "Σαλάτες",
+"values": [
+{
+"product_id": 1,
+"product": "Χωριάτικη",
+"price": 7.0,
+"currency": "EUR",
+"description": "Ντομάτα, αγγούρι, κρεμμύδι, πιπεριά, φέτα, ελαιόλαδο",
+"imageURL": "https://mysandbox.com/images/fredo_espresso"
+},
+{
+"product_id": 2,
+"product": "Ντάκος",
+"price": 6.0,
+"currency": "EUR",
+"description": "Ντομάτα, φέτα, ελαιόλαδο",
+"imageURL": "https://mysandbox.com/images/fredo_espresso"
+},
+{
+"product_id": 4,
+"product": "ΓΑΛΗΝΗ",
+"price": 8.0,
+"currency": "EUR",
+"description": "Σαλάτα ανάμεικτη, καλαμπόκι, καλαμπόκι, πράσινο μήλο, ντοματίνια, σως μπαλσάμικου με μέλι",
+"imageURL": "https://mysandbox.com/images/fredo_espresso"
+},
+{
+"product_id": 7,
+"product": "Χόρτα εποχής",
+"price": 4.5,
+"currency": "EUR",
+"description": "Διάφορα χόρτα εποχής, ελαιόλαδο, αλάτι",
+"imageURL": "https://mysandbox.com/images/fredo_espresso"
+},
+{
+"product_id": 5,
+"product": "Εποχής",
+"price": 4.5,
+"currency": "EUR",
+"description": "Μαρούλι, φρέσκο κρεμμυδάκι, άνηθο",
+"imageURL": "https://mysandbox.com/images/fredo_espresso"
+},
+{
+"product_id": 3,
+"product": "Αγγουροντομάτα",
+"price": 5.0,
+"currency": "EUR",
+"description": "Αγγούρι, ντομάτα",
+"imageURL": "https://mysandbox.com/images/filter_coffee"
+}
+]
+},
+{
+"category": "Σαγανάκια",
+"values": [
+{
+"product_id": 10,
+"product": "Μεθυσμένη φέτα",
+"price": 4.5,
+"currency": "EUR",
+"description": "φέτα, πιπεριές, ελιές, κόκκινη σάλτσα, σβησμένη με ούζο",
+"imageURL": "https://mysandbox.com/images/simple_toast"
+},
+{
+"product_id": 6,
+"product": "Σαγανάκι τυρί",
+"price": 5.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/premium_sandwich"
+},
+{
+"product_id": 14,
+"product": "Γαρίδες σαγανάκι",
+"price": 10.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/premium_sandwich"
+},
+{
+"product_id": 15,
+"product": "Φέτα σαγανάκι με φύλλο",
+"price": 5.0,
+"currency": "EUR",
+"description": "μέλι, σουσάμι",
+"imageURL": "https://mysandbox.com/images/premium_sandwich"
+},
+{
+"product_id": 8,
+"product": "Μύδια σαγανάκι",
+"price": 11.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/jack_daniels_burger"
+}
+]
+},
+{
+"category": "Μεζεδάκια",
+"values": [
+{
+"product_id": 13,
+"product": "Τηγανιά",
+"price": 8.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 11,
+"product": "Κεφτεδάκια της γιαγιάς",
+"price": 6.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 12,
+"product": "Λουκάνικο χωριάτικο",
+"price": 6.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+}
+,
+{
+"category": "Ορεκτικά",
+"values": [
+{
+"product_id": 16,
+"product": "Τζατζίκι",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 17,
+"product": "Σκορδαλιά",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 18,
+"product": "Τυροκαυτερή",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 19,
+"product": "Μελιτζανοσαλάτα",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 20,
+"product": "Καβουροσαλάτα",
+"price": 5.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 21,
+"product": "Φάβα",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 22,
+"product": "Πατάτες φρέσκιες",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 23,
+"product": "Φέτα",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 24,
+"product": "Μπακαλιαροκεφτέδες",
+"price": 6.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 25,
+"product": "Τυροπιτάρι",
+"price": 6.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 26,
+"product": "Χορτόπιτα",
+"price": 6.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 27,
+"product": "Μελιτζάνες τηγανιτές",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 28,
+"product": "Κολοκυθάκια τηγανιτά",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 29,
+"product": "Πιπεριές ψητές",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 30,
+"product": "Κολοκυθοκεφτέδες",
+"price": 4.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 31,
+"product": "Φλογέρες",
+"price": 4.5,
+"currency": "EUR",
+"description": "αρωματικά χόρτα, φέτα",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+
+{
+"product_id": 32,
+"product": "Γαύρο μαρινάτο",
+"price": 7.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 33,
+"product": "Χταπόδι ξυδάτο",
+"price": 9.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+}
+,
+{
+"category": "στα κάρβουνα",
+"values": [
+{
+"product_id": 34,
+"product": "Σαρδέλα",
+"price": 8.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 35,
+"product": "Χταπόδι φρέσκο",
+"price": 12.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 36,
+"product": "Γαρίδες*",
+"price": 13.0,
+"currency": "EUR",
+"description": "6 τμχ. Νο 1",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+}
+,
+{
+"category": "Του τηγανιέρη",
+"values": [
+{
+"product_id": 37,
+"product": "Γαύρο",
+"price": 8.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 38,
+"product": "Μαρίδα",
+"price": 8.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 39,
+"product": "Αθερίνα",
+"price": 8.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 40,
+"product": "Καλαμαράκια*",
+"price": 9.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 41,
+"product": "Μπακαλιάρο σκορδαλιά",
+"price": 9.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 42,
+"product": "Σαλάχι",
+"price": 8.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 43,
+"product": "Γαριδάκι Συμιακό",
+"price": 6.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+}
+,
+{
+"category": "Φουρνιστά",
+"values": [
+{
+"product_id": 44,
+"product": "Κριθαρότο γαρίδες",
+"price": 13.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 45,
+"product": "Μελιτζάνες ιμάμ",
+"price": 7.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+}
+]
+}
+,
+{
+"category": "Ποικιλίες",
+"values": [
+{
+"product_id": 46,
+"product": "Ψαρικών 2 ατόμων",
+"price": 17.0,
+"currency": "EUR",
+"description": "γαύρο, μαρίδα, καλαμάρι, γαρίδες, σαρδέλα, γόπα, πατάτες",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 47,
+"product": "Ψαρικών 4 ατόμων",
+"price": 34.0,
+"currency": "EUR",
+"description": "γαύρο, μαρίδα, καλαμάρι, γαρίδες, σαρδέλα, γόπα, πατάτες",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 48,
+"product": "Κρεατικών 2 ατόμων",
+"price": 18.0,
+"currency": "EUR",
+"description": "πανσέτα, μπριζολάκια, φιλετάκια κοτόπουλο, λουκάνικο, κεμπάπ, πατάτες",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 49,
+"product": "Κρεατικών 4 ατόμων",
+"price": 36.0,
+"currency": "EUR",
+"description": "πανσέτα, μπριζολάκια, φιλετάκια κοτόπουλο, λουκάνικο, κεμπάπ, πατάτες",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+}
+,
+{
+"category": "Μεζεδάκια",
+"values": [
+{
+"product_id": 50,
+"product": "Μακαρόνια με κιμά",
+"price": 6.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 51,
+"product": "Γαριδομακαρονάδα 2 ατόμων",
+"price": 23.0,
+"currency": "EUR",
+"description": "8 τμχ. γαρίδες Νο 2",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 52,
+"product": "Μυδομακαρονάδα 2 ατόμων",
+"price": 19.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+}
+,
+{
+"category": "Κρεατικά",
+"values": [
+{
+"product_id": 53,
+"product": "Μπριζόλα μοσχαρίσια",
+"price": 13.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 54,
+"product": "Μπριζόλα χοιρινή",
+"price": 8.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 55,
+"product": "Πανσέτα",
+"price": 8.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 56,
+"product": "Μπριζολάκια",
+"price": 8.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 57,
+"product": "Φιλέτο κοτόπουλο",
+"price": 9.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 58,
+"product": "Κεφτεδάκια κοκκινιστά",
+"price": 6.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 59,
+"product": "Παϊδάκια αρνίσια (κιλό)",
+"price": 28.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+}
+,
+{
+"category": "Αναψυκτικά",
+"values": [
+{
+"product_id": 60,
+"product": "Coca cola 250ml",
+"price": 2.0,
+"currency": "EUR",
+"description": "Zero, Light, με ζάχαρη",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 61,
+"product": "Sprite",
+"price": 2.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 62,
+"product": "Λεμονάδα",
+"price": 2.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 63,
+"product": "Πορτοκαλάδα",
+"price": 2.0,
+"currency": "EUR",
+"description": "Μπλε, Κόκκινη",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 64,
+"product": "Σόδα",
+"price": 2.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 65,
+"product": "Εμφιαλ. νερό 1 λίτρο",
+"price": 1.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+}
+,
+{
+"category": "Μπύρες",
+"values": [
+{
+"product_id": 66,
+"product": "Βαρελίσια Fix",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 67,
+"product": "Μύθος",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 68,
+"product": "Kaizer",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 69,
+"product": "Amstel",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 70,
+"product": "Fix",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 71,
+"product": "Μάμος",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 72,
+"product": "Alfa",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 73,
+"product": "Amstel Free",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 74,
+"product": "Ficher",
+"price": 4.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 75,
+"product": "Βεργίνα",
+"price": 3.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+}
+,
+{
+"category": "Ποτά",
+"values": [
+{
+"product_id": 76,
+"product": "Τσίπουρο Δεκαράκι",
+"price": 8.5,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 77,
+"product": "Τσίπουρο Τσιλιλή",
+"price": 8.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 78,
+"product": "Τσίπουρο χύμα (200ml)",
+"price": 5.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 79,
+"product": "Ούζο Βαρβαγιάννη",
+"price": 9.0,
+"currency": "EUR",
+"description": "Μπλε, Πράσινο",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 80,
+"product": "Ούζο Πλωμάρι",
+"price": 8.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 81,
+"product": "Ούζο Χατζόπουλος",
+"price": 7.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 82,
+"product": "Ούζο Απαλαρίνα",
+"price": 9.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 83,
+"product": "Ρακί χύμα (200ml)",
+"price": 5.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 84,
+"product": "Ούζο ποτήρι",
+"price": 3.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 85,
+"product": "Τσίπουρο ποτήρι",
+"price": 3.0,
+"currency": "EUR",
+"description": "",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+}
+,
+{
+"category": "Κρασιά",
+"values": [
+{
+"product_id": 86,
+"product": "Χύμα 250ml",
+"price": 3.0,
+"currency": "EUR",
+"description": "Λευκό, Ροζέ, Κόκκινο",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 87,
+"product": "Χύμα 500ml",
+"price": 4.5,
+"currency": "EUR",
+"description": "Λευκό, Ροζέ, Κόκκινο",
+"imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+},
+{
+"product_id": 88,
+"product": "Χύμα 1 λίτρο",
+"price": 8.0,
+"currency": "EUR",
+"description": "Λευκό, Ροζέ, Κόκκινο",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 89,
+"product": "Ροδίτης Λευκό",
+"price": 11.0,
+"currency": "EUR",
+"description": "Εμφιαλωμένο",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 90,
+"product": "Αγιοργίτικο Ροζέ",
+"price": 14.0,
+"currency": "EUR",
+"description": "Εμφιαλωμένο",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 91,
+"product": "Αγιοργίτικο Κόκκινο",
+"price": 14.0,
+"currency": "EUR",
+"description": "Εμφιαλωμένο",
+"imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+},
+{
+"product_id": 92,
+"product": "Ασύρτικο Λευκό",
+"price": 16.0,
+"currency": "EUR",
+"description": "Εμφιαλωμένο",
+"imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+}
+]
+}
+]
+}
