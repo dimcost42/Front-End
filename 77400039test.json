@@ -118,6 +118,12 @@
 		"ecrSystemMode": 0,
 		"ecrSystemProtocol": 0
 	},
+	"kostasSettings":{
+		"kostasSystem": false,
+		"kostasSystemDefaultPort": 4000,
+		"kostasSystemMode": 0,
+		"kostasSystemProtocol": 0
+	},
 	"billPayment": {
 		"useBillPayment": false,
 		"merchantBanknumber": "",
