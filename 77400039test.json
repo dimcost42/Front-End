@@ -28,6 +28,20 @@
 				"mid": "00000000000032",
 				"tid": "77400039"
 			}
+		],
+		"myservices": [
+			{
+				"telephone": "9011245245",
+				"address": "myaddress",
+				"mid": "00000000000001",
+				"tid": "77400039"
+			},
+			{
+				"telephone": "2452459011",
+				"address": "addressmy",
+				"mid": "00000100000000",
+				"tid": "00397740"
+			}
 		]
 	},
 	"multiAcq": {
