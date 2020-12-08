@@ -93,7 +93,7 @@
 		"useVodafoneTheme": false,
 		"showEmvDataInReceipt": false,
 		"useAutoCloseBatch": true,
-		"useAutoCloseBatchTimer": "15:50",
+		"useAutoCloseBatchTimer": "15:55",
 		"alphaBankDCCSupport": false,
 		"alphaBankDCCProfileId": "19010",
 		"alphaBankDCCPartnerId": "9010",
