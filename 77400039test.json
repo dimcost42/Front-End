@@ -84,7 +84,7 @@
 		"isAllowRefundPayment": true
 	},
 	"applicationSettings": {
-		"sdkLink": 2,
+		"sdkLink": 1,
 		"useMastercardNewBrand": false,
 		"supportKeyEntry": false,
 		"supportInstallments": false,
