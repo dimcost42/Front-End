@@ -86,6 +86,7 @@
 	"applicationSettings": {
 		"sdkLink": 1,
 		"useMastercardNewBrand": false,
+		"usePasokcardNewBrand": true,
 		"supportKeyEntry": false,
 		"supportInstallments": true,
 		"supportTIP": false,
