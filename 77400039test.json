@@ -115,21 +115,21 @@
 		"testParameter" : 14
 	},
 	"loyaltySettings": {
-		"alphaBankBonusEnabled": false,
+		"alphaBankBonusEnabled": true,
 		"alphaBankBonusVTid": "",
 		"alphaBankBonusVMid": "",
-		"useAlphaBankBonusBRAmount": false,
-		"useAlphaBankBonusWithoutOffers": false,
+		"useAlphaBankBonusBRAmount": true,
+		"useAlphaBankBonusWithoutOffers": true,
 		
 		"eurobankEuroepistrofiEnabled": true,
 		"eurobankEuroepistrofiVTid": "77400039",
 		"eurobankEuroepistrofiVMid": "0100984178",
 		
-		"nbgGo4MoreEnabled": false,
+		"nbgGo4MoreEnabled": true,
 		"nbgGo4MoreVTid": "",
 		"nbgGo4MoreVMid": "",
 		
-		"pbgYellowEnabled": false,
+		"pbgYellowEnabled": true,
 		"pbgYellowVTid": "",
 		"pbgYellowVMid": "",
 		"pbgYellowPointsToRedeem": "2000"
