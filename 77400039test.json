@@ -87,7 +87,7 @@
 		"sdkLink": 1,
 		"useMastercardNewBrand": false,
 		"usePasokcardNewBrand": true,
-		"supportKeyEntry": false,
+		"supportKeyEntry": true,
 		"supportInstallments": true,
 		"supportTIP": false,
 		"useBenakiTheme": false,
