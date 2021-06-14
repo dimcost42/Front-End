@@ -95,7 +95,7 @@
 		"showEmvDataInReceipt": false,
 		"useAutoCloseBatch": true,
 		"useAutoCloseBatchTimer": "15:55",
-		"alphaBankDCCSupport": false,
+		"alphaBankDCCSupport": true,
 		"alphaBankDCCProfileId": "19010",
 		"alphaBankDCCPartnerId": "9010",
 		"alphaBankDCCMerchantNumber": "123419010",
