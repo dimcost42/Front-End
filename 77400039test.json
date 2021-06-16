@@ -2,7 +2,7 @@
 	"merchant": {
 		"merchantCity": "Athens",
 		"merchantCategoryCode": "4121",
-		"merchantApplicationType": "3",
+		"merchantApplicationType": "4",
 		"merchantPostalCode": "12243",
 		"merchantName": "Cardlink",
 		"merchantAddress": "My Address",
