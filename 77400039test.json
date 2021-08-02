@@ -107,7 +107,7 @@
 		"refundValidationEnabled": false,
 		"freeRefundEnabled": true,
 		"localSaleEnabled": true,
-		"isManualAcquirerSelection": false,
+		"isManualAcquirerSelection": true,
 		"supportPleaseCallMeEnabled": true,
 		"preAuthEnabled": true,
 		"unattendedMode": false,
