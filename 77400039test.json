@@ -114,17 +114,7 @@
 		"fileLoggerEnabled": false,
 		"supportOrderThermalRollEnabled": true,
 		"fileLoggerMBCapacity": 50,
-		"testParameter" : 14,
-			"supportConfiguration" : {
-		"id" : "2012",
-		"name" : "Cardlink ONE",
-		"details" : {
-		"url" : "https://cardlink.gr/support/%22", 
-		"telephone" : "2106303001",
-		"email" : "one@cardlink.gr",
-		"callMe" : "dimcost42@gmail.com"
-		}
-			}
+		"testParameter" : 14
 		},
 	"loyaltySettings": {
 		"alphaBankBonusEnabled": true,
