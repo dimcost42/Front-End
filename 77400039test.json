@@ -120,10 +120,11 @@
 		"id" : "2012",
 		"name" : "Cardlink ONE",
 		"details" : {
-		"url" : "https://cardlink.gr/support/%22, 
+		"url" : "https://cardlink.gr/support/%22", 
 		"telephone" : "2106303001",
 		"email" : "one@cardlink.gr",
 		"callMe" : "support@cardlink.gr"
+		}
 		},
 	"loyaltySettings": {
 		"alphaBankBonusEnabled": true,
