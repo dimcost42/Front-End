@@ -115,11 +115,11 @@
 "freeCompletionEnabled": true,
 "supportPleaseCallMeEnabled": true,
 "supportConfiguration" : {
-"id" : "2010",
-"name" : "Premium (Jumbo)",
+"id" : "2011",
+"name" : "Premium",
 "details" : {
 "url" : "https://cardlink.gr/support/%22", 
-"telephone" : "2106303001",
+"telephone" : "2106303030",
 "email" : "support@cardlink.gr",
 "callMe" : "support@cardlink.gr"
 }
