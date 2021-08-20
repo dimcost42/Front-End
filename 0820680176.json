@@ -114,16 +114,6 @@
 "freeRefundEnabled": true,
 "freeCompletionEnabled": true,
 "supportPleaseCallMeEnabled": true,
-"supportConfiguration" : {
-"id" : "2013",
-"name" : "Basic",
-"details" : {
-"url" : "https://cardlink.gr/support/%22", 
-"telephone" : "2106303000",
-"email" : "support@cardlink.gr",
-"callMe" : "support@cardlink.gr"
-}
-},
 "supportOrderThermalRollEnabled": true,
 "receiptSettings": {
 "showEmvDataInReceipt": false,
