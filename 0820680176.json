@@ -114,14 +114,14 @@
 "freeRefundEnabled": true,
 "freeCompletionEnabled": true,
 "supportPleaseCallMeEnabled": true,
-"supportConfiguration": {
-"id": "2012",
-"name": "Cardlink one",
-"details": {
-"url": "https://cardlink.gr/support/",
-"telephone": "2106303050",
-"email": "one@cardlink.gr",
-"callMe": "support@cardlink.gr"
+"supportConfiguration" : {
+"id" : "2010",
+"name" : "Premium (Jumbo)",
+"details" : {
+"url" : "https://cardlink.gr/support/%22, 
+"telephone" : "2106303001",
+"email" : "support@cardlink.gr",
+"callMe" : "support@cardlink.gr"
 }
 },
 "supportOrderThermalRollEnabled": true,
