@@ -48,8 +48,12 @@
         "content": {
           "content": "To make a purchase, open the Cardlink application and select the 'tab at the top of the applicationPurchase'. Then select the amount you want and press the 'keyOK', alternatively if the green button with the 'has a physical keyboardO'.",
           "urls": [
-            "imgUrl",
-            "imgUrl2"
+            "https://dimcost42.github.io/Front-End/01.png",
+            "https://dimcost42.github.io/Front-End/02.png",
+            "https://dimcost42.github.io/Front-End/04.png",
+            "https://dimcost42.github.io/Front-End/05.png",
+            "https://dimcost42.github.io/Front-End/06.png",
+            "https://dimcost42.github.io/Front-End/07.png"
           ]
         }
       },
