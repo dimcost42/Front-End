@@ -1,0 +1,391 @@
+[
+  {
+    "id": 100,
+    "name": "Connection Instructions",
+    "subCategories": [
+      {
+        "id": 101,
+        "title": "Connection Instructions with WiFi",
+        "content": {
+          "content": "to connect to the wifi choose 'Settings'?'WiFi'?press the button to switch to 'On'if it is in'Off', if it is already'On'we press on the 3 dots on the top right and we press'Refresh'. From the list that appears, select the network you want to connect to, open the dialog box and enter the code and press 'CONNECT'.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 102,
+        "title": "LAN Connection Instructions",
+        "content": {
+          "content": "To connect the terminal to lan press 'Settings' 'Ethernet' and confirm that 'Ethernet' has a value of 'Ethernet is enabled' For static ip, go to 'Settings'  'Ethernet' 'Ethernet Configuration' and select 'Static IP', set the IP you want as well as 'Netmask', 'Gageway', 'DNS1', 'Proxy' etc and press 'SAVE'.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 103,
+        "title": "4G / 3G Connection Instructions",
+        "content": {
+          "content": "To connect with 4g / 3g drag the notification bar from top to bottom and activate 'Data' and '4G'.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "name": "Purchase",
+    "subCategories": [
+      {
+        "id": 201,
+        "title": "Purchase",
+        "content": {
+          "content": "To make a purchase, open the Cardlink application and select the 'tab at the top of the applicationPurchase'. Then select the amount you want and press the 'keyOK', alternatively if the green button with the 'has a physical keyboardO'.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 202,
+        "title": "Buying with DCC",
+        "content": {
+          "content": "For buying with DCC in the Cardlink application at the time of purchase it asks if it wants to trade in another currency or euro.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 203,
+        "title": "Purchases with redemption points",
+        "content": {
+          "content": "When buying with a card that supports loyalties and after the merchant supports the point reward program, then the purchase amount is displayed on the screen, the maximum redemption amount (can not exceed the purchase amount), the minimum amount redemption, as well as the option 'Other redemption amount' where you manually enter the amount you want to redeem points.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 300,
+    "name": "Package",
+    "subCategories": [
+      {
+        "id": 301,
+        "title": "Package Calendar",
+        "content": {
+          "content": "For the package calendar in the tab 'Transaction Management' a field appears that word 'Date', by clicking there we can select either a date, or by selecting in two places, a range of dates that we will choose to search by pressing the key 'Search'. This will give us back the transactions that took place in the time we set.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 302,
+        "title": "Sending a Package",
+        "content": {
+          "content": "To send a package in the tab 'Transaction Management' we select the round button that says 'Click to send a package', then in the pop up that will appear we choose between 'Centralized printing', 'Detailed printing' or 'Summary printing' and then the 'buttonYes', so the package is sent.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 400,
+    "name": "Cancel Transaction",
+    "subCategories": [
+      {
+        "id": 401,
+        "title": "Cancel a Transaction",
+        "content": {
+          "content": "To cancel a transaction, go to the tab 'Transaction Management', select from the transactions that appear which transaction you want to cancel, and while in the 'Transaction Overview' select the button 'Cancel Transaction', then appears a dialog box asking if we want to cancel and selecting the 'buttonYes'and inserting our card completes the transaction cancellation.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 500,
+    "name": "Searching for Transaction History",
+    "subCategories": [
+      {
+        "id": 501,
+        "title": "Searching by Date",
+        "content": {
+          "content": "To search for a transaction, go to the 'tabManage Transactions'and click on the 'Date' field, from where a window titled 'Select Date' and a calendar will open. From there we can either select a date and then press the 'buttonSearch', search for a specific date in the transactions, or otherwise select two dates (we understand that they have been selected if a pale blue is created between the start and end date), and pressing the 'buttonSearch'to search for the specific date range.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 502,
+        "title": "Card Search",
+        "content": {
+          "content": "To search for a transaction based on the card used, go to the '' tabTransaction Managementand select 'Card Search'. Then the window titled 'opensSearch by card'and there we enter the last 4 digits of the card where the transaction took place, and then we press the 'OKbutton'.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 503,
+        "title": "Current package",
+        "content": {
+          "content": "The current open package is displayed in the tab 'Transaction management', in more detail the last transaction is displayed at the top, and as we drag down we can see the open transactions of this package.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 600,
+    "name": "Other services",
+    "subCategories": [
+      {
+        "id": 601,
+        "title": "Pre-approval for rentals",
+        "content": {
+          "content": "To go to pre-approval we must select the tab 'Other services' and select the 'buttonPre-approval'. Then the pre-approval screen titled 'opensPre-approval'and asks for an amount, after entering the desired amount and pressing the 'OKbutton', we go to the next screen titled 'Rent', there we have to enter the contract number and then press button 'OK', in the next screen that appears we select the 'Rental Date', to select a range of days we click on the two dates we want and after forming a blue open line between the dates then it means that we have the correct date range selected. Then we press the 'buttonSelect'and on the next screen if we have installments it asks us for a number of installments and then we press the 'OKbutton', alternatively we complete the pre-approval process by passing the card through the POS.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 602,
+        "title": "Pre-approval for hotels",
+        "content": {
+          "content": "To go to pre-approval we must select the tab 'Other services' and select the 'buttonPre-approval'. Then the pre-approval screen titled 'opensPre-approval'and asks for an amount, after entering the desired amount and pressing the 'OKbutton', we go to the next screen titled 'Room selection', there we have to enter the room number and then press the ''OKbutton, in the next screen that appears we select the 'Arrival / Departure', to select a range of days we click on the two dates we want and after forming a blue open line between the dates then it means that we have the correct date range selected. Then we press the 'buttonSelect'and on the next screen if we have installments it asks us for a number of installments and then we press the 'OKbutton', alternatively we complete the pre-approval process by passing the card through the POS.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 603,
+        "title": "Completing the pre-approval",
+        "content": {
+          "content": "To complete the pre-approval, go to the tab 'Other services'  and then press the 'buttonComplete pre-approval'. In the window where the application goes we have the ability to search by date, or by pre-approval code. Once we find the desired pre-approval transaction that we want to complete, we select the specific transaction and then click the 'buttonFinish pre-approval'and then in the window where the application goes, it displays the pre-approval amount and there we have the ability to modify this amount before completion of the pre-approval, then we press the 'OKbutton'and pass our card and the transaction is completed.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 604,
+        "title": "Redemption points balance",
+        "content": {
+          "content": "To display the redemption points, in the tab 'Other services', by pressing the button 'Redemption points balance' and passing the card to the POS the points that the user has are displayed. From there it is possible to print on a receipt the available points.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 605,
+        "title": "Local Market",
+        "content": {
+          "content": "In the tab 'Other services' by pressing the button 'Local Market' appears the screen 'Local Market' and there asks you to enter an amount, after entering the desired amount we press the button 'OK' and then we pass the card. In case we have typed and we want to make it local with typed we follow the above steps and then when the card is requested we press the button 'Or type a card' and then we follow the steps of 6.6 from the point marked '**'",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 606,
+        "title": "Payment with enter data",
+        "content": {
+          "content": "In the tab 'Other services' by pressing the button 'Payment by entering card details' in the screen that opens with the title 'Payment by card' enter the charge amount and then on the screen 'Buy' **enter the card details (card number , Expiration date, CVV), and then press the 'OKbutton'and thus the transaction is completed.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 607,
+        "title": "Standalone Refund",
+        "content": {
+          "content": "In the tab 'Other services' pressing the 'buttonReturn'opens the window entitled 'Cancel transaction', there we select the cancellation amount and then press the 'OKbutton'then we pass the card and the refund is completed.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 700,
+    "name": "Support",
+    "subCategories": [
+      {
+        "id": 701,
+        "title": "User Manual",
+        "content": {
+          "content": "To go to the user manual of the device go to the tab 'Support' and select the '' buttonUser Manual",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 702,
+        "title": "Contact details",
+        "content": {
+          "content": "To go to the contact details, go to the 'tabSupport'and select the '' buttonContact Details.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 703,
+        "title": "Call me",
+        "content": {
+          "content": "To make a call from the center to you, go to the tab 'Support' and select the button 'Call me' and then select the phone you want to communicate, as well as select the contact reason between: 'Technical Support','Complaints Department'or'Other ...'and then we press the'buttonSend Request'to send the contact request to the competent department.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 704,
+        "title": "Ordering a thermal roll",
+        "content": {
+          "content": "To order thermal rolls through the application, go to the tab 'Support' and then click on the button 'Order a thermal roll'. From '-' and '+' we define the quantity of rolls we want to order and then press the button 'Send order'",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 800,
+    "name": "Settings",
+    "subCategories": [
+      {
+        "id": 801,
+        "title": "Reprint a package",
+        "content": {
+          "content": "To reprint a package go to the tab 'Settings' and then press the button 'Reprint package'. Then a window appears where it asks us if we want 'Aggregate printing', 'Detailed printing', 'Summary printing', and after selecting we press the 'buttonYes'and the printing of the last package starts.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 802,
+        "title": "Network Settings",
+        "content": {
+          "content": "To set the network priority from the tab,'Settings' select the button 'Network Information' and then display the possible ways to connect to the network. Select the desired connection method and then press the button 'Confirm'.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 803,
+        "title": "Update Parameters",
+        "content": {
+          "content": "To perform a Configuration Update, you must from the 'tabSettingsselect the 'button'Update Parameters'. Attention, in order to complete, we must have closed the open package.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 804,
+        "title": "System Information",
+        "content": {
+          "content": "In the 'tabSettings'by pressing the 'buttonInformation'we can see information such as: Internet: We see if it is Online as well as the way it is connected to the internet Financial Latency: We see how 'delayed' in a transaction. Ideally we want less than 200ms IBM Latency: We see how 'delayed' in loyalty the communication as well as in various configurations. Acceptable price below 200ms. LAN IP ???? We see the current position of the POS in the network. ECR PortECR: Whenis active we see the door that is open for communication. Printer Status: See the status of the printer. Indicatively 0 is that it is fully available for any printing. We can also see other useful information such as: Serial number:  It is unique for each device and is requested in case of a terminal problem. Usually referred to on the back of the device with the indication 'SN' (Serial Number) Application version: Use when we have a problem with the application to know what version the POS is in. Newer ones may have come out to fix any problems.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 805,
+        "title": "Automatic cashier",
+        "content": {
+          "content": "In the tab 'Settings' by pressing the button 'Automatic cashier' we can set in the option 'Automatic cashierautomatically' if the package will closeand in the option 'Change time' when the closing will take place.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 806,
+        "title": "Printing Settings",
+        "content": {
+          "content": "In the 'tabSettingsSettings'by pressing the '' buttonPrintingwe have the option to: Enable or disable customer printing, Enable or disable merchant printing, Enable or disable both printing. We are also given the option if we have the ECR enabled to enable or disable the printing that comes through the ECR. Select proof order which receipt will be printed first and which second. Proof Message a 40-character text that appears at the bottom of the receipt.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 807,
+        "title": "Tip settings",
+        "content": {
+          "content": "From the 'tabSettingssettings'by pressing the '' buttonTipwe can enable or disable the tip.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      },
+      {
+        "id": 808,
+        "title": "Security Settings",
+        "content": {
+          "content": "From the 'tabSettingsSettings'by pressing the '' buttonSecuritythe options for:' are displayed 'Change PIN code: When entering the application it asks for a password. 'Change settings code': When selecting the 'tab,Settings'ask for a password so that they can be modified.",
+          "urls": [
+            "imgUrl",
+            "imgUrl2"
+          ]
+        }
+      }
+    ]
+  }
+]
