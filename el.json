@@ -48,8 +48,13 @@
         "content": {
           "content": "Για να πραγματοποιήσουμε μία αγορά, ανοίγουμε την εφαρμογή Cardlink και στο πάνω μέρος της εφαρμογής επιλέγουμε το tab 'Αγορά'. Κατόπιν επιλέγουμε το ποσό που επιθυμούμε και και πατάμε το πλήκτρο 'OK', εναλλακτικά αν έχει φυσικό πληκτρολόγιο το πράσινο κουμπί με το 'O'.",
           "urls": [
-            "imgUrl",
-            "imgUrl2"
+             "https://dimcost42.github.io/Front-End/01.png",
+            "https://dimcost42.github.io/Front-End/02.png",
+            "https://dimcost42.github.io/Front-End/03.png",
+            "https://dimcost42.github.io/Front-End/04.png",
+            "https://dimcost42.github.io/Front-End/05.png",
+            "https://dimcost42.github.io/Front-End/06.png",
+            "https://dimcost42.github.io/Front-End/07.png"
           ]
         }
       },
