@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "id": 100,
     "name": "Ογηγίες Σύνδεσης",
@@ -7,7 +7,7 @@
         "id": 101,
         "title": "Οδηγίες Σύνδεσης με WiFi",
         "content": {
-         "content": "",
+          "content": "",
           "urls": [
             "imgUrl",
             "imgUrl2"
@@ -48,7 +48,7 @@
         "content": {
           "content": "",
           "urls": [
-             "https://dimcost42.github.io/Front-End/01.png",
+            "https://dimcost42.github.io/Front-End/01.png",
             "https://dimcost42.github.io/Front-End/02.png",
             "https://dimcost42.github.io/Front-End/03.png",
             "https://dimcost42.github.io/Front-End/04.png",
@@ -168,7 +168,7 @@
   },
   {
     "id": 600,
-    "name": "ʼλλες υπηρεσίες",
+    "name": "Άλλες υπηρεσίες",
     "subCategories": [
       {
         "id": 601,
@@ -305,7 +305,7 @@
     "subCategories": [
       {
         "id": 801,
-        "title": "Επανεκτύπωση πακέτου",
+        "title": "Επανεκτύπωση πακέτου,
         "content": {
           "content": "",
           "urls": [
