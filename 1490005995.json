@@ -1,82 +1,45 @@
 {
 "merchant": {
-"merchantCity": "Athens",
-"merchantCategoryCode": "4121",
-"merchantApplicationType": "0",
-"merchantPostalCode": "12243",
-"merchantName": "Cardlink",
-"merchantAddress": "My Address",
-"merchantTelephone": "6970000000",
+"merchantCity": "NEA LIOSIA",
+"merchantCategoryCode": "5411",
+"merchantApplicationType": "2",
+"merchantPostalCode": "13123",
+"merchantName": "SKLAVENITIS AG.NIKOLAOU L",
+"merchantAddress": "AG. NIKOLAOY 38  ATHHNA",
+"merchantTelephone": "2102690980",
+"cardlinkMerchantType": "",
 "merchantID": "0100984178",
-"cardlinkMerchantType": "100",
 "terminalID": "77400039",
 "customerID": "00000000000001",
 "acqIndetifier": "",
 "acqName": ""
 },
-"multiMid": {
-"services": [
-{
-"id": "0000",
-"description": "",
-"mid": "00000000000001",
-"tid": "77400039"
-},
-{
-"id": "0002",
-"description": "",
-"mid": "00000000000032",
-"tid": "77400039"
-}
-],
-"myservices": [
-{
-"telephone": "9011245245",
-"address": "myaddress",
-"mid": "00000000000001",
-"tid": "77400039"
-},
-{
-"telephone": "12322132312",
-"address": "afeaafeafefae",
-"mid": "12000000000001",
-"tid": "32400039"
-},
-{
-"telephone": "2452459011",
-"address": "addressmy",
-"mid": "00000100000000",
-"tid": "00397740"
-}
-]
-},
 "multiAcq": {
 "acquirers": [
 {
 "acqIndetifier": "014",
-"acqName": "ALPHA BANK"
+"acqName": "Alpha Bank"
 },
 {
 "acqIndetifier": "026",
-"acqName": "EURO BANK"
+"acqName": "Eurobank"
 },
 {
 "acqIndetifier": "011",
-"acqName": "NBG"
-},
-{
-"acqIndetifier": "887",
-"acqName": "CARDLINK ONE"
+"acqName": "Εθνική Τράπεζα"
 },
 {
 "acqIndetifier": "017",
-"acqName": "Piraeus"
+"acqName": "Piraeus Bank"
 },
 {
 "acqIndetifier": "016",
-"acqName": "Attica"
+"acqName": "Attica Bank"
 }
 ]
+},
+"multiMid": {
+"services": []
 },
 "allowTransactions": {
 "isAllowSalesPayment": true,
@@ -85,75 +48,89 @@
 },
 "applicationSettings": {
 "sdkLink": 1,
-"useMastercardNewBrand": false,
-"usePasokcardNewBrand": true,
-"supportKeyEntry": true,
+"useMastercardNewBrand": true,
+"supportKeyEntry": false,
 "supportInstallments": false,
 "supportTIP": false,
 "useBenakiTheme": false,
 "useVodafoneTheme": false,
-"showEmvDataInReceipt": false,
+"useSklavenitisTheme": true,
+"autoReactivationTimer": "180",
+"useAutoSettlement": false,
 "useAutoCloseBatch": true,
-"useAutoCloseBatchTimer": "15:55",
-"alphaBankDCCSupport": true,
-"alphaBankDCCProfileId": "19010",
-"alphaBankDCCPartnerId": "9010",
-"alphaBankDCCMerchantNumber": "123419010",
-"euroBankDCCSupport": true,
+"useAutoCloseBatchTimer": "22:13",
+"useAutoParams": true,
+"useAutoParamsTimer": "03:26",
+"alphaBankDCCSupport": false,
+"alphaBankDCCProfileId": "19011",
+"alphaBankDCCPartnerId": "9011",
+"alphaBankDCCMerchantNumber": "123419011",
+"euroBankDCCSupport": false,
 "nbgAppSelectionEnabled": true,
 "nbgAppSelectionAcquirerBankId": "011",
+"cardlinkOneConfiguration": {
+"accounts": []
+},
 "ishceSelectionEnabled": false,
 "ishceSelectionAcquirerBankId": "011",
 "refundValidationEnabled": false,
-"freeRefundEnabled": true,
-"localSaleEnabled": true,
-"isManualAcquirerSelection": true,
-"supportPleaseCallMeEnabled": true,
-"preAuthEnabled": true,
+"localSaleEnabled": false,
+"isManualAcquirerSelection": false,
+"preAuthEnabled": false,
 "unattendedMode": false,
-"fileLoggerEnabled": false,
-"supportOrderThermalRollEnabled": true,
-"fileLoggerMBCapacity": 50,
-"testParameter": 14,
+"mdbManagerEnabled": false,
+"fileLoggerEnabled": true,
+"fileLoggerMBCapacity": 200,
+"freeRefundEnabled": true,
+"freeCompletionEnabled": false,
+"supportPleaseCallMeEnabled": false,
 "supportConfiguration": {
-"id": "2012",
-"name": "Cardlink ONE",
+"id": "2013",
+"name": "Basic",
 "details": {
-"url": "https://cardlink.gr/support/%22",
-"telephone": "2106303001",
-"email": "one@cardlink.gr",
-"callMe": "dimcost42@gmail.com"
+"url": "https://cardlink.gr/support/",
+"telephone": "2106303000",
+"email": "support@cardlink.gr",
+"callMe": "support@cardlink.gr"
 }
+},
+"supportOrderThermalRollEnabled": false,
+"receiptSettings": {
+"showEmvDataInReceipt": false,
+"acquirerBankNameAsBIDSetting": true,
+"barcodeSetting": "01",
+"customLogo": "https://mpos.cardlink.gr/files/android/resources/receipts/sklavenitis_logo.png",
+"dualLogoPrint": false,
+"cardlinkLogoOnTop": false,
+"asfalistikosgoneasPromoMessage": "ΕΞΟΦΛΗΣΤΕ ΤΑ ΑΣΦΑΛΙΣΤΡΑ ΣΑΣ ΜΕ ΠΙΣΤΩΤΙΚΗ ΚΑΡΤΑ ΚΑΙ ΚΕΡΔΙΣΤΕ ΕΚΠΤΩΣΗ ΕΩΣ ΚΑΙ 10% ΕΝΗΜΕΡΩΘΕΙΤΕ ΣΤΟ 210 8119670"
 }
 },
 "loyaltySettings": {
-"alphaBankBonusEnabled": true,
-"alphaBankBonusVTid": "",
-"alphaBankBonusVMid": "",
-"useAlphaBankBonusBRAmount": true,
-"useAlphaBankBonusWithoutOffers": true,
+"alphaBankBonusEnabled": false,
+"alphaBankBonusVTid": "71000926",
+"alphaBankBonusVMid": "0021699640",
+"useAlphaBankBonusBRAmount": false,
+"useAlphaBankBonusWithoutOffers": false,
 "eurobankEuroepistrofiEnabled": true,
-"eurobankEuroepistrofiVTid": "77400039",
-"eurobankEuroepistrofiVMid": "0100984178",
+"eurobankEuroepistrofiVTid": "71000926",
+"eurobankEuroepistrofiVMid": "0021699640",
+"eurobankEuroepistrofiUploadFullRedemption": true,
 "nbgGo4MoreEnabled": true,
-"nbgGo4MoreVTid": "",
-"nbgGo4MoreVMid": "",
+"nbgGo4MoreVTid": "33016069",
+"nbgGo4MoreVMid": "3165957",
 "pbgYellowEnabled": true,
-"pbgYellowVTid": "",
-"pbgYellowVMid": "",
-"pbgYellowPointsToRedeem": "2000"
+"pbgYellowVTid": "00097912",
+"pbgYellowVMid": "140973637",
+"pbgYellowPointsToRedeem": "2000",
+"sklavenitisPrepaidEnabled": true,
+"asfalistikosgoneasEnabled": true,
+"asfalistikosgoneasForceOnline": true
 },
 "ecrSettings": {
 "ecrSystem": true,
 "ecrSystemDefaultPort": 4000,
 "ecrSystemMode": 0,
 "ecrSystemProtocol": 0
-},
-"kostasSettings": {
-"kostasSystem": false,
-"kostasSystemDefaultPort": 4000,
-"kostasSystemMode": 0,
-"kostasSystemProtocol": 0
 },
 "billPayment": {
 "useBillPayment": false,
@@ -170,8 +147,9 @@
 "paxDeviceSettings": {
 "disableNavigatorBar": false,
 "disableStatusBar": false,
-"allowAutoNetworkFallback": false,
-"useMicroserviceDateTime": true
+"allowAutoNetworkFallback": true,
+"useMicroserviceDateTime": true,
+"useHostDateTime": true
 },
 "config_file": "https://mpos.cardlink.gr/files/SPm2/CAKEYS.CFG",
 "iccapp_key": "https://mpos.cardlink.gr/files/SPm2/ICCAPP.CFG",
@@ -288,7 +266,7 @@
 },
 "easylinkPOSParams": {
 "d200_files": {
-"bootFile": "https://mpos.cardlink.gr/files/easylink/d200/EasyLink_Full_v2.03.00_20200119_sign.txt",
+"bootFile": "https://mpos.cardlink.gr/files/easylink/d200/EasyLink_Full_v2.04.00W_20200918_sign.txt",
 "osFile": "https://mpos.cardlink.gr/files/easylink/d200/prolin-2.4.150.8214R_SIG.txt",
 "clssParam": "https://mpos.cardlink.gr/files/easylink/d200/clss_param.txt",
 "emvParam": "https://mpos.cardlink.gr/files/easylink/d200/emv_param.txt",
@@ -314,8 +292,8 @@
 "image_setwifi_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_Wifi.png"
 },
 "q20_files": {
-"bootFile": "https://mpos.cardlink.gr/files/easylink/q20/EasyLink_Full_v2.03.00_20200119_sign.txt",
-"osFile": "https://mpos.cardlink.gr/files/easylink/q20/prolin-pelican-2.7.69.8882R_SIG.txt",
+"bootFile": "https://mpos.cardlink.gr/files/easylink/q20/EasyLink_Full_v2.04.00W_20200918_sign.txt",
+"osFile": "https://mpos.cardlink.gr/files/easylink/IM310/prolin-pelican-2.7.92.9619R_SIG.txt",
 "clssParam": "https://mpos.cardlink.gr/files/easylink/q20/clss_param.txt",
 "emvParam": "https://mpos.cardlink.gr/files/easylink/q20/emv_param.txt",
 "greekLngFile": "https://mpos.cardlink.gr/files/easylink/q20/Greek.txt",
@@ -339,18 +317,23 @@
 "image_setusb_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_USB.png",
 "image_setwifi_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_Wifi.png"
 },
+"d177_files": {
+"uiParam": "https://mpos.cardlink.gr/files/easylink/d177/ui_d177.txt",
+"clssParam": "https://mpos.cardlink.gr/files/easylink/d177/clss_param.txt",
+"emvParam": "https://mpos.cardlink.gr/files/easylink/d177/emv_param.txt"
+},
 "d180_files": {
 "clssParam": "https://mpos.cardlink.gr/files/easylink/d180/clss_param.txt",
 "emvParam": "https://mpos.cardlink.gr/files/easylink/d180/emv_param.txt"
 },
 "im310_files": {
 "bootFile": "https://mpos.cardlink.gr/files/easylink/IM310/EasyLink_Full_v2.04.00W_20200918_sign.txt",
-"osFile": "https://mpos.cardlink.gr/files/easylink/IM310/prolin-pelican-2.7.69.8882R_SIG.txt",
+"osFile": "https://mpos.cardlink.gr/files/easylink/IM310/prolin-pelican-2.7.92.9619R_SIG.txt",
 "clssParam": "https://mpos.cardlink.gr/files/easylink/IM310/clss_param.txt",
 "emvParam": "https://mpos.cardlink.gr/files/easylink/IM310/emv_param.txt"
 },
 "d220_files": {
-"bootFile": "https://mpos.cardlink.gr/files/easylink/d220/EasyLink_Full_v2.03.00_20200119_sign.txt",
+"bootFile": "https://mpos.cardlink.gr/files/easylink/q20/EasyLink_Full_v2.04.00W_20200918_sign.txt",
 "osFile": "https://mpos.cardlink.gr/files/easylink/d220/prolin-cygnus-2.6.64.8063R_SIG.txt",
 "clssParam": "https://mpos.cardlink.gr/files/easylink/d220/clss_param.txt",
 "emvParam": "https://mpos.cardlink.gr/files/easylink/d220/emv_param.txt",
