@@ -66,8 +66,8 @@
 "alphaBankDCCPartnerId": "9011",
 "alphaBankDCCMerchantNumber": "123419011",
 "euroBankDCCSupport": false,
-"nbgAppSelectionEnabled": false,
-"nbgAppSelectionAcquirerBankId": "011",
+"nbgAppSelectionEnabled": true,
+"nbgAppSelectionAcquirerBankId": "014",
 "cardlinkOneConfiguration": {
 "accounts": []
 },
