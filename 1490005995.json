@@ -1,15 +1,15 @@
 {
 "merchant": {
-"merchantCity": "NEA LIOSIA",
-"merchantCategoryCode": "5411",
-"merchantApplicationType": "2",
-"merchantPostalCode": "13123",
-"merchantName": "SKLAVENITIS AG.NIKOLAOU L",
-"merchantAddress": "AG. NIKOLAOY 38  ATHHNA",
-"merchantTelephone": "2102690980",
+"merchantCity": "HRAKLEION",
+"merchantCategoryCode": "7399",
+"merchantApplicationType": "0",
+"merchantPostalCode": "14121",
+"merchantName": "CARDLINK S.A",
+"merchantAddress": "ANTYPA MARINOY 41 45  NEO HRAKLEIO",
+"merchantTelephone": "2106100670",
 "cardlinkMerchantType": "",
-"merchantID": "0100984178",
-"terminalID": "77400039",
+"merchantID": "0023839673",
+"terminalID": "77600954",
 "customerID": "00000000000001",
 "acqIndetifier": "",
 "acqName": ""
@@ -23,18 +23,6 @@
 {
 "acqIndetifier": "026",
 "acqName": "Eurobank"
-},
-{
-"acqIndetifier": "011",
-"acqName": "Εθνική Τράπεζα"
-},
-{
-"acqIndetifier": "017",
-"acqName": "Piraeus Bank"
-},
-{
-"acqIndetifier": "016",
-"acqName": "Attica Bank"
 }
 ]
 },
@@ -47,26 +35,26 @@
 "isAllowRefundPayment": true
 },
 "applicationSettings": {
-"sdkLink": 1,
+"sdkLink": 2,
 "useMastercardNewBrand": true,
 "supportKeyEntry": false,
-"supportInstallments": false,
+"supportInstallments": true,
 "supportTIP": false,
 "useBenakiTheme": false,
 "useVodafoneTheme": false,
-"useSklavenitisTheme": true,
+"useSklavenitisTheme": false,
 "autoReactivationTimer": "180",
 "useAutoSettlement": false,
 "useAutoCloseBatch": true,
-"useAutoCloseBatchTimer": "22:13",
+"useAutoCloseBatchTimer": "23:54",
 "useAutoParams": true,
-"useAutoParamsTimer": "03:26",
+"useAutoParamsTimer": "03:54",
 "alphaBankDCCSupport": false,
 "alphaBankDCCProfileId": "19011",
 "alphaBankDCCPartnerId": "9011",
 "alphaBankDCCMerchantNumber": "123419011",
-"euroBankDCCSupport": false,
-"nbgAppSelectionEnabled": true,
+"euroBankDCCSupport": true,
+"nbgAppSelectionEnabled": false,
 "nbgAppSelectionAcquirerBankId": "011",
 "cardlinkOneConfiguration": {
 "accounts": []
@@ -75,7 +63,7 @@
 "ishceSelectionAcquirerBankId": "011",
 "refundValidationEnabled": false,
 "localSaleEnabled": false,
-"isManualAcquirerSelection": false,
+"isManualAcquirerSelection": true,
 "preAuthEnabled": false,
 "unattendedMode": false,
 "mdbManagerEnabled": false,
@@ -83,7 +71,7 @@
 "fileLoggerMBCapacity": 200,
 "freeRefundEnabled": true,
 "freeCompletionEnabled": false,
-"supportPleaseCallMeEnabled": false,
+"supportPleaseCallMeEnabled": true,
 "supportConfiguration": {
 "id": "2013",
 "name": "Basic",
@@ -94,12 +82,12 @@
 "callMe": "support@cardlink.gr"
 }
 },
-"supportOrderThermalRollEnabled": false,
+"supportOrderThermalRollEnabled": true,
 "receiptSettings": {
 "showEmvDataInReceipt": false,
-"acquirerBankNameAsBIDSetting": true,
-"barcodeSetting": "01",
-"customLogo": "https://mpos.cardlink.gr/files/android/resources/receipts/sklavenitis_logo.png",
+"acquirerBankNameAsBIDSetting": false,
+"barcodeSetting": "00",
+"customLogo": "",
 "dualLogoPrint": false,
 "cardlinkLogoOnTop": false,
 "asfalistikosgoneasPromoMessage": "ΕΞΟΦΛΗΣΤΕ ΤΑ ΑΣΦΑΛΙΣΤΡΑ ΣΑΣ ΜΕ ΠΙΣΤΩΤΙΚΗ ΚΑΡΤΑ ΚΑΙ ΚΕΡΔΙΣΤΕ ΕΚΠΤΩΣΗ ΕΩΣ ΚΑΙ 10% ΕΝΗΜΕΡΩΘΕΙΤΕ ΣΤΟ 210 8119670"
@@ -107,27 +95,27 @@
 },
 "loyaltySettings": {
 "alphaBankBonusEnabled": false,
-"alphaBankBonusVTid": "71000926",
-"alphaBankBonusVMid": "0021699640",
+"alphaBankBonusVTid": "77600954",
+"alphaBankBonusVMid": "0023839673",
 "useAlphaBankBonusBRAmount": false,
 "useAlphaBankBonusWithoutOffers": false,
 "eurobankEuroepistrofiEnabled": true,
-"eurobankEuroepistrofiVTid": "71000926",
-"eurobankEuroepistrofiVMid": "0021699640",
+"eurobankEuroepistrofiVTid": "77600954",
+"eurobankEuroepistrofiVMid": "0023839673",
 "eurobankEuroepistrofiUploadFullRedemption": true,
-"nbgGo4MoreEnabled": true,
-"nbgGo4MoreVTid": "33016069",
-"nbgGo4MoreVMid": "3165957",
-"pbgYellowEnabled": true,
-"pbgYellowVTid": "00097912",
-"pbgYellowVMid": "140973637",
+"nbgGo4MoreEnabled": false,
+"nbgGo4MoreVTid": "",
+"nbgGo4MoreVMid": "",
+"pbgYellowEnabled": false,
+"pbgYellowVTid": "",
+"pbgYellowVMid": "",
 "pbgYellowPointsToRedeem": "2000",
-"sklavenitisPrepaidEnabled": true,
-"asfalistikosgoneasEnabled": true,
-"asfalistikosgoneasForceOnline": true
+"sklavenitisPrepaidEnabled": false,
+"asfalistikosgoneasEnabled": false,
+"asfalistikosgoneasForceOnline": false
 },
 "ecrSettings": {
-"ecrSystem": true,
+"ecrSystem": false,
 "ecrSystemDefaultPort": 4000,
 "ecrSystemMode": 0,
 "ecrSystemProtocol": 0
@@ -147,8 +135,8 @@
 "paxDeviceSettings": {
 "disableNavigatorBar": false,
 "disableStatusBar": false,
-"allowAutoNetworkFallback": true,
-"useMicroserviceDateTime": true,
+"allowAutoNetworkFallback": false,
+"useMicroserviceDateTime": false,
 "useHostDateTime": true
 },
 "config_file": "https://mpos.cardlink.gr/files/SPm2/CAKEYS.CFG",
