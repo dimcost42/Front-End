@@ -98,9 +98,9 @@
 		"useAlphaBankBonusBRAmount": false,
 		"useAlphaBankBonusWithoutOffers": false,
 		
-		"eurobankEuroepistrofiEnabled": false,
-		"eurobankEuroepistrofiVTid": "",
-		"eurobankEuroepistrofiVMid": "",
+		"eurobankEuroepistrofiEnabled": true,
+		"eurobankEuroepistrofiVTid": "77600560",
+		"eurobankEuroepistrofiVMid": "0021150628",
 		
 		"nbgGo4MoreEnabled": false,
 		"nbgGo4MoreVTid": "",
