@@ -1,40 +1,49 @@
 {
-	"buttons": [
-	{ 
-	  "btnName": "Μοτοσυκλέτες",
-	  "price":1.90
-	},
-	{
-	"btnName": "Επιβατικά Αυτοκίνητα",
-	"price": 13.50
-	},
-	{
-	"btnName": "Επιβατικά ΙΧ ΑΜΕΑ",
-	"price":5.0
-	},
-	{
-	"btnName":"Φορτηγά 2 άξονες",
-	"price":20.30
-	},
-	{
-	"btnName":"Φορτηγά 3 άξονες",
-	"price":33.00
-	},
-	{
-	"btnName":"Φορτηγά 4+ άξονες",
-	"price": 42.00
-	},
-	{
-	"btnName":"Λεωφορεία έως και 20 θέσεις",
-	"price": 30.50
-	},
-	{
-	"btnName":"Λεωφορεία 21-40 θέσεις",
-	"price": 43.00
-	},
-	{
-	"btnName": "Λεωφορεία πάνω από 40 θέσεις",
-	"price": 66.00
-	}
-	]
+"buttons": [
+{
+"btnName": "Μοτοσυκλέτες",
+"description":"",
+"price": 1.9
+},
+{
+"btnName": "Επιβατικά Αυτοκίνητα",
+"description":"",
+"price": 13.5
+},
+{
+"btnName": "Επιβατικά ΙΧ ΑΜΕΑ",
+"description":"",
+"price": 5
+},
+{
+"btnName": "Φορτηγά 2 άξονες",
+"description":"",
+"price": 20.3
+},
+{
+"btnName": "Φορτηγά 3 άξονες",
+"description":"",
+"price": 33
+},
+{
+"btnName": "Φορτηγά 4+ άξονες",
+"description":"",
+"price": 42
+},
+{
+"btnName": "Λεωφορεία έως και 20 θέσεις",
+"description":"",
+"price": 30.5
+},
+{
+"btnName": "Λεωφορεία 21-40 θέσεις",
+"description":"",
+"price": 43
+},
+{
+"btnName": "Λεωφορεία πάνω από 40 θέσεις",
+"description":"",
+"price": 66
+}
+]
 }
