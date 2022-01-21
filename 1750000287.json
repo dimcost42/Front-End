@@ -85,10 +85,10 @@
 },
 "applicationSettings": {
 "sdkLink": 1,
-"useMastercardNewBrand": false,
+"useMastercardNewBrand": true,
 "usePasokcardNewBrand": true,
 "supportKeyEntry": true,
-"supportInstallments": false,
+"supportInstallments": true,
 "supportTIP": false,
 "useBenakiTheme": false,
 "useVodafoneTheme": false,
