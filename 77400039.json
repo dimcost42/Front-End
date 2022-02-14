@@ -64,7 +64,7 @@
 		"isAllowRefundPayment": true
 	},
 	"applicationSettings": {
-		"sdkLink": 2,
+		"sdkLink": 1,
 		"useMastercardNewBrand": false,
 		"supportKeyEntry": false,
 		"supportInstallments": false,
@@ -72,8 +72,8 @@
 		"useBenakiTheme": false,
 		"useVodafoneTheme": false,
 		"showEmvDataInReceipt": false,
-		"useAutoCloseBatch": false,
-		"useAutoCloseBatchTimer": "01:00",
+		"useAutoCloseBatch": true,
+		"useAutoCloseBatchTimer": "13:30",
 		"alphaBankDCCSupport": false,
 		"alphaBankDCCProfileId": "19010",
 		"alphaBankDCCPartnerId": "9010",
@@ -112,7 +112,7 @@
 		"pbgYellowPointsToRedeem": "2000"
 	},
 	"ecrSettings":{
-		"ecrSystem": false,
+		"ecrSystem": true,
 		"ecrSystemDefaultPort": 4000,
 		"ecrSystemMode": 0,
 		"ecrSystemProtocol": 0
