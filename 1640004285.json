@@ -107,7 +107,7 @@
 		"isManualAcquirerSelection": false,
 		"preAuthEnabled": true,
 		"unattendedMode": false,
-		"mdbManagerEnabled": true,
+		"mdbManagerEnabled": false,
 		"mdbCreditsAvailable": 65534,
 		"mdbCreditsLimitAvailable": 65534,
 		"fileLoggerEnabled": true,
