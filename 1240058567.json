@@ -11,15 +11,19 @@
 "merchantID": "0100984178",
 "terminalID": "77400039",
 "customerID": "00000000000001",
-"acqIndetifier": "026",
-"acqName": "Eurobank"
+"acqIndetifier": "014",
+"acqName": "Alpha Bank"
 },
 "multiAcq": {
 "acquirers": [
 {
 "acqIndetifier": "026",
 "acqName": "Eurobank"
-}
+},
+  {
+    "acqIndetifier": "014",
+    "acqName": "Alpha Bank"
+  }
 ]
 },
 "multiMid": {
@@ -33,7 +37,7 @@
 "applicationSettings": {
 "sdkLink": 1,
 "useMastercardNewBrand": true,
-"supportKeyEntry": false,
+"supportKeyEntry": true,
 "supportInstallments": false,
 "supportTIP": false,
 "useBenakiTheme": false,
@@ -45,7 +49,7 @@
 "useAutoCloseBatchTimer": "23:21",
 "useAutoParams": true,
 "useAutoParamsTimer": "01:21",
-"alphaBankDCCSupport": false,
+"alphaBankDCCSupport": true,
 "alphaBankDCCProfileId": "19011",
 "alphaBankDCCPartnerId": "9011",
 "alphaBankDCCMerchantNumber": "123419011",
