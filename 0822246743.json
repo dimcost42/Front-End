@@ -2,7 +2,7 @@
 	"merchant": {
 		"merchantCity": "Athens",
 		"merchantCategoryCode": "4121",
-		"merchantApplicationType": "0",
+		"merchantApplicationType": "4",
 		"merchantPostalCode": "15121",
 		"merchantName": "Cardlink Test",
 		"merchantAddress": "41-45 Marinou Antipa",
