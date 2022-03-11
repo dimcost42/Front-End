@@ -16,6 +16,22 @@
 	},
 	"multiMid": {
 		"services": [
+			{
+				"id": "0000",
+				"description": "",
+				"mid": "00000000000001",
+				"tid": "77400039"
+			},
+			{
+				"id": "0002",
+				"description": "",
+				"mid": "00000000000032",
+				"tid": "77400039"
+			}
+		]
+	},
+"multiAcq": {
+"acquirers": [
 {
 "acqIndetifier": "014",
 "acqName": "ALPHA BANK"
@@ -39,18 +55,6 @@
 {
 "acqIndetifier": "016",
 "acqName": "Attica"
-}
-]
-	},
-"multiAcq": {
-"acquirers": [
-{
-"acqIndetifier": "014",
-"acqName": "Alpha Bank"
-},
-{
-"acqIndetifier": "011",
-"acqName": "NBG"
 }
 ]
 },
