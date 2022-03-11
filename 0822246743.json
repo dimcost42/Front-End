@@ -11,24 +11,36 @@
 		"cardlinkMerchantType": "100",
 		"terminalID": "77400039",
 		"customerID": "00000000000001",
-		"acqIndetifier": "014",
-		"acqName": "ALPHA BANK"
+		"acqIndetifier": "",
+		"acqName": ""
 	},
 	"multiMid": {
 		"services": [
-			{
-				"id": "0000",
-				"description": "",
-				"mid": "00000000000001",
-				"tid": "77400039"
-			},
-			{
-				"id": "0002",
-				"description": "",
-				"mid": "00000000000032",
-				"tid": "77400039"
-			}
-		]
+{
+"acqIndetifier": "014",
+"acqName": "ALPHA BANK"
+},
+{
+"acqIndetifier": "026",
+"acqName": "EURO BANK"
+},
+{
+"acqIndetifier": "011",
+"acqName": "NBG"
+},
+{
+"acqIndetifier": "887",
+"acqName": "CARDLINK ONE"
+},
+{
+"acqIndetifier": "017",
+"acqName": "Piraeus"
+},
+{
+"acqIndetifier": "016",
+"acqName": "Attica"
+}
+]
 	},
 "multiAcq": {
 "acquirers": [
@@ -93,16 +105,16 @@
 }
 },
 "loyaltySettings": {
-"alphaBankBonusEnabled": true,
+"alphaBankBonusEnabled": false,
 "alphaBankBonusVTid": "77600535",
 "alphaBankBonusVMid": "0021425574",
-"useAlphaBankBonusBRAmount": true,
-"useAlphaBankBonusWithoutOffers": true,
-"eurobankEuroepistrofiEnabled": true,
+"useAlphaBankBonusBRAmount": false,
+"useAlphaBankBonusWithoutOffers": false,
+"eurobankEuroepistrofiEnabled": false,
 "eurobankEuroepistrofiVTid": "77600535",
 "eurobankEuroepistrofiVMid": "0020083259",
 "eurobankEuroepistrofiUploadFullRedemption": false,
-"nbgGo4MoreEnabled": true,
+"nbgGo4MoreEnabled": false,
 "nbgGo4MoreVTid": "36009992",
 "nbgGo4MoreVMid": "3173232",
 "pbgYellowEnabled": true,
