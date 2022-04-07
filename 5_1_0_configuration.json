@@ -8,8 +8,8 @@
     "merchantAddress" : "AGIOY KONSTANTINOY 50  MAROYSI",
     "merchantTelephone" : "2106100676",
     "cardlinkMerchantType" : "",
-    "merchantID" : "0101118297",
-    "terminalID" : "77617423",
+    "merchantID" : "0100000007",
+    "terminalID" : "77400039",
     "customerID" : "00000000000001",
     "acqIndetifier" : "",
     "acqName" : ""
@@ -48,7 +48,7 @@
     "isAllowMotoPayment" : true
   },
   "applicationSettings" : {
-    "sdkLink" : 2,
+    "sdkLink" : 1,
     "useMastercardNewBrand" : true,
     "supportKeyEntry" : true,
     "supportInstallments" : true,
