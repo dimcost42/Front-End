@@ -106,7 +106,7 @@
 		"localSaleEnabled": true,
 		"isManualAcquirerSelection": false,
 		"preAuthEnabled": true,
-		"unattendedMode": false,
+		"unattendedMode": true,
 		"mdbManagerEnabled": true,
 		"mdbCreditsAvailable": 65534,
 		"mdbCreditsLimitAvailable": 65534,
