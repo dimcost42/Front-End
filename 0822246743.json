@@ -225,9 +225,9 @@
 "pbgYellowVTid": "03974427",
 "pbgYellowVMid": "140974429",
 "pbgYellowPointsToRedeem": "2000",
-"sklavenitisPrepaidEnabled": true,
-"asfalistikosgoneasEnabled": true,
-"asfalistikosgoneasForceOnline": true
+"sklavenitisPrepaidEnabled": false,
+"asfalistikosgoneasEnabled": false,
+"asfalistikosgoneasForceOnline": false
 },
 "ecrSettings": {
 "ecrSystem": true,
