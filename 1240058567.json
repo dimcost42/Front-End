@@ -17,13 +17,19 @@
 "multiAcq": {
 "acquirers": [
 {
-"acqIndetifier": "026",
-"acqName": "Eurobank"
+"acqIndetifier": "014",
+"acqName": "Alpha Bank",
+"allowLocal": true,
+"allowRefund": true,
+"allowKeyEntry": true
 },
-  {
-    "acqIndetifier": "014",
-    "acqName": "Alpha Bank"
-  }
+{
+"acqIndetifier": "026",
+"acqName": "Eurobank",
+"allowLocal": true,
+"allowRefund": true,
+"allowKeyEntry": true
+}
 ]
 },
 "multiMid": {
@@ -37,7 +43,7 @@
 "applicationSettings": {
 "sdkLink": 1,
 "useMastercardNewBrand": true,
-"supportKeyEntry": true,
+"supportKeyEntry": false,
 "supportInstallments": false,
 "supportTIP": false,
 "useBenakiTheme": false,
@@ -46,10 +52,10 @@
 "autoReactivationTimer": "180",
 "useAutoSettlement": false,
 "useAutoCloseBatch": true,
-"useAutoCloseBatchTimer": "23:21",
+"useAutoCloseBatchTimer": "22:34",
 "useAutoParams": true,
-"useAutoParamsTimer": "01:21",
-"alphaBankDCCSupport": true,
+"useAutoParamsTimer": "00:34",
+"alphaBankDCCSupport": false,
 "alphaBankDCCProfileId": "19011",
 "alphaBankDCCPartnerId": "9011",
 "alphaBankDCCMerchantNumber": "123419011",
@@ -63,7 +69,7 @@
 "ishceSelectionAcquirerBankId": "011",
 "refundValidationEnabled": false,
 "localSaleEnabled": false,
-"isManualAcquirerSelection": false,
+"isManualAcquirerSelection": true,
 "preAuthEnabled": false,
 "unattendedMode": false,
 "mdbManagerEnabled": false,
@@ -73,11 +79,11 @@
 "freeCompletionEnabled": false,
 "supportPleaseCallMeEnabled": true,
 "supportConfiguration": {
-"id": "2011",
-"name": "Premium",
+"id": "2013",
+"name": "Basic",
 "details": {
 "url": "https://cardlink.gr/support/",
-"telephone": "2106303030",
+"telephone": "2106303000",
 "email": "support@cardlink.gr",
 "callMe": "support@cardlink.gr"
 }
@@ -95,13 +101,13 @@
 },
 "loyaltySettings": {
 "alphaBankBonusEnabled": false,
-"alphaBankBonusVTid": "77816081",
-"alphaBankBonusVMid": "0020799326",
+"alphaBankBonusVTid": "71300034",
+"alphaBankBonusVMid": "0023839673",
 "useAlphaBankBonusBRAmount": false,
 "useAlphaBankBonusWithoutOffers": false,
 "eurobankEuroepistrofiEnabled": false,
-"eurobankEuroepistrofiVTid": "77816081",
-"eurobankEuroepistrofiVMid": "0020799326",
+"eurobankEuroepistrofiVTid": "71300034",
+"eurobankEuroepistrofiVMid": "0023839673",
 "eurobankEuroepistrofiUploadFullRedemption": false,
 "nbgGo4MoreEnabled": false,
 "nbgGo4MoreVTid": "",
@@ -133,8 +139,8 @@
 "codeME": ""
 },
 "paxDeviceSettings": {
-"disableNavigatorBar": false,
-"disableStatusBar": false,
+"disableNavigatorBar": true,
+"disableStatusBar": true,
 "allowAutoNetworkFallback": false,
 "useMicroserviceDateTime": false,
 "useHostDateTime": true
@@ -309,6 +315,19 @@
 "uiParam": "https://mpos.cardlink.gr/files/easylink/d177/ui_d177.txt",
 "clssParam": "https://mpos.cardlink.gr/files/easylink/d177/clss_param.txt",
 "emvParam": "https://mpos.cardlink.gr/files/easylink/d177/emv_param.txt"
+},
+"sp20_files": {
+"uiParam": "https://mpos.cardlink.gr/files/easylink/sp20/ui_sp20v4.txt",
+"uiGreekParam": "https://mpos.cardlink.gr/files/easylink/sp20/ui_sp20v4_greek.txt",
+"clssParam": "https://mpos.cardlink.gr/files/easylink/sp20/clss_param.txt",
+"emvParam": "https://mpos.cardlink.gr/files/easylink/sp20/emv_param.txt",
+"greekLngParam": "https://mpos.cardlink.gr/files/easylink/sp20/greek.txt",
+"westAndGreekBinParam": "https://mpos.cardlink.gr/files/easylink/sp20/west_greek_8_20210821.txt"
+},
+"r20_files": {
+"uiParam": "https://mpos.cardlink.gr/files/easylink/r20/ui_r20.txt",
+"clssParam": "https://mpos.cardlink.gr/files/easylink/r20/clss_param.txt",
+"emvParam": "https://mpos.cardlink.gr/files/easylink/r20/emv_param.txt"
 },
 "d180_files": {
 "clssParam": "https://mpos.cardlink.gr/files/easylink/d180/clss_param.txt",
