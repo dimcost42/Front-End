@@ -120,16 +120,16 @@
     "defaultLanguage" : "el"
   },
   "loyaltySettings" : {
-    "alphaBankBonusEnabled" : true,
+    "alphaBankBonusEnabled" : false,
     "alphaBankBonusVTid" : "77618446",
     "alphaBankBonusVMid" : "0101118297",
     "useAlphaBankBonusBRAmount" : false,
     "useAlphaBankBonusWithoutOffers" : false,
-    "eurobankEuroepistrofiEnabled" : true,
+    "eurobankEuroepistrofiEnabled" : false,
     "eurobankEuroepistrofiVTid" : "77618446",
     "eurobankEuroepistrofiVMid" : "0101118297",
-    "eurobankEuroepistrofiUploadFullRedemption" : true,
-    "nbgGo4MoreEnabled" : true,
+    "eurobankEuroepistrofiUploadFullRedemption" : false,
+    "nbgGo4MoreEnabled" : false,
     "nbgGo4MoreVTid" : "30002634",
     "nbgGo4MoreVMid" : "0123455",
     "pbgYellowEnabled" : false,
@@ -141,7 +141,7 @@
     "asfalistikosgoneasForceOnline" : false
   },
   "ecrSettings" : {
-    "ecrSystem" : true,
+    "ecrSystem" : false,
     "ecrSystemDefaultPort" : 4000,
     "ecrSystemMode" : 0,
     "ecrSystemProtocol" : 0
