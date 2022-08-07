@@ -69,7 +69,7 @@
     "useAutoCloseBatchTimer" : "23:26",
     "useAutoParams" : true,
     "useAutoParamsTimer" : "03:26",
-    "alphaBankDCCSupport" : true,
+    "alphaBankDCCSupport" : false,
     "alphaBankDCCProfileId" : "19011",
     "alphaBankDCCPartnerId" : "9011",
     "alphaBankDCCMerchantNumber" : "123419011",
