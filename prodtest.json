@@ -75,7 +75,7 @@
     "alphaBankDCCMerchantNumber" : "123419011",
     "alphaBankDCCMinimumAmount" : 100,
     "euroBankDCCSupport" : true,
-    "nbgAppSelectionEnabled" : true,
+    "nbgAppSelectionEnabled" : false,
     "nbgAppSelectionAcquirerBankId" : "011",
     "cardlinkOneConfiguration" : {
       "accounts" : [ ]
