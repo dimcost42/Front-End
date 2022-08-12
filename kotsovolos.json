@@ -15,7 +15,7 @@
   "allowTransactions": {
     "isAllowSalesPayment": true,
     "isAllowVoidPayment": true,
-    "isAllowRefundPayment": true
+    "isAllowRefundPayment": false
   },
   "mPOSInstallentParams": {
     "enabled": false
