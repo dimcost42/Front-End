@@ -111,7 +111,7 @@
       "acquirerBankNameAsBIDSetting" : false,
       "barcodeSetting" : "00",
       "merchantReceipt" : false,
-      "customLogo" : "",
+      "customLogo" : "https://dimcost42.github.io/Front-End/neagalinireceipt.png",
       "dualLogoPrint" : false,
       "cardlinkLogoOnTop" : false,
       "asfalistikosgoneasPromoMessage" : "ΕΞΟΦΛΗΣΤΕ ΤΑ ΑΣΦΑΛΙΣΤΡΑ ΣΑΣ ΜΕ ΠΙΣΤΩΤΙΚΗ ΚΑΡΤΑ ΚΑΙ ΚΕΡΔΙΣΤΕ ΕΚΠΤΩΣΗ ΕΩΣ ΚΑΙ 10% ΕΝΗΜΕΡΩΘΕΙΤΕ ΣΤΟ 210 8119670"
