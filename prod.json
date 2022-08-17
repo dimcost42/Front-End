@@ -162,7 +162,7 @@
     "disableStatusBar" : false,
     "allowAutoNetworkFallback" : false,
     "useMicroserviceDateTime" : false,
-    "useHostDateTime" : true
+    "useHostDateTime" : false
   },
   "cardTypes" : [ {
     "id" : 1,
