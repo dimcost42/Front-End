@@ -2,6 +2,7 @@
   "menu": [
     {
       "category":"Cofee",
+      "description":"Καφεδάκι για όλες τις ορέξεις",
       "values":[
         {
           "product_id":1,
@@ -23,6 +24,7 @@
     },
     {
       "category":"Sandwiches & Burgers",
+      "description":"Σαντουιτσακι και μπεργκερακι για να γεμιζει η κοιλιτσα",
       "values":[
         {
           "product_id":5,
@@ -52,6 +54,7 @@
     },
     {
       "category":"Souvlakia",
+      "description":"Σουβλακακι για την ορεξη",
       "values":[
         {
           "product_id":10,
