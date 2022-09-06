@@ -16,4 +16,11 @@
 }, {
 	"value": "PAXSTORE",
 	"name": "Paxstore"
-}]
+}, {
+	"value": "MAXSTORE",
+	"name": "Maxstore"
+}, {
+	"value": "PDM",
+	"name": "Pdm"
+}
+]
