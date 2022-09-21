@@ -22,5 +22,8 @@
 }, {
 	"value": "PDM",
 	"name": "Pdm"
+}, {
+	"value": "Key Injector",
+	"name": "Key Injection"
 }
 ]
