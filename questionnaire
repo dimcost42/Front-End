@@ -1,0 +1,900 @@
+{
+"questions": [
+{
+"question": "Computing is a set of activities that include:",
+"answerA": "performing of calculations or processing of data.",
+"answerB": "following a recipe to make biscuits.",
+"answerC": "accurate and careful observation of the stars, over a long period of time.",
+"answerD": "accurate and careful observation of chemical reactions.",
+"answerCorrect": "A"
+},
+{
+"question": "Computational thinking is:",
+"answerA": "When computers are solving a difficult problem.",
+"answerB": "The process of analyzing problems and challenges and identifying possible solutions to help solve them.",
+"answerC": "Using a computer to do lots of math.",
+"answerD": "Any activity where a computer and a person work together to do more than either could on their own.",
+"answerCorrect": "B"
+},
+{
+"question": "Which method is not a typical part of computational thinking?",
+"answerA": "Abstraction",
+"answerB": "Apprehension ",
+"answerC": "Decomposition",
+"answerD": "Pattern Recognition",
+"answerCorrect": "B"
+},
+{
+"question": "Which of these is a good example of decomposition of a problem?",
+"answerA": "Splitting the task of designing a robot into designing the hand, designing the power source, deciding on and designing the sensors.",
+"answerB": "Slicing a cake into 6 equal slices ",
+"answerC": "Putting an apple into a glass jar and taking photos of it each day to see what happens.",
+"answerD": "Using a search engine to find the answer to a question.",
+"answerCorrect": "A"
+},
+{
+"question": "A program is:",
+"answerA": "The detailed rules and regulations of a game or sport ",
+"answerB": "An algorithm expressed in a form that is suitable for a computer ",
+"answerC": "The collection of laws and regulations that determine what buildings can be built legally at a particular place. ",
+"answerD": "A sequence of instructions for a person to follow, e.g. a recipe for baking a cake.",
+"answerCorrect": "B"
+},
+{
+"question": "Which of these is least likely to be a way that algorithms are used in computational thinking?",
+"answerA": "An algorithm may lead to a computer program that when run solves the problem",
+"answerB": "An algorithm may lead to a computer program that employs intuition to derive better solutions.",
+"answerC": "An algorithm may provide a step by step guide for manufacturing something. ",
+"answerD": "An algorithm may provide a step by step guide for processes involving people, money and resources.",
+"answerCorrect": "B"
+},
+{
+"question": "For designing a program for cooking for a robot chef to use, which of the following would be the most relevant detail?",
+"answerA": "The colour of the robot.",
+"answerB": "What quantities of each ingredient to use. ",
+"answerC": "Which shop the ingredients were bought from.",
+"answerD": "Whether the programmer is right or left handed.",
+"answerCorrect": "B"
+},
+{
+"question": "A formal language is:",
+"answerA": "A language in which it is not possible to make a mistake.",
+"answerB": "A language with defined rules and unambiguous meanings",
+"answerC": "The best language to use when writing a postcard.",
+"answerD": "Any language that has the words \"and\" and \"or\" in it.",
+"answerCorrect": "B"
+},
+{
+"question": "English, Arabic and Chinese are:",
+"answerA": "Formal languages.",
+"answerB": "Computer languages.",
+"answerC": "Natural languages.",
+"answerD": "Source code",
+"answerCorrect": "C"
+},
+{
+"question": "Machine code is:",
+"answerA": "Translated into source code so that a computer can obey the instructions.",
+"answerB": "A method for secure communication between two computers.",
+"answerC": "The 1’s and 0’s that a computer obeys.",
+"answerD": "A written agreement between a programmer and a customer specifying what a program should do.",
+"answerCorrect": "C"
+},
+{
+"question": "An algorithm written in the java computer language is an example of:",
+"answerA": "Source code.",
+"answerB": "Machine code",
+"answerC": "A program specification ",
+"answerD": "A program description",
+"answerCorrect": "A"
+},
+{
+"question": "A program specification is: ",
+"answerA": "The code that the computer runs.",
+"answerB": "The comments in code that a programmer reads.",
+"answerC": "The actual electrical signals in a computer, when a program is running.",
+"answerD": "A description of what a program should do that is used during designing the program.",
+"answerCorrect": "D"
+},
+{
+"question": "A sequence is:",
+"answerA": "A number of instructions that can be obeyed in any order.",
+"answerB": "A number of instructions that should be obeyed one after the other.",
+"answerC": "An analysis of a problem to be solved.",
+"answerD": "A collection of recommendations for enhancing a computer program.",
+"answerCorrect": "B"
+},
+{
+"question": "Which of these is not used to represent an algorithm?",
+"answerA": "A computer program.",
+"answerB": "Flowchart.",
+"answerC": "Pseudocode.",
+"answerD": "Pseudoscience.",
+"answerCorrect": "D"
+},
+{
+"question": "Which of the following commands is used to display the result of a calculation?",
+"answerA": "print();",
+"answerB": "main()",
+"answerC": "System.out.println(); ",
+"answerD": "System.in",
+"answerCorrect": "C"
+},
+{
+"question": "Which statement about variables is correct?",
+"answerA": "Variables never change their value. ",
+"answerB": "A variable name must use lower case letters only. ",
+"answerC": "Variables must be initialized to zero. ",
+"answerD": "Sometimes a variable can hold a Boolean value.",
+"answerCorrect": "D"
+},
+{
+"question": "What is the purpose of a variable? ",
+"answerA": "To make it easier to change a program in the future.",
+"answerB": "To tell Java how to combine two numbers",
+"answerC": "To remember some value that will be used again later in the program. ",
+"answerD": "To ensure that the source code is indented correctly",
+"answerCorrect": "C"
+},
+{
+"question": "A data type which has only two values is called:",
+"answerA": "Integer",
+"answerB": "Float",
+"answerC": "String",
+"answerD": "Boolean",
+"answerCorrect": "D"
+},
+{
+"question": "An ArrayList variable can hold:",
+"answerA": "Just a single number between -128 and 128.",
+"answerB": "A video file in the format normally used for display on a computer. ",
+"answerC": "An audio file in the format normally used for ring tones.",
+"answerD": "An ArrayList of student names that can be sorted using the method Collections.sort().",
+"answerCorrect": "D"
+},
+{
+"question": "A comment in a computer program is:",
+"answerA": "Anything contained in quotes",
+"answerB": "Anything in the code that is before a procedure",
+"answerC": "The ASCII character #",
+"answerD": "Text to help document the program.",
+"answerCorrect": "D"
+},
+{
+"question": "You should use a comment:",
+"answerA": "After every single line in a program.",
+"answerB": "Before every single line in a program.",
+"answerC": "To make it easier for someone else to understand your program.",
+"answerD": "Only for the most difficult method in a program.",
+"answerCorrect": "C"
+},
+{
+"question": "Variable names should be:",
+"answerA": "Short to make the program as fast as possible. ",
+"answerB": "At least eight letters long, so that other people wont be able to guess them.",
+"answerC": "Made from letters and numbers, not just letters.",
+"answerD": "Chosen to make your program more easily understood.",
+"answerCorrect": "D"
+},
+{
+"question": "Java blocks of code are indicated by: ",
+"answerA": "Surrounding them with quotes.",
+"answerB": "Starting them with { and ending them with } and indenting the block of code. ",
+"answerC": "Starting them with ( and ending them with )",
+"answerD": "Indenting the block of code.",
+"answerCorrect": "B"
+},
+{
+"question": "A Java conditional statement: ",
+"answerA": "Has the keyword ‘if’ in it",
+"answerB": "Has the keyword ‘for’ in it ",
+"answerC": "Is a special kind of comment saying what conditions the code should be used in.",
+"answerD": "Is a special kind of procedure that may in some conditions be a method instead.",
+"answerCorrect": "A"
+},
+{
+"question": "In the following code: \n if (password == \"Voldemort\") \n{ System.out.println(\"I guessed your password correctly\"); \n }else{ \n System.out.println(\"I did not guess your password correctly\"); } \n …which of the following statements are correct?",
+"answerA": "Both the first and second indented block will always be run. ",
+"answerB": "Neither the first nor the second indented block will ever be run",
+"answerC": "There is a logic error because you cannot use .equals with a string.",
+"answerD": "The first or second indented block may be run.  Which one runs depends on the value of password.",
+"answerCorrect": "D"
+},
+{
+"question": "What is the main purpose of a loop?",
+"answerA": "To stop the computer running off the end of a program.",
+"answerB": "To go back to the beginning of a program. ",
+"answerC": "To connect one computer to another.",
+"answerD": "To do some instructions repeatedly.",
+"answerCorrect": "D"
+},
+{
+"question": "A loop that goes on forever is called?",
+"answerA": "A pixel loop. ",
+"answerB": "A broken loop. ",
+"answerC": "An infinite loop.",
+"answerD": "An ‘iffy-loop’.",
+"answerCorrect": "C"
+},
+{
+"question": "To count through several items, we typically use:",
+"answerA": "a loop the loop",
+"answerB": "random numbers ",
+"answerC": "a while loop ",
+"answerD": "a for loop",
+"answerCorrect": "D"
+},
+{
+"question": "To repeat some action several times without counting we typically use: ",
+"answerA": "a loop the loop ",
+"answerB": "random numbers ",
+"answerC": "a while loop",
+"answerD": "a for loop",
+"answerCorrect": "C"
+},
+{
+"question": "A typical method in Java:",
+"answerA": "Starts with the keyword static and datatype and finally provides some code that returns a value",
+"answerB": "Starts with the keyword abc and provides some code that returns a value",
+"answerC": "Is a named piece of code that does a number of things and then stops the program. ",
+"answerD": "Is a named piece of code that does a number of things and then restarts the NetBeans IDE.",
+"answerCorrect": "A"
+},
+{
+"question": "A void method in Java:",
+"answerA": "Consists of pseudocode which isn’t meant for the computer to run.",
+"answerB": "Consists entirely of comments specifying what the program is intended to do. ",
+"answerC": "Starts with a #",
+"answerD": "Is like a typical method, but does not return a value.",
+"answerCorrect": "D"
+},
+{
+"question": "A parameter is:",
+"answerA": "A value which is passed into a void method or a typical method for it to use ",
+"answerB": "A way of measuring distance approximately, that can make some code simpler. ",
+"answerC": "A way for a program to do several things at the same time. ",
+"answerD": "A block of code with a specified number of lines to it.",
+"answerCorrect": "A"
+},
+{
+"question": "The method max() is found in which library?",
+"answerA": "The Random library.",
+"answerB": "The Randint library.",
+"answerC": "The Monster library. ",
+"answerD": "The Math library.",
+"answerCorrect": "D"
+},
+{
+"question": "The string named greeting has the value \"Good\".  Which command sets it to have the value \"Good Morning\"?",
+"answerA": "greeting = \"Good\" + greeting ",
+"answerB": "greeting = greeting + \" Morning\" ",
+"answerC": "greeting = \"Good\" + \"Morning\"",
+"answerD": "greeting = [\"Good\", \"Morning\"]",
+"answerCorrect": "B"
+},
+{
+"question": "A recursive algorithm is one that:",
+"answerA": "Calculates the exponential of a number. ",
+"answerB": "Draws a curved line.",
+"answerC": "Uses random numbers to solve a problem.",
+"answerD": "Breaks a problem into smaller pieces, and then applies the same approach to those smaller pieces.",
+"answerCorrect": "D"
+},
+{
+"question": "An infinite loop is:",
+"answerA": "An example of recursion. ",
+"answerB": "An example of distortion.",
+"answerC": "A loop that runs forever. ",
+"answerD": "A recursive function that draws circles.",
+"answerCorrect": "C"
+},
+{
+"question": "Program testing is:",
+"answerA": "Checking with the customer that the specification is what they want. ",
+"answerB": "Fixing a bug when a user reports an error. ",
+"answerC": "When someone who has more experience has a look at the source code for a program and helps improve it. ",
+"answerD": "A formal approach to finding bugs in a program, by running the program with different inputs.",
+"answerCorrect": "D"
+},
+{
+"question": "Debugging is:",
+"answerA": "Checking a program against its requirements to see if it does what it is supposed to do. ",
+"answerB": "Enhancing a program by adding new features. ",
+"answerC": "Work done to track down the cause of a problem and fix it. ",
+"answerD": "Enhancing a program by taking out features which aren’t needed anymore.",
+"answerCorrect": "C"
+},
+{
+"question": "One of the initial requirement for a particular program is that it ask for and remember your name. Which of the following would you expect to see in the code to help meet that requirement?",
+"answerA": "A recursive function ",
+"answerB": "The Scanners statement (next() method) ",
+"answerC": "A bug ",
+"answerD": "Code to convert a string to an integer.",
+"answerCorrect": "B"
+},
+{
+"question": "A software company wants to make incremental improvements to version 1 of its program for managing recipes.   Which of the following is a good way to identify possible enhancements?",
+"answerA": "Add code for drawing a fern recursively.",
+"answerB": "Use Google to search for \"robots AND cooking\"",
+"answerC": "Look for small changes that would make the program useful to more people. ",
+"answerD": "Design a massive overhaul of the program to implement as many changes as possible.",
+"answerCorrect": "C"
+},
+{
+"question": "When describing the commercial value of a new program, the best way is:",
+"answerA": "Show as detailed a flowchart as possible to show how complex the program is. ",
+"answerB": "Describe the benefit to users and back it up with numerical data if you can. ",
+"answerC": "Explain that the program is new, and therefore it must be of value. ",
+"answerD": "Explain that it uses only well known, widely used, reliable algorithms.",
+"answerCorrect": "B"
+},
+{
+"question": "Computing is defined as: ",
+"answerA": "Any goal-oriented activity requiring, benefiting from, or creating computers ",
+"answerB": "An algorithm that uniquely represents symbols from some source alphabet, which may be in some other target alphabet ",
+"answerC": "A deliberate process that transforms one or more inputs into one or more results, with variable change ",
+"answerD": "A process of discovering and resolving defects that prevent correct operation of computer software or a system",
+"answerCorrect": "A"
+},
+{
+"question": "Which of the following is a typical activity in the creation of a program? ",
+"answerA": "Prototyping ",
+"answerB": "Project Management ",
+"answerC": "Rapid Application ",
+"answerD": "Debugging",
+"answerCorrect": "D"
+},
+{
+"question": "The fundamental structures of a software system are referred to as:",
+"answerA": "Computing ",
+"answerB": "Algorithm ",
+"answerC": "Software Architecture ",
+"answerD": "Application Software",
+"answerCorrect": "C"
+},
+{
+"question": "The capability provided to the consumer to use a provider’s applications running on a cloud infrastructure is also known as: ",
+"answerA": "Platform as a Service (PaaS) ",
+"answerB": "Software as a Service (SaaS)",
+"answerC": "Infrastructure as a Service (IaaS) ",
+"answerD": "Communication as a Service (CaaS)",
+"answerCorrect": "B"
+},
+{
+"question": "_______ defines \"a flexible, holistic product development strategy where a development team works as a unit to reach a common goal\" ",
+"answerA": "Scrum ",
+"answerB": "DevOps ",
+"answerC": "Agile ",
+"answerD": "Project Management",
+"answerCorrect": "A"
+},
+{
+"question": "RAD stands for: ",
+"answerA": "Rapid Agile Development ",
+"answerB": "Random Application Design ",
+"answerC": "Rapid Application Development ",
+"answerD": "Random Agile Design",
+"answerCorrect": "C"
+},
+{
+"question": "A splitting of software development work into distinct phases (or stages) containing activities with the intent of better planning and management describes: ",
+"answerA": "Requirements capturing ",
+"answerB": "Project management ",
+"answerC": "Software as a Service ",
+"answerD": "Application development",
+"answerCorrect": "D"
+},
+{
+"question": "The focus of OOP languages is not on _______, but on __________.",
+"answerA": "Structure/modeling data ",
+"answerB": "Modeling data/ structure",
+"answerC": "Classes/procedures ",
+"answerD": "Objects/procedures",
+"answerCorrect": "A"
+},
+{
+"question": "What is the decimal value of binary number 00100000? ",
+"answerA": "1 ",
+"answerB": "16 ",
+"answerC": "32 ",
+"answerD": "4",
+"answerCorrect": "C"
+},
+{
+"question": "Which of the following command refers to a loop? ",
+"answerA": "or ",
+"answerB": "If ",
+"answerC": "Else ",
+"answerD": "Print",
+"answerCorrect": "A"
+},
+{
+"question": "The + operator is used to:",
+"answerA": "Concatenate any number of strings and integers ",
+"answerB": "Return the number of characters in a particular string ",
+"answerC": "Search for a string (the “search key”) within a larger string, starting at the beginning of the larger string ",
+"answerD": "Removes spaces (and other invisible characters) from both ends of a string",
+"answerCorrect": "A"
+},
+{
+"question": "Which string function will return a part of the string, starting at a given position up to, but not including, another specified position? ",
+"answerA": "trim() ",
+"answerB": "length() ",
+"answerC": "Substring(startIndex, endIndex) ",
+"answerD": "Indexof(“start”)",
+"answerCorrect": "C"
+},
+{
+"question": "A collection of statements that are grouped together to perform an operation is defined as a:",
+"answerA": "Function ",
+"answerB": "Method",
+"answerC": "String ",
+"answerD": "Variable",
+"answerCorrect": "B"
+},
+{
+"question": "A Member variable has a _________ scope. ",
+"answerA": "Private ",
+"answerB": "Block",
+"answerC": "Method ",
+"answerD": "Class",
+"answerCorrect": "D"
+},
+{
+"question": "An advantage of overloading is that there: ",
+"answerA": "Fewer method names to remember ",
+"answerB": "Need to read the documentation ",
+"answerC": "Many methods’ names are used to distinguish easily ",
+"answerD": "Data types are all the same",
+"answerCorrect": "A"
+},
+{
+"question": "How can we define a variable named myTAX, with a value of 23.67%, that will not change after it is initialization? ",
+"answerA": "public static void myTAX(double) = 2367; ",
+"answerB": "public final static double myTAX = 0.2367;",
+"answerC": "public final static int myTAX = 0.2367; ",
+"answerD": "public static void myTAX(int) = 2367;",
+"answerCorrect": "B"
+},
+{
+"question": "_________ is a relationship where one class is part of another class. ",
+"answerA": "Destructor ",
+"answerB": "Composition ",
+"answerC": "Association ",
+"answerD": "Aggregation",
+"answerCorrect": "D"
+},
+{
+"question": "Which sentence BEST describes the default constructor? ",
+"answerA": "Implemented by the user and does not receive any parameters ",
+"answerB": "A constructor generated by the java compiler that is invisible in a class and does not have any parameters ",
+"answerC": "The first constructor in a class, implemented by the user ",
+"answerD": "A constructor generated by the java compiler that receives a single parameter",
+"answerCorrect": "B"
+},
+{
+"question": "Assume you have two classes, named myOb1 and myOb2.  What kind of relationship do these objects share, when myOb1 holds an instance of myOb2, called a, but acan live on after the destruction of the myOb1’s instance? ",
+"answerA": "Subclass ",
+"answerB": "Compostion ",
+"answerC": "Association ",
+"answerD": "Aggregation",
+"answerCorrect": "D"
+},
+{
+"question": "Inheritance represents: ",
+"answerA": "HAS-A relationship ",
+"answerB": "IS-A relationship ",
+"answerC": "A relationship among multiple classes ",
+"answerD": "A relationship among multiple objects",
+"answerCorrect": "B"
+},
+{
+"question": "What is polymorphism? ",
+"answerA": "A technique to define different objects of the same type ",
+"answerB": "A technique to define different methods of the same type ",
+"answerC": "The ability of an object to take on many forms ",
+"answerD": "The ability of an object to take on a single form",
+"answerCorrect": "C"
+},
+{
+"question": "We cannot override Private methods This statement about inheritance is: ",
+"answerA": "TRUE ",
+"answerB": "FALSE",
+"answerC": "NOT AN OPTION",
+"answerD": "NOT AN OPTION",
+"answerCorrect": "A"
+},
+{
+"question": "A Java interface is BEST described as a(n): ",
+"answerA": "Child of an abstract class ",
+"answerB": "Empty Java class ",
+"answerC": "Class that when compiled does not produce a .class file ",
+"answerD": "Collection of constants and method declarations",
+"answerCorrect": "D"
+},
+{
+"question": "A __________ access modifier can be used as an interface. ",
+"answerA": "Public ",
+"answerB": "Private ",
+"answerC": "Static ",
+"answerD": "Protected",
+"answerCorrect": "A"
+},
+{
+"question": "An interface is used instead of an abstract class when we want to: ",
+"answerA": "Declare only abstract methods ",
+"answerB": "Use methods with public modifiers ",
+"answerC": "Define a type that permits multiple implementations",
+"answerD": " AN OPTION",
+"answerCorrect": "C"
+},
+{
+"question": "Which of the following is NOT a generic types of collection? ",
+"answerA": "Ordered lists ",
+"answerB": "Dictionaries ",
+"answerC": "Sets ",
+"answerD": "Destructor",
+"answerCorrect": "D"
+},
+{
+"question": "Suppose you want to store a set of data, but the size of the collection could change.  You should use a(n): ",
+"answerA": "Array",
+"answerB": "Array List",
+"answerC": "Variable ",
+"answerD": "Class",
+"answerCorrect": "B"
+},
+{
+"question": "In your program, there is a requirement of frequent addition and deletion in application, so your best choice to use is a(n): ",
+"answerA": "LinkedList ",
+"answerB": "ArrayList ",
+"answerC": "Array ",
+"answerD": "Variable",
+"answerCorrect": "A"
+},
+{
+"question": "_______________ is the process of testing individual components in isolation ",
+"answerA": "System testing ",
+"answerB": "Integration testing ",
+"answerC": "Unit testing ",
+"answerD": "Acceptance testing",
+"answerCorrect": "C"
+},
+{
+"question": "Which of the following sentences BEST defines GitHub? ",
+"answerA": "A centralized version control system that requires developers to work on a project with a single authoritative data store ",
+"answerB": "A hosted and distributed continuous integration service used to build and test software projects ",
+"answerC": "A text editor designed specifically for editing source code and it may be built into an integrated development environment (IDE) ",
+"answerD": "A distributed version control system that allows developers to work on a project without requiring a single authoritative data store",
+"answerCorrect": "D"
+},
+{
+"question": "What is the command you should use to get the source code from a Git repository for the first time? ",
+"answerA": "git checkout “repo url” ",
+"answerB": "git fetch “repo url” ",
+"answerC": "git clone “repo url” ",
+"answerD": "git pull “repo url”",
+"answerCorrect": "C"
+},
+{
+"question": "What does SQL Stand for? ",
+"answerA": "Standard Query Language ",
+"answerB": "Structured Query Language ",
+"answerC": "Standard Question Language ",
+"answerD": "Structured Question Language",
+"answerCorrect": "B"
+},
+{
+"question": "A valid number for DECIMAL(10,3) is : ",
+"answerA": "1234567.1234 ",
+"answerB": "-12345678 ",
+"answerC": "-12345678.12 ",
+"answerD": "123456789.123",
+"answerCorrect": "A"
+},
+{
+"question": "A record, is also called a ______",
+"answerA": "Column ",
+"answerB": "Row ",
+"answerC": "Field ",
+"answerD": "Table",
+"answerCorrect": "B"
+},
+{
+"question": "Organizing a database in order to reduce data redundancy and improve data integrity is called: ",
+"answerA": "Database Design ",
+"answerB": "Database Integrity ",
+"answerC": "Normalization ",
+"answerD": "Relationships",
+"answerCorrect": "C"
+},
+{
+"question": "A(n) ____________ does not allow duplicates, null values but can consist of multiple columns. ",
+"answerA": "Foreign Key ",
+"answerB": "Relationship ",
+"answerC": "Index ",
+"answerD": "Primary Key",
+"answerCorrect": "D"
+},
+{
+"question": "Assume variable a holds 20 and variable b holds 30. Which of the following condition is TRUE? ",
+"answerA": "(a !< b) ",
+"answerB": "(a = b) ",
+"answerC": "(a >= b) ",
+"answerD": "(a !> b)",
+"answerCorrect": "D"
+},
+{
+"question": "What is a Foreign Key? ",
+"answerA": "Foreign keys are the columns that uniquely  identifies  a row ",
+"answerB": "Foreign keys are the columns of a table that points to the primary key of another table. ",
+"answerC": "Foreign keys are the datatypes that are forbidden for a column",
+"answerD": " AN OPTION",
+"answerCorrect": "B"
+},
+{
+"question": "When we want to return all rows from the left table, and the matched rows from the right table we must use a : ",
+"answerA": "INNER JOIN ",
+"answerB": "LEFT JOIN ",
+"answerC": "RIGHT JOIN",
+"answerD": " AN OPTION",
+"answerCorrect": "B"
+},
+{
+"question": "How would you select all values from table “Students” using SQL? ",
+"answerA": "SELECT * FROM STUDENTS; ",
+"answerB": "SELECT STUDENTS FROM *; ",
+"answerC": "SELECT ALL STUDENTS FROM STUDENTS; ",
+"answerD": "SELECT ALL * FROM *;",
+"answerCorrect": "A"
+},
+{
+"question": "Which of the following applies for the First Normal Form (1st NF)? ",
+"answerA": "Each attribute must contain only a single value from its pre-defined domain ",
+"answerB": "Each attribute must contain multiple values from its pre-defined domain ",
+"answerC": "Each attribute must contain only null values from its pre-defined domain ",
+"answerD": "Each attribute can contain either a single value or multiple values from its pre-defined domain",
+"answerCorrect": "A"
+},
+{
+"question": "Which SQL statements can access and manipulate data in existing schema objects? ",
+"answerA": "DDL Statements ",
+"answerB": "DML Statements ",
+"answerC": "DCL Statements ",
+"answerD": "All types of Statements",
+"answerCorrect": "B"
+},
+{
+"question": "Java Database Connectivity (JDBC) is a(n) _____________ for the programming language Java, which defines how a client may access  a(n)___________. ",
+"answerA": "API / database ",
+"answerB": "database / API ",
+"answerC": "database / dataset ",
+"answerD": "dataset / database",
+"answerCorrect": "A"
+},
+{
+"question": "What does HTML stand for? ",
+"answerA": "High Text Marking Language ",
+"answerB": "Hyper Text Mark Up Language ",
+"answerC": "High Text Mark Up Layout ",
+"answerD": "Hyper Text Mark Up Layout",
+"answerCorrect": "B"
+},
+{
+"question": "What does www.cepis.org denote in the address http://www.cepis.org/media/pressr1.pdf ?",
+"answerA": "Address or domain name of the host computer ",
+"answerB": "Geo-location of the organization ",
+"answerC": "The type of the organization using this URL ",
+"answerD": "The protocol for communication with this site",
+"answerCorrect": "A"
+},
+{
+"question": "To roughly sketch the different components of a website, such as the main pages and the layout of the pages you should use a: ",
+"answerA": "Any web development text editor ",
+"answerB": "Navigation Bar ",
+"answerC": "Storyboard ",
+"answerD": "A web site template",
+"answerCorrect": "C"
+},
+{
+"question": "Which of the following tags defines an unordered list in HTML? ",
+"answerA": "<ul>",
+"answerB": "<ol> ",
+"answerC": "<li> ",
+"answerD": "<h1>",
+"answerCorrect": "A"
+},
+{
+"question": "<h2> is a HTML tag that defines an: ",
+"answerA": "Line break ",
+"answerB": "Horizontal line ",
+"answerC": "Page title ",
+"answerD": "Heading level 2",
+"answerCorrect": "D"
+},
+{
+"question": " ____________ is the space between the content of an element and its border. ",
+"answerA": "Margin ",
+"answerB": "Box ",
+"answerC": "Width ",
+"answerD": "Padding",
+"answerCorrect": "D"
+},
+{
+"question": "What would happen if we used \n li { text-align: left; } \n li:nth-child(even) { text-align: right; } \nin a CSS? ",
+"answerA": "Every lists’ items of our website would have alternate text alignment (left, right, left etc.) ",
+"answerB": "Every paragraph of our website would have alternate text alignment (left, right, left etc.) ",
+"answerC": "Every lists’ items of our website would have alternate text alignment (right, left, right etc.) ",
+"answerD": "Every paragraph of our website would have alternate text alignment (right, left, right etc.)",
+"answerCorrect": "A"
+},
+{
+"question": "A(n) ___________ is a systematic way of organizing and accessing data, and a(n) __________ is a step-by-step procedure for performing some task in a finite amount of time.",
+"answerA": "algorithm/data structure",
+"answerB": "data structure/algorithm",
+"answerC": "sorting method/searching method",
+"answerD": "searching method/sorting method",
+"answerCorrect": "B"
+},
+{
+"question": "Which of the following is a phase of the software testing cycle?",
+"answerA": "Software Improvement",
+"answerB": "Time Management",
+"answerC": "Project Planning",
+"answerD": "Defect Retesting",
+"answerCorrect": "D"
+},
+{
+"question": "_______________ testing looks at the _______.",
+"answerA": "White-box / source code",
+"answerB": "Black-box / source code",
+"answerC": "Alpha / output of the software",
+"answerD": "Beta / output of the software",
+"answerCorrect": "A"
+},
+{
+"question": "One common source of expensive _____________ is requirement gaps.",
+"answerA": "Defects",
+"answerB": "Errors",
+"answerC": "Testing",
+"answerD": "Software",
+"answerCorrect": "A"
+},
+{
+"question": "_______________ is the process of testing individual components in isolation",
+"answerA": "System testing",
+"answerB": "Integration testing",
+"answerC": "Unit testing",
+"answerD": "Acceptance testing",
+"answerCorrect": "C"
+},
+{
+"question": "UX stands for:",
+"answerA": "User Expertise",
+"answerB": "User Experience",
+"answerC": "Utility Experience",
+"answerD": "Urban Expertise",
+"answerCorrect": "B"
+},
+{
+"question": "Which one is NOT a core activities in the user interface design process?",
+"answerA": "User analysis",
+"answerB": "System prototyping",
+"answerC": "Interface evaluation",
+"answerD": "Model-view-controller",
+"answerCorrect": "D"
+},
+{
+"question": "__________ refers to understanding what users will do with the system.",
+"answerA": "System prototyping",
+"answerB": "Interface evaluation",
+"answerC": "User Experience",
+"answerD": "User analysis",
+"answerCorrect": "D"
+},
+{
+"question": "What is measured for unit size?",
+"answerA": "Lines of code + lines of comments + lines with whitespace",
+"answerB": "Lines of comments",
+"answerC": "Lines of code + lines of comments",
+"answerD": "Lines of code",
+"answerCorrect": "D"
+},
+{
+"question": "Which guideline is measured in terms of dependencies between units?",
+"answerA": "Write Code Once",
+"answerB": "Keep Architecture Components Balanced",
+"answerC": "Separate Concerns in Modules",
+"answerD": "Keep Unit Interfaces Small",
+"answerCorrect": "C"
+},
+{
+"question": "Angular is a JavaScript open-source framework for building _______________.",
+"answerA": "back end services",
+"answerB": "front end web applications",
+"answerC": "interface elements",
+"answerD": "web components",
+"answerCorrect": "B"
+},
+{
+"question": "Which Angular directive is responsible for redirecting the users to another route?",
+"answerA": "<a routerOutlet=\"/contact\">Contact</a>",
+"answerB": "<a link=\"/contact\">Contact</a>",
+"answerC": "<a href=\"/contact\">Contact</a>",
+"answerD": "<a routerLink=\"/contact\">Contact</a>",
+"answerCorrect": "D"
+},
+{
+"question": "Which Decorator is used to initialize an Angular Component?",
+"answerA": "@Component({ Metadata })",
+"answerB": "@NgComponent({ Metadata })",
+"answerC": "@NgModel({ Metadata })",
+"answerD": "@ngOnInit({ Metadata })",
+"answerCorrect": "A"
+},
+{
+"question": "A(n) _______________ is an event that occurs when a program runs interrupting its normal flow.",
+"answerA": "comparison",
+"answerB": "exception",
+"answerC": "Error",
+"answerD": "Output",
+"answerCorrect": "B"
+},
+{
+"question": "Which class is at the top of the inheritance hierarchy?",
+"answerA": "Application Exception",
+"answerB": "Exception",
+"answerC": "Object",
+"answerD": "System Exception",
+"answerCorrect": "C"
+},
+{
+"question": "In a design context, an information provider class needs to update a set of information consumer classes while associated with them in a loosely-coupled manner. Which design pattern is suitably applicable in this context?",
+"answerA": "Factory",
+"answerB": "Observer",
+"answerC": "Strategy",
+"answerD": "Abstract Factory",
+"answerCorrect": "B"
+},
+{
+"question": "What is the difference between Factory and Abstract Factory design patterns?",
+"answerA": "The Factory pattern uses the Singleton pattern while Abstract Factory does not",
+"answerB": "The Abstract Factory pattern produces objects of a product class while Factory Pattern provides interface to create a family of related objects",
+"answerC": "The Factory pattern produces objects of a product class while Abstract Factory Pattern provides interface to create a family of related objects",
+"answerD": "Nothing, they are the same.",
+"answerCorrect": "C"
+},
+{
+"question": "A. Application of design patterns always result in performance gain",
+"answerA": "TRUE",
+"answerB": "FALSE",
+"answerC": " AN OPTION",
+"answerD": " AN OPTION",
+"answerCorrect": "B"
+},
+{
+"question": "Application of design patterns improves design quality",
+"answerA": "TRUE",
+"answerB": "FALSE",
+"answerC": " AN OPTION",
+"answerD": " AN OPTION",
+"answerCorrect": "A"
+},
+{
+"question": "Design patterns promote best practices to write and maintain code ",
+"answerA": "TRUE",
+"answerB": "FALSE",
+"answerC": " AN OPTION",
+"answerD": " AN OPTION",
+"answerCorrect": "A"
+},
+{
+"question": "Which of the following design patterns DOES NOT belong to Creational category of design patterns?",
+"answerA": "Abstract Factory",
+"answerB": "Builder",
+"answerC": "Factory Method",
+"answerD": "Observer",
+"answerCorrect": "D"
+}
+]
+}
