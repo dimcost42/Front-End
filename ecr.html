@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ecr Client</title>
+</head>
+<body>
+
+  <label for="sale">Sale</label>
+  <input type="radio" id="sale" name="saleType" value="sale" checked onclick="hideRRN()"/><br/>
+
+  <label for="fullvoid">FullVoid</label>
+  <input type="radio" id="fullvoid" name="saleType" value="fullvoid" onclick="showRRN()"/><br/>
+
+  <label for="refund">Refund</label>
+  <input type="radio" id="refund" name="saleType" value="refund" onclick="showRRN()"/><br/>
+
+  <label for="freerefund">Free Refund</label>
+  <input type="radio" id="freerefund" name="saleType" value="refund" onclick="hideRRN()"/><br/>
+
+  <label for="merchantinfo">Merchant Info</label>
+  <input type="radio" id="merchantinfo" name="saleType" value="merchantinfo" onclick="hideRRN()"/><br/>
+
+  <label for="reconciliation">Reconciliation</label>
+  <input type="radio" id="reconciliation" name="saleType" value="reconciliation" onclick="hideRRN()"/><br/>
+
+  
+    <br/><br/>
+    <label for="url">URL</label><br/>
+    <input type="text" id="url" title="url" value="http://localhost:8080"/><br/><br/>
+    <label for="ip">Ip</label><br/>
+    <input type="text" id="ip" title="ip" value="192.168.1.1"/><br/><br/>
+    <label for="port">Port</label><br/>
+    <input type="text" id="port" title="ip" value="4000"/><br/><br/>
+    <label for="amount">Amount</label><br/>
+    <input type="text" id="amount" title="amount" value="01.00"/><br/><br/>
+
+    <label for="rrn" id="rrnlbl">RRN</label><br/>
+    <input type="text" id="rrn" title="rrn" value="001001"/><br/><br/>
+
+    <br/>
+    <button type="button" onclick="loadDoc()">Request data</button>
+<b>
+<pre id="demo"></pre>
+</b>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  hideRRN();
+});
+
+function hideRRN(){
+  document.getElementById("rrn").hidden = true
+  document.getElementById("rrnlbl").hidden = true
+}
+function showRRN(){
+  document.getElementById("rrn").hidden = false
+  document.getElementById("rrnlbl").hidden = false
+}
+
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+
+  document.getElementById("demo").innerHTML = ""
+  var radioButtonCheckedValue = document.querySelector('input[name="saleType"]:checked').value;
+
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = JSON.stringify(JSON.parse(this.responseText),null,2);
+    }
+  };
+  xhttp.open("POST", document.getElementById("url").value+"/"+radioButtonCheckedValue, true);
+  xhttp.setRequestHeader(
+      "Content-type", "application/json");
+
+
+  var jsonObject = JSON.stringify({
+   "serviceData":{
+      "host":""+document.getElementById("ip").value+"",
+      "port":""+document.getElementById("port").value+"",
+      "ecrid":"77400039"
+	 },
+   "transactionData":{
+      "firstByteOriginalTrans":"0",
+      "uniqueTxnId":"                           54826", 
+      "amount":""+document.getElementById("amount").value+"",
+      "referenceNumber":""+document.getElementById("rrn").value+""
+   }
+})
+
+if(radioButtonCheckedValue==="reconciliation"){
+  jsonObject = JSON.stringify({
+   "serviceData":{
+      "host":""+document.getElementById("ip").value+"",
+      "port":""+document.getElementById("port").value+"",
+      "ecrid":"77400039"
+	 },
+   "transactionData":{
+      "firstByteOriginalTrans":"0",
+      "uniqueTxnId":"                           54826", 
+      "reconciliationMode":"0",
+      "batchNumber":"000000"
+   }
+})
+}
+
+if(radioButtonCheckedValue==="refund"){
+  jsonObject = JSON.stringify({
+   "serviceData":{
+      "host":""+document.getElementById("ip").value+"",
+      "port":""+document.getElementById("port").value+"",
+      "ecrid":"77400039"
+	 },
+   "transactionData":{
+      "firstByteOriginalTrans":"0",
+      "uniqueTxnId":"                           54826", 
+      "amount":""+document.getElementById("amount").value+"",
+      "tlvData":"TL0010OR06"+document.getElementById("rrn").value+""
+   }
+})
+}
+
+if(document.querySelector('input[name="saleType"]:checked').id ==="freerefund"){
+  jsonObject = JSON.stringify({
+   "serviceData":{
+      "host":""+document.getElementById("ip").value+"",
+      "port":""+document.getElementById("port").value+"",
+      "ecrid":"77400039"
+	 },
+   "transactionData":{
+      "firstByteOriginalTrans":"0",
+      "uniqueTxnId":"                           54826", 
+      "amount":""+document.getElementById("amount").value+""
+   }
+})
+}
+
+console.log(jsonObject)
+ xhttp.send(jsonObject);
+ 
+}
+
+
+
+function create_UUID(){
+    var dt = new Date().getTime();
+    var uuid = 'xxxxxxxxxxxx4xxxxxxyxxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = (dt + Math.random()*16)%16 | 0;
+        dt = Math.floor(dt/16);
+        return (c=='x' ? r :(r&0x3|0x8)).toString(16);
+    });
+    return uuid;
+}
+</script>
+    
+</body>
+
+</html>
