@@ -5,31 +5,39 @@
 </head>
 <body>
 
+  <center>
+    <h1>Ecr2Eft Web Client</h1>
+  <input type="radio" id="sale" name="saleType" value="sale" checked onclick="hideRRN()"/>
   <label for="sale">Sale</label>
-  <input type="radio" id="sale" name="saleType" value="sale" checked onclick="hideRRN()"/><br/>
+  <br/>
 
+  <input type="radio" id="fullvoid" name="saleType" value="fullvoid" onclick="showRRN()"/>
   <label for="fullvoid">FullVoid</label>
-  <input type="radio" id="fullvoid" name="saleType" value="fullvoid" onclick="showRRN()"/><br/>
+  <br/>
 
+  <input type="radio" id="refund" name="saleType" value="refund" onclick="showRRN()"/>
   <label for="refund">Refund</label>
-  <input type="radio" id="refund" name="saleType" value="refund" onclick="showRRN()"/><br/>
+  <br/>
 
+  <input type="radio" id="freerefund" name="saleType" value="refund" onclick="hideRRN()"/>
   <label for="freerefund">Free Refund</label>
-  <input type="radio" id="freerefund" name="saleType" value="refund" onclick="hideRRN()"/><br/>
+  <br/>
 
+  <input type="radio" id="merchantinfo" name="saleType" value="merchantinfo" onclick="hideRRN()"/>
   <label for="merchantinfo">Merchant Info</label>
-  <input type="radio" id="merchantinfo" name="saleType" value="merchantinfo" onclick="hideRRN()"/><br/>
+  <br/>
 
+  <input type="radio" id="reconciliation" name="saleType" value="reconciliation" onclick="hideRRN()"/>
   <label for="reconciliation">Reconciliation</label>
-  <input type="radio" id="reconciliation" name="saleType" value="reconciliation" onclick="hideRRN()"/><br/>
+  <br/>
 
   
     <br/><br/>
-    <label for="url">URL</label><br/>
+    <label for="url">Service Url</label><br/>
     <input type="text" id="url" title="url" value="http://localhost:8080"/><br/><br/>
-    <label for="ip">Ip</label><br/>
+    <label for="ip">Pos IP</label><br/>
     <input type="text" id="ip" title="ip" value="192.168.1.1"/><br/><br/>
-    <label for="port">Port</label><br/>
+    <label for="port">Pos Port</label><br/>
     <input type="text" id="port" title="ip" value="4000"/><br/><br/>
     <label for="amount">Amount</label><br/>
     <input type="text" id="amount" title="amount" value="01.00"/><br/><br/>
@@ -42,7 +50,7 @@
 <b>
 <pre id="demo"></pre>
 </b>
-
+</center>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   hideRRN();
