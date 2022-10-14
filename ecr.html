@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Ecr Client</title>
+    <title>Ecr Client by Novidea</title>
+    <style>
+      body {
+        background-image: url('https://dimcost42.github.io/Front-End/saasBackground.jpg');
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+
+      #mytDiv {
+        background-color: aliceblue;
+        opacity: 85%;
+        width: 30%;
+        padding: 2%;
+      }
+
+      /* #logo {
+    position: fixed;
+    bottom: 0;
+} */
+      </style>
 </head>
 <body>
 
   <center>
+    <div id="mytDiv">
     <h1>Ecr2Eft Web Client</h1>
   <input type="radio" id="sale" name="saleType" value="sale" checked onclick="hideRRN()"/>
   <label for="sale">Sale</label>
@@ -50,6 +71,8 @@
 <b>
 <pre id="demo"></pre>
 </b>
+<img id="logo" src="https://www.novidea.gr/img/novidea-logo.svg" width="200dp"/>
+</div>
 </center>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
