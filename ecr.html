@@ -151,6 +151,8 @@
         <input type="text" id="ip" title="ip" value="192.168.1.1" /><br /><br />
         <label for="port">Pos Port</label><br />
         <input type="text" id="port" title="ip" value="4000" /><br /><br />
+        <label for="tid">Terminal ID</label><br />
+        <input type="text" id="tid" title="tid" value="77000000" /><br /><br />
         <label for="amount" id="amountlbl">Amount</label><br />
         <input
           type="text"
@@ -239,7 +241,7 @@
             serviceData: {
               host: "" + document.getElementById("ip").value + "",
               port: "" + document.getElementById("port").value + "",
-              ecrid: "77400039",
+              ecrid: "" + document.getElementById("tid").value + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
@@ -262,7 +264,7 @@
             serviceData: {
               host: "" + document.getElementById("ip").value + "",
               port: "" + document.getElementById("port").value + "",
-              ecrid: "77400039",
+              ecrid: "" + document.getElementById("tid").value + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
@@ -272,12 +274,24 @@
           });
         }
 
+        
+        if (radioButtonCheckedValue === "merchantinfo") {
+          var jsonObject = JSON.stringify({
+            serviceData: {
+              host: "" + document.getElementById("ip").value + "",
+              port: "" + document.getElementById("port").value + "",
+              ecrid: "" + document.getElementById("tid").value + ""
+            },
+            transactionData: {}
+          });
+        }
+
         if (radioButtonCheckedValue === "fullvoid") {
           var jsonObject = JSON.stringify({
             serviceData: {
               host: "" + document.getElementById("ip").value + "",
               port: "" + document.getElementById("port").value + "",
-              ecrid: "77400039",
+              ecrid: "" + document.getElementById("tid").value + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
@@ -293,7 +307,7 @@
             serviceData: {
               host: "" + document.getElementById("ip").value + "",
               port: "" + document.getElementById("port").value + "",
-              ecrid: "77400039",
+              ecrid: "" + document.getElementById("tid").value + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
@@ -309,7 +323,7 @@
             serviceData: {
               host: "" + document.getElementById("ip").value + "",
               port: "" + document.getElementById("port").value + "",
-              ecrid: "77400039",
+              ecrid: "" + document.getElementById("tid").value + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
@@ -328,7 +342,7 @@
             serviceData: {
               host: "" + document.getElementById("ip").value + "",
               port: "" + document.getElementById("port").value + "",
-              ecrid: "77400039",
+              ecrid: "" + document.getElementById("tid").value + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
