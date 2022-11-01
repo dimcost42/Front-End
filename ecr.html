@@ -271,11 +271,21 @@
 
         xhttp.onreadystatechange = function () {
           if (this.readyState == 4 && this.status == 200) {
+            var jsonResponse = JSON.parse(this.responseText);
             document.getElementById("demo").innerHTML = "RESPONSE:<br/><br/>"+JSON.stringify(
-              JSON.parse(this.responseText),
+              jsonResponse,
               null,
               2
             );
+            if(jsonResponse.transactionData.referenceNumber != null){
+            document.getElementById("rrn").value = jsonResponse.transactionData.referenceNumber;
+            }
+            if(jsonResponse.transactionData.authorizationCode != null){
+            document.getElementById("authorizationCode").value = jsonResponse.transactionData.authorizationCode;
+            }
+            if(jsonResponse.transactionData.eftTerminalId != null){
+            document.getElementById("tid").value = jsonResponse.transactionData.eftTerminalId;
+            }
           }
         };
         xhttp.open(
