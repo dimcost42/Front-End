@@ -96,7 +96,7 @@
           name="saleType"
           value="sale"
           checked
-          onclick="manipulateInputs(true, false, true)"
+          onclick="manipulateInputs(true, false, true, true)"
         />
         <label for="sale">Sale</label>
         <br />
@@ -106,7 +106,7 @@
           id="saleinstallments"
           name="saleType"
           value="sale"
-          onclick="manipulateInputs(true, false, false)"
+          onclick="manipulateInputs(true, false, false, true)"
         />
         <label for="saleinstallments">Sale with installements</label>
         <br />
@@ -116,7 +116,7 @@
           id="fullvoid"
           name="saleType"
           value="fullvoid"
-          onclick="manipulateInputs(false, false, true)"
+          onclick="manipulateInputs(false, false, true, true)"
         />
         <label for="fullvoid">FullVoid</label>
         <br />
@@ -126,7 +126,7 @@
           id="refund"
           name="saleType"
           value="refund"
-          onclick="manipulateInputs(false, false, true)"
+          onclick="manipulateInputs(false, false, true, true)"
         />
         <label for="refund">Refund</label>
         <br />
@@ -136,7 +136,7 @@
           id="freerefund"
           name="saleType"
           value="refund"
-          onclick="manipulateInputs(true, false, true)"
+          onclick="manipulateInputs(true, false, true, true)"
         />
         <label for="freerefund">Free Refund</label>
         <br />
@@ -146,9 +146,30 @@
           id="merchantinfo"
           name="saleType"
           value="merchantinfo"
-          onclick="manipulateInputs(true, true, true)"
+          onclick="manipulateInputs(true, true, true, true)"
         />
         <label for="merchantinfo">Merchant Info</label>
+        <br />
+
+
+        <input
+        type="radio"
+        id="normalpreauth"
+        name="saleType"
+        value="normalpreauth"
+        onclick="manipulateInputs(true, false, true, true)"
+      />
+      <label for="normalpreauth">Pre Auth</label>
+      <br />
+
+      <input
+          type="radio"
+          id="preauthcompletion"
+          name="saleType"
+          value="preauthcompletion"
+          onclick="manipulateInputs(false, false, true, false)"
+        />
+        <label for="preauthcompletion">Pre Auth Completion</label>
         <br />
 
         <input
@@ -156,10 +177,11 @@
           id="reconciliation"
           name="saleType"
           value="reconciliation"
-          onclick="manipulateInputs(true, true, true)"
+          onclick="manipulateInputs(true, true, true, true)"
         />
         <label for="reconciliation">Reconciliation</label>
         <br />
+      
 
         <br /><br />
         <label for="url">Service Url</label><br />
@@ -201,6 +223,9 @@
           <option value="011">11</option>
           <option value="012">12</option>
         </select>
+        <br/><br/>
+        <label for="authorizationCode" id="authorizationCodelbl">Authorization Code</label><br />
+        <input type="text" id="authorizationCode" title="authorizationCode" value="001001" /><br /><br />
         <br /><br />
 
         <br />
@@ -221,16 +246,18 @@
     </center>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        manipulateInputs(true, false, true);
+        manipulateInputs(true, false, true, true);
       });
 
-      function manipulateInputs(hideRRNenabled, hideAmountEnabled, hideInstallementsEnabled) {
+      function manipulateInputs(hideRRNenabled, hideAmountEnabled, hideInstallementsEnabled, authorizationCodeEnabled) {
         document.getElementById("rrn").hidden = hideRRNenabled;
         document.getElementById("rrnlbl").hidden = hideRRNenabled;
         document.getElementById("amount").hidden = hideAmountEnabled;
         document.getElementById("amountlbl").hidden = hideAmountEnabled;
         document.getElementById("installements").hidden = hideInstallementsEnabled;
         document.getElementById("installementslbl").hidden = hideInstallementsEnabled;
+        document.getElementById("authorizationCodelbl").hidden = authorizationCodeEnabled;
+        document.getElementById("authorizationCode").hidden = authorizationCodeEnabled;
       }
 
       function loadDoc() {
@@ -296,6 +323,22 @@
           });
         }
 
+        if (
+          radioButtonCheckedValue === "normalpreauth" &&
+          raddioButtonCheckedID !== "saleinstallments"
+        ) {
+          var jsonObject = JSON.stringify({
+            serviceData: {
+              host: "" + document.getElementById("ip").value + "",
+              port: "" + document.getElementById("port").value + "",
+              ecrid: "" + document.getElementById("tid").value + ""
+            },
+            transactionData: {
+              uniqueTxnId: "                   " + Date.now(),
+              amount: "" + document.getElementById("amount").value + "",
+            },
+          });
+        }
         
         if (radioButtonCheckedValue === "merchantinfo") {
           var jsonObject = JSON.stringify({
@@ -320,6 +363,22 @@
               uniqueTxnId: "                   " + Date.now(),
               amount: "" + document.getElementById("amount").value + "",
               referenceNumber: "" + document.getElementById("rrn").value + "",
+            },
+          });
+        }
+
+        if (radioButtonCheckedValue === "preauthcompletion") {
+          var jsonObject = JSON.stringify({
+            serviceData: {
+              host: "" + document.getElementById("ip").value + "",
+              port: "" + document.getElementById("port").value + "",
+              ecrid: "" + document.getElementById("tid").value + ""
+            },
+            transactionData: {
+              uniqueTxnId: "                   " + Date.now(),
+              amount: "" + document.getElementById("amount").value + "",
+              referenceNumber: "" + document.getElementById("rrn").value + "",
+              authorizationCode: "" + document.getElementById("authorizationCode").value + ""
             },
           });
         }
