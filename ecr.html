@@ -133,6 +133,16 @@
 
         <input
           type="radio"
+          id="loyaltyvoid"
+          name="saleType"
+          value="loyaltyvoid"
+          onclick="manipulateInputs(false, false, true, true)"
+        />
+        <label for="loyaltyvoid">Loyalty Void</label>
+        <br />
+
+        <input
+          type="radio"
           id="freerefund"
           name="saleType"
           value="refund"
@@ -421,6 +431,23 @@
               uniqueTxnId: "                   " + Date.now(),
               amount: "" + document.getElementById("amount").value + "",
               tlvData: "TL0010OR06" + document.getElementById("rrn").value + "",
+            },
+          });
+        }
+
+        
+        if (radioButtonCheckedValue === "loyaltyvoid") {
+          jsonObject = JSON.stringify({
+            serviceData: {
+              host: "" + document.getElementById("ip").value + "",
+              port: "" + document.getElementById("port").value + "",
+              ecrid: "" + document.getElementById("tid").value + ""
+            },
+            transactionData: {
+              firstByteOriginalTrans: "0",
+              uniqueTxnId: "                   " + Date.now(),
+              amount: "" + document.getElementById("amount").value + "",
+              referenceNumber: "" + document.getElementById("rrn").value + ""
             },
           });
         }
