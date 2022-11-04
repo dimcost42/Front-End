@@ -1,0 +1,1043 @@
+{
+  "merchant": {
+    "merchantCity": "MAROYSI",
+    "merchantCategoryCode": "5722",
+    "merchantApplicationType": "0",
+    "merchantPostalCode": "15124",
+    "merchantName": "KOTSOVOLOS RODOS",
+    "merchantAddress": "AGIOY KONSTANTINOY 50 ",
+    "merchantTelephone": "2102899999",
+    "cardlinkMerchantType": "",
+    "merchantID": "0101118297",
+    "terminalID": "77618446",
+    "customerID": "00000000000001",
+    "acqIndetifier": "",
+    "acqName": ""
+  },
+  "multiAcq": {
+    "acquirers": [
+      {
+        "acqIdentifier": "014",
+        "acqName": "Alpha Bank",
+        "allowRefund": true,
+        "allowKeyEntry": true
+      },
+      {
+        "acqIdentifier": "011",
+        "acqName": "Εθνική Τράπεζα",
+        "allowRefund": true,
+        "allowKeyEntry": true
+      }
+    ]
+  },
+  "multiMid": {
+    "services": []
+  },
+  "allowTransactions": {
+    "isAllowSalesPayment": true,
+    "isAllowVoidPayment": true,
+    "isAllowRefundPayment": true
+  },
+  "applicationSettings": {
+    "sdkLink": 2,
+    "useMastercardNewBrand": true,
+    "supportKeyEntry": false,
+    "supportInstallments": true,
+    "supportTIP": false,
+    "useBenakiTheme": false,
+    "useVodafoneTheme": false,
+    "useSklavenitisTheme": false,
+    "autoReactivationTimer": "180",
+    "useAutoSettlement": false,
+    "useAutoCloseBatch": true,
+    "useAutoCloseBatchTimer": "23:03",
+    "useAutoParams": true,
+    "useAutoParamsTimer": "03:03",
+    "alphaBankDCCSupport": false,
+    "alphaBankDCCProfileId": "19011",
+    "alphaBankDCCPartnerId": "9011",
+    "alphaBankDCCMerchantNumber": "123419011",
+    "euroBankDCCSupport": false,
+    "nbgAppSelectionEnabled": true,
+    "nbgAppSelectionAcquirerBankId": "011",
+    "cardlinkOneConfiguration": {
+      "accounts": []
+    },
+    "ishceSelectionEnabled": false,
+    "ishceSelectionAcquirerBankId": "011",
+    "refundValidationEnabled": false,
+    "localSaleEnabled": false,
+    "isManualAcquirerSelection": false,
+    "preAuthEnabled": false,
+    "unattendedMode": false,
+    "mdbManagerEnabled": false,
+    "fileLoggerEnabled": true,
+    "fileLoggerMBCapacity": 200,
+    "freeRefundEnabled": true,
+    "freeCompletionEnabled": false,
+    "supportPleaseCallMeEnabled": true,
+    "supportConfiguration": {
+      "id": "2011",
+      "name": "Premium",
+      "details": {
+        "url": "https://cardlink.gr/support/",
+        "telephone": "2106303030",
+        "email": "support@cardlink.gr",
+        "callMe": "support@cardlink.gr"
+      }
+    },
+    "supportOrderThermalRollEnabled": true,
+    "receiptSettings": {
+      "showEmvDataInReceipt": false,
+      "acquirerBankNameAsBIDSetting": false,
+      "barcodeSetting": "00",
+      "customLogo": "",
+      "dualLogoPrint": false,
+      "cardlinkLogoOnTop": false,
+      "asfalistikosgoneasPromoMessage": "ΕΞΟΦΛΗΣΤΕ ΤΑ ΑΣΦΑΛΙΣΤΡΑ ΣΑΣ ΜΕ ΠΙΣΤΩΤΙΚΗ ΚΑΡΤΑ ΚΑΙ ΚΕΡΔΙΣΤΕ ΕΚΠΤΩΣΗ ΕΩΣ ΚΑΙ 10% ΕΝΗΜΕΡΩΘΕΙΤΕ ΣΤΟ 210 8119670"
+    }
+  },
+  "loyaltySettings": {
+    "alphaBankBonusEnabled": true,
+    "alphaBankBonusVTid": "77618446",
+    "alphaBankBonusVMid": "0101118297",
+    "useAlphaBankBonusBRAmount": true,
+    "useAlphaBankBonusWithoutOffers": false,
+    "eurobankEuroepistrofiEnabled": false,
+    "eurobankEuroepistrofiVTid": "77903423",
+    "eurobankEuroepistrofiVMid": "0023067820",
+    "eurobankEuroepistrofiUploadFullRedemption": false,
+    "nbgGo4MoreEnabled": true,
+    "nbgGo4MoreVTid": "30002634",
+    "nbgGo4MoreVMid": "0123455",
+    "pbgYellowEnabled": false,
+    "pbgYellowVTid": "",
+    "pbgYellowVMid": "",
+    "pbgYellowPointsToRedeem": "2000",
+    "sklavenitisPrepaidEnabled": false,
+    "asfalistikosgoneasEnabled": false,
+    "asfalistikosgoneasForceOnline": false
+  },
+  "ecrSettings": {
+    "ecrSystem": false,
+    "ecrSystemDefaultPort": 4000,
+    "ecrSystemMode": 0,
+    "ecrSystemProtocol": 0
+  },
+  "billPayment": {
+    "useBillPayment": false,
+    "merchantBanknumber": "",
+    "cashRegisterCode": "",
+    "merchantNameGr": "",
+    "merchantNameEn": "",
+    "dctOnlineFlag": "",
+    "referenceCodeCashRegisterTransaction": "",
+    "customerMobilePhone": "",
+    "callerName": "",
+    "codeME": ""
+  },
+  "paxDeviceSettings": {
+    "disableNavigatorBar": true,
+    "disableStatusBar": true,
+    "allowAutoNetworkFallback": false,
+    "useMicroserviceDateTime": false,
+    "useHostDateTime": true
+  },
+  "cardTypes": [
+    {
+      "id": 1,
+      "name": "VISA",
+      "color": "#1A1F71",
+      "aids": [
+        "A0000000031010",
+        "A0000000031020",
+        "A0000000031030"
+      ],
+      "bins": []
+    },
+    {
+      "id": 2,
+      "name": "VISA ELECTRON",
+      "color": "#1A1F71",
+      "aids": [
+        "A0000000032010"
+      ],
+      "bins": []
+    },
+    {
+      "id": 4,
+      "name": "MASTERCARD",
+      "color": "#F79E1B",
+      "aids": [
+        "A0000000041010"
+      ],
+      "bins": [
+        {
+          "lower": "51",
+          "upper": "55"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "MAESTRO",
+      "color": "#F79E1B",
+      "aids": [
+        "A0000000043060"
+      ],
+      "bins": [
+        {
+          "lower": "504394300",
+          "upper": "509999999"
+        },
+        {
+          "lower": "504394090",
+          "upper": "504394099"
+        },
+        {
+          "lower": "502260000",
+          "upper": "504394049"
+        },
+        {
+          "lower": "500000000",
+          "upper": "502258999"
+        },
+        {
+          "lower": "56",
+          "upper": "58"
+        },
+        {
+          "lower": "67",
+          "upper": "67"
+        },
+        {
+          "lower": "6390",
+          "upper": "6390"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "AMEX",
+      "color": "#006FCF",
+      "aids": [
+        "A00000002501"
+      ],
+      "bins": [
+        {
+          "lower": "34",
+          "upper": "34"
+        },
+        {
+          "lower": "37",
+          "upper": "37"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "DINERS",
+      "color": "#353332",
+      "aids": [
+        "A0000001523010"
+      ],
+      "bins": [
+        {
+          "lower": "6011",
+          "upper": "6011"
+        },
+        {
+          "lower": "644",
+          "upper": "659"
+        },
+        {
+          "lower": "38",
+          "upper": "38"
+        },
+        {
+          "lower": "65",
+          "upper": "65"
+        },
+        {
+          "lower": "500000000",
+          "upper": "502258999"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "UnionPay",
+      "color": "#E21836",
+      "aids": [
+        "A0000003330101"
+      ],
+      "bins": [
+        {
+          "lower": "62",
+          "upper": "62"
+        }
+      ]
+    }
+  ],
+  "config_file": "https://mpos.cardlink.gr/files/SPm2/CAKEYS.CFG",
+  "iccapp_key": "https://mpos.cardlink.gr/files/SPm2/ICCAPP.CFG",
+  "terminal": "https://mpos.cardlink.gr/files/TERMINAL.CFG",
+  "curerency": "https://mpos.cardlink.gr/files/CURRENCY.CFG",
+  "masterfile": "https://mpos.cardlink.gr/files/SPm2/FW/master/masterfile.txt",
+  "contactless": "https://mpos.cardlink.gr/files/new/contactless.cfg",
+  "boot_file": "https://mpos.cardlink.gr/files/SPm2/FW/6CL/boot.txt",
+  "ssl": "https://mpos.cardlink.gr/files/dummy.txt",
+  "mPOSParams": {
+    "message12": {
+      "transactionCategoryCode": "",
+      "terminalCountryCode": "300",
+      "timeOut1": "",
+      "timeOut2": "",
+      "timeOut3": "",
+      "terminalCurrencyExponent": "2",
+      "terminalAdditionalCapabilities": "c000f0a001",
+      "terminalType": "22",
+      "terminalCapabilities": "E0F8C8",
+      "merchantLanguage": "",
+      "terminalCurrencyCode": "978",
+      "operatorPIN": ""
+    },
+    "message42": {
+      "applicationVerNo": {
+        "A0000000041010": {
+          "verNo_start": "0002",
+          "verNo_end": "0001"
+        },
+        "A0000000031010": {
+          "verNo_start": "008C",
+          "verNo_middlie": "0084",
+          "verNo_end": "0083"
+        },
+        "A0000000032010": {
+          "verNo_start": "008C",
+          "verNo_middlie": "0084",
+          "verNo_end": "0083"
+        },
+        "A0000000032020": {
+          "verNo_start": "008C",
+          "verNo_middlie": "0084",
+          "verNo_end": "0083"
+        },
+        "A0000000043060": {
+          "verNo_start": "20001"
+        },
+        "A00000002501": {
+          "verNo_start": "0001"
+        },
+        "A000000003": {
+          "verNo_start": "008c",
+          "verNo_middlie": "0084",
+          "verNo_end": "0083"
+        },
+        "A000000004": {
+          "verNo_start": "0002",
+          "verNo_end": "0001"
+        },
+        "A000000025": {
+          "verNo_start": "0001"
+        },
+        "A0000001523010": {
+          "verNo_start": "0001"
+        }
+      },
+      "tacDenial": {
+        "AMEX": "0000000000",
+        "VISA": "0010000000",
+        "MASTERCARD": "0000000000",
+        "DINERS": "0010000000"
+      },
+      "tacDefault": {
+        "AMEX": "0000000000",
+        "VISA": "DC4000A800",
+        "MASTERCARD": "FC50BC8000",
+        "DINERS": "DC00002000"
+      },
+      "tacOnLine": {
+        "AMEX": "0000000000",
+        "VISA": "DC4004F800",
+        "MASTERCARD": "FC50BC8000",
+        "DINERS": "FCE09CF800"
+      },
+      "terminalRiskManagementData": "",
+      "constraintsChecks": "0",
+      "targetPercentageInRandomSelection": "0",
+      "additionalConstraintChecks": "0",
+      "ddol": "9F3704",
+      "posEntryModeCode": "32",
+      "thresholdValueInRandomSelection": "0",
+      "forceOnline": "",
+      "maxTargetPercentageInRandomSelection": "0",
+      "tdol": "",
+      "flootLimit": "0"
+    },
+    "message46": {
+      "whenSuccessful": {
+        "issuerScript": "",
+        "issuerAuthorisationResponseCode": "",
+        "result": "6",
+        "issuerResponse": "1",
+        "issuerAuthenticationData": ""
+      },
+      "whenNotSuccessful": {
+        "issuerScript": "",
+        "issuerAuthorisationResponseCode": "",
+        "result": "0",
+        "issuerResponse": "2",
+        "issuerAuthenticationData": ""
+      }
+    }
+  },
+  "easylinkPOSParams": {
+    "d177_files": {
+      "uiParam": "https://mpos.cardlink.gr/files/easylink/d177/ui_d177.txt",
+      "clssParam": "https://mpos.cardlink.gr/files/easylink/d177/clss_param.txt",
+      "emvParam": "https://mpos.cardlink.gr/files/easylink/d177/emv_param.txt"
+    },
+    "d180_files": {
+      "clssParam": "https://mpos.cardlink.gr/files/easylink/d180/clss_param.txt",
+      "emvParam": "https://mpos.cardlink.gr/files/easylink/d180/emv_param.txt"
+    },
+    "d188_files": {
+      "downloadingBmp": "https://mpos.cardlink.gr/files/easylink/d188/bmp/downloading.bmp",
+      "failedBmp": "https://mpos.cardlink.gr/files/easylink/d188/bmp/failed.bmp",
+      "insertBmp": "https://mpos.cardlink.gr/files/easylink/d188/bmp/insert.bmp",
+      "logoBmp": "https://mpos.cardlink.gr/files/easylink/d188/bmp/logo.bmp",
+      "successfulBmp": "https://mpos.cardlink.gr/files/easylink/d188/bmp/successful.bmp",
+      "swipedBmp": "https://mpos.cardlink.gr/files/easylink/d188/bmp/swiped.bmp",
+      "tapBmp": "https://mpos.cardlink.gr/files/easylink/d188/bmp/tap.bmp",
+      "clssParam": "https://mpos.cardlink.gr/files/easylink/d188/clss_param.txt",
+      "emvParam": "https://mpos.cardlink.gr/files/easylink/d188/emv_param.txt",
+      "greekLngParam": "https://mpos.cardlink.gr/files/easylink/d188/greek.txt",
+      "uiGreekParam": "https://mpos.cardlink.gr/files/easylink/d188/ui_D188_greek.txt",
+      "uiD188": "https://mpos.cardlink.gr/files/easylink/d188/ui_D188.txt"
+    },
+    "d200_files": {
+      "bootFile": "https://mpos.cardlink.gr/files/easylink/d200/EasyLink_Full_v2.04.00W_20200918_sign.txt",
+      "osFile": "https://mpos.cardlink.gr/files/easylink/d200/prolin-2.4.150.8214R_SIG.txt",
+      "clssParam": "https://mpos.cardlink.gr/files/easylink/d200/clss_param.txt",
+      "emvParam": "https://mpos.cardlink.gr/files/easylink/d200/emv_param.txt",
+      "greekLngFile": "https://mpos.cardlink.gr/files/easylink/d200/Greek.txt",
+      "greekUIFile": "https://mpos.cardlink.gr/files/easylink/d200/greek_ui_d200.txt",
+      "englishUIFile": "https://mpos.cardlink.gr/files/easylink/d200/english_ui_d200.txt",
+      "image_bg_png": "https://mpos.cardlink.gr/files/easylink/d200/bg.png",
+      "image_bg2_png": "https://mpos.cardlink.gr/files/easylink/d200/bg_2.png",
+      "image_back_png": "https://mpos.cardlink.gr/files/easylink/icons/back.png",
+      "image_button1_png": "https://mpos.cardlink.gr/files/easylink/icons/button1.png",
+      "image_button2_png": "https://mpos.cardlink.gr/files/easylink/icons/button2.png",
+      "image_info_png": "https://mpos.cardlink.gr/files/easylink/icons/Info.png",
+      "image_key_inject_png": "https://mpos.cardlink.gr/files/easylink/icons/Key_Inject.png",
+      "image_LngConfig_png": "https://mpos.cardlink.gr/files/easylink/icons/LngConfig.png",
+      "image_Logo_png": "https://mpos.cardlink.gr/files/easylink/icons/Logo3.png",
+      "image_query_png": "https://mpos.cardlink.gr/files/easylink/icons/query.png",
+      "image_sale_png": "https://mpos.cardlink.gr/files/easylink/icons/sale.png",
+      "image_setble_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_BLE.png",
+      "image_setbt_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_BT.png",
+      "image_setcomm_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_Comm.png",
+      "image_setedr_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_EDR.png",
+      "image_setusb_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_USB.png",
+      "image_setwifi_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_Wifi.png"
+    },
+    "d220_files": {
+      "bootFile": "https://mpos.cardlink.gr/files/easylink/q20/EasyLink_Full_v2.04.00W_20200918_sign.txt",
+      "osFile": "https://mpos.cardlink.gr/files/easylink/d220/prolin-cygnus-2.6.64.8063R_SIG.txt",
+      "clssParam": "https://mpos.cardlink.gr/files/easylink/d220/clss_param.txt",
+      "emvParam": "https://mpos.cardlink.gr/files/easylink/d220/emv_param.txt",
+      "greekLngFile": "https://mpos.cardlink.gr/files/easylink/d220/Greek.txt",
+      "greekUIFile": "https://mpos.cardlink.gr/files/easylink/d220/greek_ui_d220.txt",
+      "englishUIFile": "https://mpos.cardlink.gr/files/easylink/d220/english_ui_d220.txt",
+      "image_bg_png": "https://mpos.cardlink.gr/files/easylink/d220/bg.png",
+      "image_menubt_png": "https://mpos.cardlink.gr/files/easylink/icons/menubt.png",
+      "image_back_png": "https://mpos.cardlink.gr/files/easylink/icons/back.png",
+      "image_button2_png": "https://mpos.cardlink.gr/files/easylink/icons/button2.png",
+      "image_info_png": "https://mpos.cardlink.gr/files/easylink/icons/Info.png",
+      "image_key_inject_png": "https://mpos.cardlink.gr/files/easylink/icons/Key_Inject.png",
+      "image_LngConfig_png": "https://mpos.cardlink.gr/files/easylink/icons/LngConfig.png",
+      "image_Logo_png": "https://mpos.cardlink.gr/files/easylink/icons/Logo3.png",
+      "image_query_png": "https://mpos.cardlink.gr/files/easylink/icons/query.png",
+      "image_sale_png": "https://mpos.cardlink.gr/files/easylink/icons/sale.png",
+      "image_setble_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_BLE.png",
+      "image_setbt_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_BT.png",
+      "image_setcomm_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_Comm.png",
+      "image_setedr_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_EDR.png",
+      "image_setusb_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_USB.png",
+      "image_setwifi_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_Wifi.png"
+    },
+    "q20_files": {
+      "bootFile": "https://mpos.cardlink.gr/files/easylink/q20/EasyLink_Full_v2.04.00W_20200918_sign.txt",
+      "osFile": "https://mpos.cardlink.gr/files/easylink/IM310/prolin-pelican-2.7.92.9619R_SIG.txt",
+      "clssParam": "https://mpos.cardlink.gr/files/easylink/q20/clss_param.txt",
+      "emvParam": "https://mpos.cardlink.gr/files/easylink/q20/emv_param.txt",
+      "greekLngFile": "https://mpos.cardlink.gr/files/easylink/q20/Greek.txt",
+      "greekUIFile": "https://mpos.cardlink.gr/files/easylink/q20/greek_ui_q20.txt",
+      "englishUIFile": "https://mpos.cardlink.gr/files/easylink/q20/english_ui_q20.txt",
+      "image_bg_png": "https://mpos.cardlink.gr/files/easylink/q20/bg.png",
+      "image_bg2_png": "https://mpos.cardlink.gr/files/easylink/q20/bg_2.png",
+      "image_back_png": "https://mpos.cardlink.gr/files/easylink/icons/back.png",
+      "image_button1_png": "https://mpos.cardlink.gr/files/easylink/icons/button1.png",
+      "image_button2_png": "https://mpos.cardlink.gr/files/easylink/icons/button2.png",
+      "image_info_png": "https://mpos.cardlink.gr/files/easylink/icons/Info.png",
+      "image_key_inject_png": "https://mpos.cardlink.gr/files/easylink/icons/Key_Inject.png",
+      "image_LngConfig_png": "https://mpos.cardlink.gr/files/easylink/icons/LngConfig.png",
+      "image_Logo_png": "https://mpos.cardlink.gr/files/easylink/icons/Logo3.png",
+      "image_query_png": "https://mpos.cardlink.gr/files/easylink/icons/query.png",
+      "image_sale_png": "https://mpos.cardlink.gr/files/easylink/icons/sale.png",
+      "image_setble_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_BLE.png",
+      "image_setbt_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_BT.png",
+      "image_setcomm_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_Comm.png",
+      "image_setedr_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_EDR.png",
+      "image_setusb_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_USB.png",
+      "image_setwifi_png": "https://mpos.cardlink.gr/files/easylink/icons/SET_Wifi.png"
+    },
+    "sp20_files": {
+      "uiParam": "https://mpos.cardlink.gr/files/easylink/sp20/ui_sp20v4.txt",
+      "uiGreekParam": "https://mpos.cardlink.gr/files/easylink/sp20/ui_sp20v4_greek.txt",
+      "clssParam": "https://mpos.cardlink.gr/files/easylink/sp20/clss_param.txt",
+      "emvParam": "https://mpos.cardlink.gr/files/easylink/sp20/emv_param.txt",
+      "greekLngParam": "https://mpos.cardlink.gr/files/easylink/sp20/greek.txt"
+    },
+    "r20_files": {
+      "uiParam": "https://mpos.cardlink.gr/files/easylink/r20/ui_r20.txt",
+      "clssParam": "https://mpos.cardlink.gr/files/easylink/r20/clss_param.txt",
+      "emvParam": "https://mpos.cardlink.gr/files/easylink/r20/emv_param.txt"
+    },
+    "im310_files": {
+      "bootFile": "https://mpos.cardlink.gr/files/easylink/IM310/EasyLink_Full_v2.04.00W_20200918_sign.txt",
+      "osFile": "https://mpos.cardlink.gr/files/easylink/IM310/prolin-pelican-2.7.92.9619R_SIG.txt",
+      "clssParam": "https://mpos.cardlink.gr/files/easylink/IM310/clss_param.txt",
+      "emvParam": "https://mpos.cardlink.gr/files/easylink/IM310/emv_param.txt"
+    }
+  },
+  "androidPOSParams": {
+    "emvConfig": {
+      "terminalCapabilities": "E0F8C8",
+      "terminalAdditionalCapabilities": "c000f0a001",
+      "terminalCountryCode": "300",
+      "terminalType": "22",
+      "terminalCurrencyCode": "978",
+      "terminalCurrencyExponent": "2"
+    },
+    "contactless": {
+      "applicationIDSConfiguration": [
+        {
+          "aidName": "MASTERCARD",
+          "aid": "A0000000041010",
+          "partialAidSelection": "1",
+          "allowSale": true,
+          "allowCash": true,
+          "allowCashback": true,
+          "allowRefund": true,
+          "floorLimit": "0",
+          "ctlsFloorLimit": "0",
+          "transactionLimit": "999999",
+          "cvmRequiredLimit": "5000",
+          "onDeviceCvmTransactionLimit": "999999",
+          "terminalCapabilities": "E060C8",
+          "terminalCapabilitiesNoCvm": "E008C8",
+          "additionalTerminalCapabilities": "6000002001",
+          "emvApplicationVersionList": "0002",
+          "msdApplicationVersionList": "0001",
+          "ctlsTACOnline": "F45084800C",
+          "ctlsTACDefault": "F45084800C",
+          "ctlsTACDenial": "0000000000",
+          "contactTACOnline": "FC50BCF800",
+          "contactTACDefault": "FC50BCA000",
+          "contactTACDenial": "0000000000",
+          "defaultTDOL": "9F0802",
+          "defaultDDOL": "9F37049F47018F019F3201",
+          "defaultUDOL": "9F6A04",
+          "terminalRisk": "6C68800000000000",
+          "kernelConfiguration": "B0",
+          "targetPercentageInRandomSelection": "0",
+          "maxTargetPercentageInRandomSelection": "0",
+          "contactFloorLimitCheck": "1",
+          "contactRandomTransactionSelect": "1",
+          "velocityCheck": "1",
+          "thresholdValueInRandomSelection": "0",
+          "alphabankDccBelowCvmLimit": false,
+          "alphaBankDCCDisclaimer": [
+            "I HAVE CHOSEN TO PAY IN %dccCurrencyName% \u0026 UNDERSTAND",
+            "MY CHOICE OF CURRENCY IS FINAL.",
+            "THE EXCHANGE RATE IS BASED ON",
+            "FINTRAX INCLUDING AN INTERNATION",
+            "CONVERSION FEE OF %feePercent%%",
+            "THIS SERVICE IS PROVIDED BY CARDLINK",
+            "IN ASSOCIATION WITH FINTRAX."
+          ],
+          "eurobankDccBelowCvmLimit": false,
+          "eurobankDCCDisclaimer": [
+            "I HAVE CHOSEN NOT TO USE THE MASTERCARD",
+            "CURRENCY CONVERSION PROCESS AND I WILL",
+            "HAVE NO RECOURSE AGAINST MASTERCARD",
+            "CONCERNING THE CURRENCY CONVERSION",
+            "OR ITS DISCLOSURE. THE EXCHANGE RATE",
+            "IS BASED ON EUROBANK WHOLESALE RATE",
+            "AS OF %conversionRateDay%/%conversionRateMonth% PLUS AN INTERNATIONAL",
+            "CONVERSION FEE OF %fee% %dccCurrencyName%.",
+            "THIS SERVICE IS PROVIDED BY EUROBANK"
+          ]
+        },
+        {
+          "aidName": "Maestro",
+          "aid": "A0000000043060",
+          "partialAidSelection": "1",
+          "allowSale": true,
+          "allowCash": true,
+          "allowCashback": true,
+          "allowRefund": true,
+          "floorLimit": "0",
+          "ctlsFloorLimit": "0",
+          "transactionLimit": "999999",
+          "cvmRequiredLimit": "5000",
+          "onDeviceCvmTransactionLimit": "999999",
+          "terminalCapabilities": "E060C8",
+          "terminalCapabilitiesNoCvm": "E008C8",
+          "additionalTerminalCapabilities": "6000002001",
+          "emvApplicationVersionList": "0002",
+          "msdApplicationVersionList": "0001",
+          "ctlsTACOnline": "F45004800C",
+          "ctlsTACDefault": "F45004800C",
+          "ctlsTACDenial": "0000800000",
+          "contactTACOnline": "FC50BCF800",
+          "contactTACDefault": "FC50BCA000",
+          "contactTACDenial": "0000000000",
+          "defaultTDOL": "9F0802",
+          "defaultDDOL": "9F37049F47018F019F3201",
+          "defaultUDOL": "9F6A04",
+          "terminalRisk": "4C60800000000000",
+          "kernelConfiguration": "B0",
+          "targetPercentageInRandomSelection": "0",
+          "maxTargetPercentageInRandomSelection": "0",
+          "contactFloorLimitCheck": "1",
+          "contactRandomTransactionSelect": "1",
+          "velocityCheck": "1",
+          "thresholdValueInRandomSelection": "0",
+          "alphabankDccBelowCvmLimit": true,
+          "alphaBankDCCDisclaimer": [
+            "I HAVE CHOSEN TO PAY IN %dccCurrencyName% \u0026 UNDERSTAND",
+            "MY CHOICE OF CURRENCY IS FINAL.",
+            "THE EXCHANGE RATE IS BASED ON",
+            "FINTRAX INCLUDING AN INTERNATION",
+            "CONVERSION FEE OF %feePercent%%",
+            "THIS SERVICE IS PROVIDED BY CARDLINK",
+            "IN ASSOCIATION WITH FINTRAX."
+          ],
+          "eurobankDccBelowCvmLimit": true,
+          "eurobankDCCDisclaimer": [
+            "I HAVE CHOSEN NOT TO USE THE MASTERCARD",
+            "CURRENCY CONVERSION PROCESS AND I WILL",
+            "HAVE NO RECOURSE AGAINST MASTERCARD",
+            "CONCERNING THE CURRENCY CONVERSION",
+            "OR ITS DISCLOSURE. THE EXCHANGE RATE",
+            "IS BASED ON EUROBANK WHOLESALE RATE",
+            "AS OF %conversionRateDay%/%conversionRateMonth% PLUS AN INTERNATIONAL",
+            "CONVERSION FEE OF %fee% %dccCurrencyName%.",
+            "THIS SERVICE IS PROVIDED BY EUROBANK"
+          ]
+        },
+        {
+          "aidName": "VISA",
+          "aid": "A0000000031010",
+          "partialAidSelection": "1",
+          "allowSale": true,
+          "allowCash": true,
+          "allowCashback": true,
+          "allowRefund": true,
+          "floorLimit": "0",
+          "ctlsFloorLimit": "0",
+          "transactionLimit": "999999",
+          "cvmRequiredLimit": "5001",
+          "terminalCapabilities": "E0F8C8",
+          "additionalTerminalCapabilities": "0000000000",
+          "emvApplicationVersionList": "008C",
+          "msdApplicationVersionList": "008C",
+          "terminalTransactionQualifier": "36204000",
+          "terminalTransactionQualifierCashback": "36004000",
+          "terminalTransactionQualifierCash": "36004000",
+          "terminalTransactionQualifierRefund": "36A04000",
+          "ctlsTACOnline": "0000000000",
+          "ctlsTACDefault": "0000000000",
+          "ctlsTACDenial": "0000000000",
+          "contactTACOnline": "DC4004F800",
+          "contactTACDefault": "DC4000A800",
+          "contactTACDenial": "0010000000",
+          "defaultTDOL": "9F0802",
+          "defaultDDOL": "9F37049F4701",
+          "defaultUDOL": "9F6A04",
+          "targetPercentageInRandomSelection": "0",
+          "maxTargetPercentageInRandomSelection": "0",
+          "contactFloorLimitCheck": "1",
+          "contactRandomTransactionSelect": "1",
+          "velocityCheck": "1",
+          "thresholdValueInRandomSelection": "0",
+          "alphabankDccBelowCvmLimit": true,
+          "alphaBankDCCDisclaimer": [
+            "I HAVE CHOSEN TO PAY IN %dccCurrencyName% \u0026 UNDERSTAND",
+            "MY CHOICE OF CURRENCY IS FINAL.",
+            "THE EXCHANGE RATE IS BASED ON",
+            "FINTRAX INCLUDING AN INTERNATION",
+            "CONVERSION FEE OF %feePercent%%",
+            "THIS SERVICE IS PROVIDED BY CARDLINK",
+            "IN ASSOCIATION WITH FINTRAX."
+          ],
+          "eurobankDccBelowCvmLimit": true,
+          "eurobankDCCDisclaimer": [
+            "I HAVE CHOSEN TO PAY IN %dccCurrencyName% \u0026 UNDERSTAND",
+            "MY CHOICE OF CURRENCY IS FINAL.",
+            "THE EXCHANGE RATE IS BASED ON",
+            "EUROBANK WHOLESALERATE AS OF %conversionRateDay%/%conversionRateMonth%",
+            "PLUS AN INTERNATIONAL CONVERSION FEE",
+            "OF %fee% %dccCurrencyName%. THIS SERVICE IS",
+            "PROVIDED BY EUROBANK"
+          ]
+        },
+        {
+          "aidName": "VISA Electron",
+          "aid": "A0000000032010",
+          "partialAidSelection": "1",
+          "allowSale": true,
+          "allowCash": true,
+          "allowCashback": true,
+          "allowRefund": true,
+          "floorLimit": "0",
+          "ctlsFloorLimit": "0",
+          "transactionLimit": "999999",
+          "cvmRequiredLimit": "5001",
+          "terminalCapabilities": "E0F8C8",
+          "additionalTerminalCapabilities": "0000000000",
+          "emvApplicationVersionList": "008C",
+          "msdApplicationVersionList": "0105",
+          "terminalTransactionQualifier": "36204000",
+          "terminalTransactionQualifierCashback": "36004000",
+          "terminalTransactionQualifierCash": "36004000",
+          "terminalTransactionQualifierRefund": "36A04000",
+          "ctlsTACOnline": "D84004F800",
+          "ctlsTACDefault": "D84004F800",
+          "ctlsTACDenial": "0000000000",
+          "contactTACOnline": "DC4004F800",
+          "contactTACDefault": "DC4000A800",
+          "contactTACDenial": "0010000000",
+          "defaultTDOL": "9F0802",
+          "defaultDDOL": "9F37049F47018F019F3201",
+          "defaultUDOL": "9F6A04",
+          "targetPercentageInRandomSelection": "0",
+          "maxTargetPercentageInRandomSelection": "0",
+          "contactFloorLimitCheck": "1",
+          "contactRandomTransactionSelect": "1",
+          "velocityCheck": "1",
+          "thresholdValueInRandomSelection": "0",
+          "alphabankDccBelowCvmLimit": true,
+          "alphaBankDCCDisclaimer": [
+            "I HAVE CHOSEN TO PAY IN %dccCurrencyName% \u0026 UNDERSTAND",
+            "MY CHOICE OF CURRENCY IS FINAL.",
+            "THE EXCHANGE RATE IS BASED ON",
+            "FINTRAX INCLUDING AN INTERNATION",
+            "CONVERSION FEE OF %feePercent%%",
+            "THIS SERVICE IS PROVIDED BY CARDLINK",
+            "IN ASSOCIATION WITH FINTRAX."
+          ],
+          "eurobankDccBelowCvmLimit": true,
+          "eurobankDCCDisclaimer": [
+            "I HAVE CHOSEN TO PAY IN %dccCurrencyName% \u0026 UNDERSTAND",
+            "MY CHOICE OF CURRENCY IS FINAL.",
+            "THE EXCHANGE RATE IS BASED ON",
+            "EUROBANK WHOLESALERATE AS OF %conversionRateDay%/%conversionRateMonth%",
+            "PLUS AN INTERNATIONAL CONVERSION FEE",
+            "OF %fee% %dccCurrencyName%. THIS SERVICE IS",
+            "PROVIDED BY EUROBANK"
+          ]
+        },
+        {
+          "aidName": "American Express",
+          "aid": "A00000002501",
+          "partialAidSelection": "1",
+          "allowSale": true,
+          "allowCash": true,
+          "allowCashback": true,
+          "allowRefund": true,
+          "floorLimit": "0",
+          "ctlsFloorLimit": "0",
+          "transactionLimit": "99999",
+          "cvmRequiredLimit": "1000",
+          "terminalCapabilities": "E0F8C8",
+          "terminalCapabilitiesNoCvm": "E0F8C8",
+          "additionalTerminalCapabilities": "E000F0A001",
+          "emvApplicationVersionList": "0001",
+          "msdApplicationVersionList": "0001",
+          "ctlsTACOnline": "C400000000",
+          "ctlsTACDefault": "DC50840000",
+          "ctlsTACDenial": "0000000000",
+          "contactTACOnline": "C400000000",
+          "contactTACDefault": "DC50840000",
+          "contactTACDenial": "0000000000",
+          "expressPayTerminalTransactionCapabilities": "D8F04000",
+          "expressPayTerminalCapabilities": "C8",
+          "expressPayRandomNumberScope": "3C",
+          "defaultTDOL": "0F9F02065F2A029A039C0195059F3704",
+          "defaultDDOL": "039F3704",
+          "defaultUDOL": "9F6A04",
+          "targetPercentageInRandomSelection": "0",
+          "maxTargetPercentageInRandomSelection": "0",
+          "contactFloorLimitCheck": "1",
+          "contactRandomTransactionSelect": "1",
+          "velocityCheck": "1",
+          "thresholdValueInRandomSelection": "0",
+          "alphabankDccBelowCvmLimit": true,
+          "eurobankDccBelowCvmLimit": true
+        },
+        {
+          "aidName": "China Union Pay",
+          "aid": "A000000333010101",
+          "partialAidSelection": "1",
+          "allowSale": true,
+          "allowCash": true,
+          "allowCashback": true,
+          "allowRefund": true,
+          "floorLimit": "0",
+          "ctlsFloorLimit": "0",
+          "transactionLimit": "99999",
+          "cvmRequiredLimit": "5000",
+          "terminalCapabilities": "E0F8C8",
+          "terminalCapabilitiesNoCvm": "E0F8C8",
+          "additionalTerminalCapabilities": "c000f0a001",
+          "emvApplicationVersionList": "0020",
+          "msdApplicationVersionList": "0001",
+          "terminalTransactionQualifier": "3600000000",
+          "terminalTransactionQualifierCashback": "3600000000",
+          "terminalTransactionQualifierCash": "3600000000",
+          "terminalTransactionQualifierRefund": "3600000000",
+          "ctlsTACOnline": "FC78FCF8F0",
+          "ctlsTACDefault": "FC78FCF8F0",
+          "ctlsTACDenial": "0010000000",
+          "contactTACOnline": "FC78FCF8F0",
+          "contactTACDefault": "FC78FCF8F0",
+          "contactTACDenial": "0010000000",
+          "defaultTDOL": "039F3704",
+          "defaultDDOL": "039F3704",
+          "defaultUDOL": "9F6A04",
+          "targetPercentageInRandomSelection": "0",
+          "maxTargetPercentageInRandomSelection": "0",
+          "contactFloorLimitCheck": "1",
+          "contactRandomTransactionSelect": "1",
+          "velocityCheck": "1",
+          "thresholdValueInRandomSelection": "0",
+          "alphabankDccBelowCvmLimit": true,
+          "eurobankDccBelowCvmLimit": true
+        },
+        {
+          "aidName": "China Union Pay",
+          "aid": "A000000333010102",
+          "partialAidSelection": "1",
+          "allowSale": true,
+          "allowCash": true,
+          "allowCashback": true,
+          "allowRefund": true,
+          "floorLimit": "0",
+          "ctlsFloorLimit": "0",
+          "transactionLimit": "99999",
+          "cvmRequiredLimit": "5000",
+          "terminalCapabilities": "E0F8C8",
+          "terminalCapabilitiesNoCvm": "E0F8C8",
+          "additionalTerminalCapabilities": "c000f0a001",
+          "emvApplicationVersionList": "0020",
+          "msdApplicationVersionList": "0001",
+          "terminalTransactionQualifier": "3600000000",
+          "terminalTransactionQualifierCashback": "3600000000",
+          "terminalTransactionQualifierCash": "3600000000",
+          "terminalTransactionQualifierRefund": "3600000000",
+          "ctlsTACOnline": "FC78FCF8F0",
+          "ctlsTACDefault": "FC78FCF8F0",
+          "ctlsTACDenial": "0010000000",
+          "contactTACOnline": "FC78FCF8F0",
+          "contactTACDefault": "FC78FCF8F0",
+          "contactTACDenial": "0010000000",
+          "defaultTDOL": "039F3704",
+          "defaultDDOL": "039F3704",
+          "defaultUDOL": "9F6A04",
+          "targetPercentageInRandomSelection": "0",
+          "maxTargetPercentageInRandomSelection": "0",
+          "contactFloorLimitCheck": "1",
+          "contactRandomTransactionSelect": "1",
+          "velocityCheck": "1",
+          "thresholdValueInRandomSelection": "0",
+          "alphabankDccBelowCvmLimit": true,
+          "eurobankDccBelowCvmLimit": true
+        },
+        {
+          "aidName": "China Union Pay",
+          "aid": "A000000333010103",
+          "partialAidSelection": "1",
+          "allowSale": true,
+          "allowCash": true,
+          "allowCashback": true,
+          "allowRefund": true,
+          "floorLimit": "0",
+          "ctlsFloorLimit": "0",
+          "transactionLimit": "99999",
+          "cvmRequiredLimit": "5000",
+          "terminalCapabilities": "E0F8C8",
+          "terminalCapabilitiesNoCvm": "E0F8C8",
+          "additionalTerminalCapabilities": "c000f0a001",
+          "emvApplicationVersionList": "0020",
+          "msdApplicationVersionList": "0001",
+          "terminalTransactionQualifier": "3600000000",
+          "terminalTransactionQualifierCashback": "3600000000",
+          "terminalTransactionQualifierCash": "3600000000",
+          "terminalTransactionQualifierRefund": "3600000000",
+          "ctlsTACOnline": "FC78FCF8F0",
+          "ctlsTACDefault": "FC78FCF8F0",
+          "ctlsTACDenial": "0010000000",
+          "contactTACOnline": "FC78FCF8F0",
+          "contactTACDefault": "FC78FCF8F0",
+          "contactTACDenial": "0010000000",
+          "defaultTDOL": "039F3704",
+          "defaultDDOL": "039F3704",
+          "defaultUDOL": "9F6A04",
+          "targetPercentageInRandomSelection": "0",
+          "maxTargetPercentageInRandomSelection": "0",
+          "contactFloorLimitCheck": "1",
+          "contactRandomTransactionSelect": "1",
+          "velocityCheck": "1",
+          "thresholdValueInRandomSelection": "0",
+          "alphabankDccBelowCvmLimit": true,
+          "eurobankDccBelowCvmLimit": true
+        },
+        {
+          "aidName": "China Union Pay",
+          "aid": "A000000333010106",
+          "partialAidSelection": "1",
+          "allowSale": true,
+          "allowCash": true,
+          "allowCashback": true,
+          "allowRefund": true,
+          "floorLimit": "0",
+          "ctlsFloorLimit": "0",
+          "transactionLimit": "99999",
+          "cvmRequiredLimit": "5000",
+          "terminalCapabilities": "E0F8C8",
+          "terminalCapabilitiesNoCvm": "E0F8C8",
+          "additionalTerminalCapabilities": "c000f0a001",
+          "emvApplicationVersionList": "0020",
+          "msdApplicationVersionList": "0001",
+          "terminalTransactionQualifier": "3600000000",
+          "terminalTransactionQualifierCashback": "3600000000",
+          "terminalTransactionQualifierCash": "3600000000",
+          "terminalTransactionQualifierRefund": "3600000000",
+          "ctlsTACOnline": "FC78FCF8F0",
+          "ctlsTACDefault": "FC78FCF8F0",
+          "ctlsTACDenial": "0010000000",
+          "contactTACOnline": "FC78FCF8F0",
+          "contactTACDefault": "FC78FCF8F0",
+          "contactTACDenial": "0010000000",
+          "defaultTDOL": "039F3704",
+          "defaultDDOL": "039F3704",
+          "defaultUDOL": "9F6A04",
+          "targetPercentageInRandomSelection": "0",
+          "maxTargetPercentageInRandomSelection": "0",
+          "contactFloorLimitCheck": "1",
+          "contactRandomTransactionSelect": "1",
+          "velocityCheck": "1",
+          "thresholdValueInRandomSelection": "0",
+          "alphabankDccBelowCvmLimit": true,
+          "eurobankDccBelowCvmLimit": true
+        },
+        {
+          "aidName": "China Union Pay",
+          "aid": "A000000333010108",
+          "partialAidSelection": "1",
+          "allowSale": true,
+          "allowCash": true,
+          "allowCashback": true,
+          "allowRefund": true,
+          "floorLimit": "0",
+          "ctlsFloorLimit": "0",
+          "transactionLimit": "99999",
+          "cvmRequiredLimit": "5000",
+          "terminalCapabilities": "E0F8C8",
+          "terminalCapabilitiesNoCvm": "E0F8C8",
+          "additionalTerminalCapabilities": "c000f0a001",
+          "emvApplicationVersionList": "0020",
+          "msdApplicationVersionList": "0001",
+          "terminalTransactionQualifier": "3600000000",
+          "terminalTransactionQualifierCashback": "3600000000",
+          "terminalTransactionQualifierCash": "3600000000",
+          "terminalTransactionQualifierRefund": "3600000000",
+          "ctlsTACOnline": "FC78FCF8F0",
+          "ctlsTACDefault": "FC78FCF8F0",
+          "ctlsTACDenial": "0010000000",
+          "contactTACOnline": "FC78FCF8F0",
+          "contactTACDefault": "FC78FCF8F0",
+          "contactTACDenial": "0010000000",
+          "defaultTDOL": "039F3704",
+          "defaultDDOL": "039F3704",
+          "defaultUDOL": "9F6A04",
+          "targetPercentageInRandomSelection": "0",
+          "maxTargetPercentageInRandomSelection": "0",
+          "contactFloorLimitCheck": "1",
+          "contactRandomTransactionSelect": "1",
+          "velocityCheck": "1",
+          "thresholdValueInRandomSelection": "0",
+          "alphabankDccBelowCvmLimit": true,
+          "eurobankDccBelowCvmLimit": true
+        },
+        {
+          "aidName": "DPAS",
+          "aid": "A0000001523010",
+          "partialAidSelection": "1",
+          "allowSale": true,
+          "allowCash": true,
+          "allowCashback": true,
+          "allowRefund": true,
+          "floorLimit": "0",
+          "ctlsFloorLimit": "0",
+          "transactionLimit": "99999",
+          "cvmRequiredLimit": "5000",
+          "onDeviceCvmTransactionLimit": "999999",
+          "terminalCapabilities": "E0F8C8",
+          "terminalCapabilitiesNoCvm": "E0F8C8",
+          "additionalTerminalCapabilities": "E000F0A001",
+          "emvApplicationVersionList": "0001",
+          "msdApplicationVersionList": "0001",
+          "terminalTransactionQualifier": "B600400000",
+          "terminalTransactionQualifierCashback": "B600400000",
+          "terminalTransactionQualifierCash": "B600400000",
+          "terminalTransactionQualifierRefund": "B600400000",
+          "ctlsTACOnline": "FC78FCF8F0",
+          "ctlsTACDefault": "FC78FCF8F0",
+          "ctlsTACDenial": "0010000000",
+          "contactTACOnline": "FCE09CF800",
+          "contactTACDefault": "DC00002000",
+          "contactTACDenial": "0010000000",
+          "targetPercentageInRandomSelection": "0",
+          "maxTargetPercentageInRandomSelection": "0",
+          "contactFloorLimitCheck": "1",
+          "contactRandomTransactionSelect": "1",
+          "velocityCheck": "1",
+          "thresholdValueInRandomSelection": "0",
+          "alphabankDccBelowCvmLimit": true,
+          "eurobankDccBelowCvmLimit": true
+        },
+        {
+          "aidName": "ZIP",
+          "aid": "A0000003241010",
+          "partialAidSelection": "1",
+          "allowSale": true,
+          "allowCash": true,
+          "allowCashback": true,
+          "allowRefund": true,
+          "floorLimit": "0",
+          "ctlsFloorLimit": "0",
+          "transactionLimit": "99999",
+          "cvmRequiredLimit": "5000",
+          "onDeviceCvmTransactionLimit": "999999",
+          "terminalCapabilities": "E0F8C8",
+          "terminalCapabilitiesNoCvm": "E0F8C8",
+          "additionalTerminalCapabilities": "E000F0A001",
+          "emvApplicationVersionList": "0001",
+          "msdApplicationVersionList": "0001",
+          "terminalTransactionQualifier": "B600400000",
+          "terminalTran
