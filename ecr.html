@@ -288,19 +288,19 @@
               2
             );
             if(jsonResponse.transactionData.referenceNumber != null){
-            document.getElementById("rrn").value = jsonResponse.transactionData.referenceNumber;
+            document.getElementById("rrn").value = jsonResponse.transactionData.referenceNumber.trim();
             }
             if(jsonResponse.transactionData.authorizationCode != null){
-            document.getElementById("authorizationCode").value = jsonResponse.transactionData.authorizationCode;
+            document.getElementById("authorizationCode").value = jsonResponse.transactionData.authorizationCode.trim();
             }
             if(jsonResponse.transactionData.eftTerminalId != null){
-            document.getElementById("tid").value = jsonResponse.transactionData.eftTerminalId;
+            document.getElementById("tid").value = jsonResponse.transactionData.eftTerminalId.trim();
             }
           }
         };
         xhttp.open(
           "POST",
-          document.getElementById("url").value + "/" + radioButtonCheckedValue,
+          document.getElementById("url").value.trim() + "/" + radioButtonCheckedValue,
           true
         );
         xhttp.setRequestHeader("Content-type", "application/json");
@@ -308,14 +308,14 @@
         if (raddioButtonCheckedID === "saleinstallments") {
           var jsonObject = JSON.stringify({
             serviceData: {
-              host: "" + document.getElementById("ip").value + "",
-              port: "" + document.getElementById("port").value + "",
-              ecrid: "" + document.getElementById("tid").value + ""
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
               uniqueTxnId: "                   " + Date.now(),
-              amount: "" + document.getElementById("amount").value + "",
+              amount: "" + parseFloat(document.getElementById("amount").value.trim().replace(",",".")).toFixed(2) + "",
               tlvData:
                 "TL0007NI03" +
                 document.getElementById("installements").options[
@@ -331,14 +331,14 @@
         ) {
           var jsonObject = JSON.stringify({
             serviceData: {
-              host: "" + document.getElementById("ip").value + "",
-              port: "" + document.getElementById("port").value + "",
-              ecrid: "" + document.getElementById("tid").value + ""
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
               uniqueTxnId: "                   " + Date.now(),
-              amount: "" + document.getElementById("amount").value + "",
+              amount: "" + parseFloat(document.getElementById("amount").value.trim().replace(",",".")).toFixed(2) + "",
             },
           });
         }
@@ -349,13 +349,13 @@
         ) {
           var jsonObject = JSON.stringify({
             serviceData: {
-              host: "" + document.getElementById("ip").value + "",
-              port: "" + document.getElementById("port").value + "",
-              ecrid: "" + document.getElementById("tid").value + ""
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
             },
             transactionData: {
               uniqueTxnId: "                   " + Date.now(),
-              amount: "" + document.getElementById("amount").value + "",
+              amount: "" + parseFloat(document.getElementById("amount").value.trim().replace(",",".")).toFixed(2) + "",
             },
           });
         }
@@ -363,9 +363,9 @@
         if (radioButtonCheckedValue === "merchantinfo") {
           var jsonObject = JSON.stringify({
             serviceData: {
-              host: "" + document.getElementById("ip").value + "",
-              port: "" + document.getElementById("port").value + "",
-              ecrid: "" + document.getElementById("tid").value + ""
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
             },
             transactionData: {}
           });
@@ -374,15 +374,15 @@
         if (radioButtonCheckedValue === "fullvoid") {
           var jsonObject = JSON.stringify({
             serviceData: {
-              host: "" + document.getElementById("ip").value + "",
-              port: "" + document.getElementById("port").value + "",
-              ecrid: "" + document.getElementById("tid").value + ""
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
               uniqueTxnId: "                   " + Date.now(),
-              amount: "" + document.getElementById("amount").value + "",
-              referenceNumber: "" + document.getElementById("rrn").value + "",
+              amount: "" + parseFloat(document.getElementById("amount").value.trim().replace(",",".")).toFixed(2) + "",
+              referenceNumber: "" + document.getElementById("rrn").value.trim() + "",
             },
           });
         }
@@ -390,15 +390,15 @@
         if (radioButtonCheckedValue === "preauthcompletion") {
           var jsonObject = JSON.stringify({
             serviceData: {
-              host: "" + document.getElementById("ip").value + "",
-              port: "" + document.getElementById("port").value + "",
-              ecrid: "" + document.getElementById("tid").value + ""
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
             },
             transactionData: {
               uniqueTxnId: "                   " + Date.now(),
-              amount: "" + document.getElementById("amount").value + "",
-              referenceNumber: "" + document.getElementById("rrn").value + "",
-              authorizationCode: "" + document.getElementById("authorizationCode").value + ""
+              amount: "" + parseFloat(document.getElementById("amount").value.trim().replace(",",".")).toFixed(2) + "",
+              referenceNumber: "" + document.getElementById("rrn").value.trim() + "",
+              authorizationCode: "" + document.getElementById("authorizationCode").value.trim() + ""
             },
           });
         }
@@ -406,9 +406,9 @@
         if (radioButtonCheckedValue === "reconciliation") {
           jsonObject = JSON.stringify({
             serviceData: {
-              host: "" + document.getElementById("ip").value + "",
-              port: "" + document.getElementById("port").value + "",
-              ecrid: "" + document.getElementById("tid").value + ""
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
@@ -422,15 +422,15 @@
         if (radioButtonCheckedValue === "refund") {
           jsonObject = JSON.stringify({
             serviceData: {
-              host: "" + document.getElementById("ip").value + "",
-              port: "" + document.getElementById("port").value + "",
-              ecrid: "" + document.getElementById("tid").value + ""
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
               uniqueTxnId: "                   " + Date.now(),
-              amount: "" + document.getElementById("amount").value + "",
-              tlvData: "TL0010OR06" + document.getElementById("rrn").value + "",
+              amount: "" + parseFloat(document.getElementById("amount").value.trim().replace(",",".")).toFixed(2) + "",
+              tlvData: "TL0010OR06" + document.getElementById("rrn").value.trim() + "",
             },
           });
         }
@@ -439,15 +439,15 @@
         if (radioButtonCheckedValue === "loyaltyvoid") {
           jsonObject = JSON.stringify({
             serviceData: {
-              host: "" + document.getElementById("ip").value + "",
-              port: "" + document.getElementById("port").value + "",
-              ecrid: "" + document.getElementById("tid").value + ""
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
               uniqueTxnId: "                   " + Date.now(),
-              amount: "" + document.getElementById("amount").value + "",
-              referenceNumber: "" + document.getElementById("rrn").value + ""
+              amount: "" + parseFloat(document.getElementById("amount").value.trim().replace(",",".")).toFixed(2) + "",
+              referenceNumber: "" + document.getElementById("rrn").value.trim() + ""
             },
           });
         }
@@ -458,14 +458,14 @@
         ) {
           jsonObject = JSON.stringify({
             serviceData: {
-              host: "" + document.getElementById("ip").value + "",
-              port: "" + document.getElementById("port").value + "",
-              ecrid: "" + document.getElementById("tid").value + ""
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
             },
             transactionData: {
               firstByteOriginalTrans: "0",
               uniqueTxnId: "                   " + Date.now(),
-              amount: "" + document.getElementById("amount").value + "",
+              amount: "" + parseFloat(parseFloat(document.getElementById("amount").value.trim().replace(",",".")).toFixed(2)).toFixed(2) + "",
             },
           });
         }
@@ -480,7 +480,7 @@
           
 
           document.getElementById("latestrequest").innerHTML = "<br/>REQUEST:<br/><br/>"+"POST " +
-          document.getElementById("url").value +
+          document.getElementById("url").value.trim() +
           "/" +
           radioButtonCheckedValue +
           "<br/><br/>" +
