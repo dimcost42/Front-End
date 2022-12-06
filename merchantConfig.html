@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  -->
+    <title>Json analyzer by Novidea</title>
+    <style>
+      body {
+        background-image: url("https://dimcost42.github.io/Front-End/saasBackground.jpg");
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #mytDiv {
+        background-color: aliceblue;
+        opacity: 85%;
+        width: 30%;
+        padding: 2%;
+      }
+
+      .topnav {
+        overflow: hidden;
+        background-color: aliceblue;
+        opacity: 85%;
+      }
+
+      .topnav a {
+        float: left;
+        color: #080808;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .topnav a.active {
+        background-color: #020202;
+        color: white;
+      }
+
+      /* #logo {
+    position: fixed;
+    bottom: 0;
+} */
+    </style>
+  </head>
+  <body>
+    <center>
+      <div id="mytDiv">
+        <label for="sn">Terminal SN</label><br />
+        <input type="text" id="sn" title="sn" />
+        <br /><br />
+        <button type="button" onclick="loadDoc()">Search Terminal</button>
+        <b>
+          <pre id="demo"></pre></b
+        ><br />
+        <pre id="latestrequest"></pre>
+
+        <a href="https://www.novidea.gr/" target="_blank"
+          ><img
+            id="logo"
+            src="https://www.novidea.gr/img/novidea-logo.svg"
+            width="200dp"
+        /></a>
+      </div>
+    </center>
+    <script>
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          var jsonResponse = null;
+
+          if (this.readyState == 4 && this.status == 200) {
+            jsonResponse = JSON.parse(this.responseText);
+            document.getElementById("demo").innerHTML =
+              "<br/>Merchant Type: " +
+              merchantType(jsonResponse.merchant.merchantApplicationType) +
+              "<br/>" +
+              "<br/>Merchant Name: " +
+              jsonResponse.merchant.merchantName +
+              "<br/>" +
+              "<br/>Merchant ID: " +
+              jsonResponse.merchant.merchantID +
+              "<br/>" +
+              "<br/>Terminal ID: " +
+              jsonResponse.merchant.terminalID +
+              "<br/>" +
+              "<br/>Key entry: " +
+              jsonResponse.applicationSettings.supportKeyEntry +
+              "<br/>" +
+              "<br/>Installments: " +
+              jsonResponse.applicationSettings.supportInstallments +
+              "<br/>" +
+              "<br/>Tips: " +
+              jsonResponse.applicationSettings.supportTIP +
+              "<br/>" +
+              "<br/>Auto close batch: " +
+              jsonResponse.applicationSettings.useAutoCloseBatch +
+              "<br/>" +
+              "<br/>Auto close batch time: " +
+              jsonResponse.applicationSettings.useAutoCloseBatchTimer +
+              "<br/>" +
+              "<br/>Auto update parameters: " +
+              jsonResponse.applicationSettings.useAutoParams +
+              "<br/>" +
+              "<br/>Auto update parameters time: " +
+              jsonResponse.applicationSettings.useAutoParamsTimer +
+              "<br/>" +
+              "<br/>Alphabank DCC: " +
+              jsonResponse.applicationSettings.alphaBankDCCSupport +
+              "<br/>" +
+              "<br/>Eurobank DCC: " +
+              jsonResponse.applicationSettings.euroBankDCCSupport +
+              "<br/>" +
+              "<br/>Pre auth: " +
+              jsonResponse.applicationSettings.preAuthEnabled +
+              "<br/>" +
+              "<br/>Local Sale: " +
+              jsonResponse.applicationSettings.localSaleEnabled +
+              "<br/>" +
+              "<br/>Installments: " +
+              jsonResponse.applicationSettings.supportInstallments +
+              "<br/>"+
+              "<br/>Unattended: " +
+              jsonResponse.applicationSettings.unattendedMode +
+              "<br/>"+
+              "<br/>MDB: " +
+              jsonResponse.applicationSettings.mdbManagerEnabled +
+              "<br/>"+
+              "<br/>Navigation bar: " +
+              jsonResponse.paxDeviceSettings.disableNavigatorBar +
+              "<br/>"+
+              "<br/>Status bar: " +
+              jsonResponse.paxDeviceSettings.disableStatusBar +
+              "<br/>"+
+              "<br/>AlphaBank Bonus: " +
+              jsonResponse.loyaltySettings.alphaBankBonusEnabled +
+              "<br/>"+
+              "<br/>Eurobank Euroepistrofi: " +
+              jsonResponse.loyaltySettings.eurobankEuroepistrofiEnabled +
+              "<br/>"+
+              "<br/>NBG Go4More: " +
+              jsonResponse.loyaltySettings.nbgGo4MoreEnabled +
+              "<br/>"+
+              "<br/>PBG Yellows: " +
+              jsonResponse.loyaltySettings.pbgYellowEnabled +
+              "<br/>"+
+              "<br/>Ecr: " +
+              jsonResponse.ecrSettings.ecrSystem +
+              "<br/>"+
+              "<br/>Ecr Mode: " +
+              jsonResponse.ecrSettings.ecrSystemMode +
+              "<br/>"+
+              "<br/>Network Fallback: " +
+              jsonResponse.paxDeviceSettings.allowAutoNetworkFallback +
+              "<br/>"+
+              "<br/>Host date time: " +
+              jsonResponse.paxDeviceSettings.useHostDateTime +
+              "<br/>";
+
+            console.log(jsonResponse);
+          }else{
+            document.getElementById("demo").innerHTML = "Not in production";
+          }
+        };
+        xhttp.open(
+          "GET",
+          "https://ptao.novidea.gr/" +
+            document.getElementById("sn").value.trim(),
+          true
+        );
+        // xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send();
+      }
+
+      function merchantType(merchantType) {
+        switch (merchantType) {
+          case "0":
+            return "Simple sale";
+            break;
+          case "1":
+            return "Restaurant";
+            break;
+          case "2":
+            return "Super market";
+            break;
+          case "3":
+            return "Car rental";
+            break;
+          case "4":
+            return "Hotel";
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
