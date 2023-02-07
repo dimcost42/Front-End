@@ -7,9 +7,9 @@
     "merchantName" : "DEMO TEST CARDLINK",
     "merchantAddress" : "AGIOY KONSTANTINOY 50  MAROYSI",
     "merchantTelephone" : "2106100676",
-    "cardlinkMerchantType" : "",
-    "merchantID" : "0101118297",
-    "terminalID" : "77618446",
+	  "merchantID": "0100984178",
+		"cardlinkMerchantType": "",
+		"terminalID": "77400039",
     "customerID" : "00000000000001",
     "acqIndetifier" : "",
     "acqName" : ""
@@ -55,7 +55,7 @@
     "isAllowMotoPayment" : true
   },
   "applicationSettings" : {
-    "sdkLink" : 2,
+    "sdkLink" : 1,
     "useMastercardNewBrand" : true,
     "supportKeyEntry" : true,
     "supportInstallments" : true,
@@ -121,16 +121,16 @@
     "defaultLanguage" : "el"
   },
   "loyaltySettings" : {
-    "alphaBankBonusEnabled" : true,
+    "alphaBankBonusEnabled" : false,
     "alphaBankBonusVTid" : "77618446",
     "alphaBankBonusVMid" : "0101118297",
     "useAlphaBankBonusBRAmount" : false,
     "useAlphaBankBonusWithoutOffers" : false,
-    "eurobankEuroepistrofiEnabled" : true,
+    "eurobankEuroepistrofiEnabled" : false,
     "eurobankEuroepistrofiVTid" : "77618446",
     "eurobankEuroepistrofiVMid" : "0101118297",
-    "eurobankEuroepistrofiUploadFullRedemption" : true,
-    "nbgGo4MoreEnabled" : true,
+    "eurobankEuroepistrofiUploadFullRedemption" : false,
+    "nbgGo4MoreEnabled" : false,
     "nbgGo4MoreVTid" : "30002634",
     "nbgGo4MoreVMid" : "0123455",
     "pbgYellowEnabled" : false,
