@@ -1,20 +1,20 @@
 {
-  "menu": [
+  "categories": [
     {
-      "category":"Cofee",
+      "name":"Cofee",
       "description":"Καφεδάκι για όλες τις ορέξεις",
-      "values":[
+      "products":[
         {
-          "product_id":1,
-          "product":"Freddo Espresso",
+          "id":1,
+          "name":"Freddo Espresso",
           "price":3.40,
           "currency":"EUR",
           "description":"Arabica, caramel flavor",
           "imageURL":"https://mysandbox.com/images/fredo_espresso"
         },
         {
-          "product_id":3,
-          "product":"Filter Coffe",
+          "id":3,
+          "name":"Filter Coffe",
           "price":3.20,
           "currency":"EUR",
           "description":"French coffee, hot drink",
@@ -23,28 +23,28 @@
       ]
     },
     {
-      "category":"Sandwiches & Burgers",
+      "name":"Sandwiches & Burgers",
       "description":"Σαντουιτσακι και μπεργκερακι για να γεμιζει η κοιλιτσα",
-      "values":[
+      "products":[
         {
-          "product_id":5,
-          "product":"Simple Toast",
+          "id":5,
+          "name":"Simple Toast",
           "price":3.50,
           "currency":"EUR",
           "description":"Cheddar cheese, bacon",
           "imageURL":"https://mysandbox.com/images/simple_toast"
         },
         {
-          "product_id":6,
-          "product":"Premium Sandwich",
+          "id":6,
+          "name":"Premium Sandwich",
           "price":4.50,
           "currency":"EUR",
           "description":"Graviera, cheese, salami aeros",
           "imageURL":"https://mysandbox.com/images/premium_sandwich"
         },
         {
-          "product_id":8,
-          "product":"Jack Daniels' Burger",
+          "id":8,
+          "name":"Jack Daniels' Burger",
           "price":6.50,
           "currency":"EUR",
           "description":"Cheddar cheese, carameled onions, beef meat, hot sauce",
@@ -53,28 +53,28 @@
       ]
     },
     {
-      "category":"Souvlakia",
+      "name":"Souvlakia",
       "description":"Σουβλακακι για την ορεξη",
-      "values":[
+      "products":[
         {
-          "product_id":10,
-          "product":"Pita Giros Xoirino Apola",
+          "id":10,
+          "name":"Pita Giros Xoirino Apola",
           "price":2.50,
           "currency":"EUR",
           "description":"Patates, tzatziki, ntomata, kremmydi",
           "imageURL":"https://mysandbox.com/images/pita_gyros_xoirino"
         },
         {
-          "product_id":11,
-          "product":"Pita Giros Kotopoulo Apola",
+          "id":11,
+          "name":"Pita Giros Kotopoulo Apola",
           "price":2.60,
           "currency":"EUR",
           "description":"Patates, sauce mayo, ntomata, marouli",
           "imageURL":"https://mysandbox.com/images/pita_gyros_kotopoulo"
         },
         {
-          "product_id":12,
-          "product":"Kalamaki kotopoulo",
+          "id":12,
+          "name":"Kalamaki kotopoulo",
           "price":1.90,
           "currency":"EUR",
           "description":"Kalamaki kotopoulo, pita, patates",
