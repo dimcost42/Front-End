@@ -25,5 +25,9 @@
 }, {
 	"value": "KeyInject",
 	"name": "Key Injection"
-}
+},
+ {
+	"value": "Wordline",
+	"name": "Wordline"
+ }
 ]
