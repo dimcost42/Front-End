@@ -63,7 +63,7 @@
 "sdkLink": 1,
 "useMastercardNewBrand": true,
 "supportKeyEntry": true,
-"supportInstallments": true,
+"supportInstallments": false,
 "supportTIP": true,
 "useBenakiTheme": false,
 "useVodafoneTheme": false,
