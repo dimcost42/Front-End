@@ -236,6 +236,16 @@
         />
         <label for="reconciliation">Reconciliation</label>
         <br />
+
+        <input
+          type="radio"
+          id="fullreconciliation"
+          name="saleType"
+          value="fullreconciliation"
+          onclick="manipulateInputs(true, true, true, true)"
+        />
+        <label for="fullreconciliation">Full Reconciliation</label>
+        <br />
       
 
         <br /><br />
@@ -459,6 +469,22 @@
         }
 
         if (radioButtonCheckedValue === "reconciliation") {
+          jsonObject = JSON.stringify({
+            serviceData: {
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
+            },
+            transactionData: {
+              firstByteOriginalTrans: "0",
+              uniqueTxnId: "                   " + Date.now(),
+              reconciliationMode: "0",
+              batchNumber: "000000",
+            },
+          });
+        }
+
+        if (radioButtonCheckedValue === "fullreconciliation") {
           jsonObject = JSON.stringify({
             serviceData: {
               host: "" + document.getElementById("ip").value.trim() + "",
