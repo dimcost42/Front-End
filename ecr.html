@@ -246,6 +246,26 @@
         />
         <label for="fullreconciliation">Full Reconciliation</label>
         <br />
+
+        <input
+        type="radio"
+        id="onetappreauth"
+        name="saleType"
+        value="onetappreauth"
+        onclick="manipulateInputs(true, false, true, true)"
+      />
+      <label for="onetappreauth">One Tap Preauth</label>
+      <br />
+
+      <input
+      type="radio"
+      id="onetappreauthcompletion"
+      name="saleType"
+      value="onetappreauthcompletion"
+      onclick="manipulateInputs(false, false, true, false)"
+    />
+    <label for="onetappreauth">One Tap Preauth Completion</label>
+    <br />
       
 
         <br /><br />
@@ -547,6 +567,44 @@
               firstByteOriginalTrans: "0",
               uniqueTxnId: "                   " + Date.now(),
               amount: "" + parseFloat(parseFloat(document.getElementById("amount").value.trim().replace(",",".")).toFixed(2)).toFixed(2) + "",
+            },
+          });
+        }
+
+        if (
+          document.querySelector('input[name="saleType"]:checked').id ===
+          "onetappreauth"
+        ) {
+          jsonObject = JSON.stringify({
+            serviceData: {
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
+            },
+            transactionData: {
+              // firstByteOriginalTrans: "0",
+              uniqueTxnId: "                   " + Date.now(),
+              amount: "" + parseFloat(parseFloat(document.getElementById("amount").value.trim().replace(",",".")).toFixed(2)).toFixed(2) + "",
+            },
+          });
+        }
+
+        if (
+          document.querySelector('input[name="saleType"]:checked').id ===
+          "onetappreauthcompletion"
+        ) {
+          jsonObject = JSON.stringify({
+            serviceData: {
+              host: "" + document.getElementById("ip").value.trim() + "",
+              port: "" + document.getElementById("port").value.trim() + "",
+              ecrid: "" + document.getElementById("tid").value.trim() + ""
+            },
+            transactionData: {
+              // firstByteOriginalTrans: "0",
+              uniqueTxnId: "                   " + Date.now(),
+              amount: "" + parseFloat(parseFloat(document.getElementById("amount").value.trim().replace(",",".")).toFixed(2)).toFixed(2) + "",
+              referenceNumber: "" + document.getElementById("rrn").value.trim() + "",
+              authorizationCode: "" + document.getElementById("authorizationCode").value.trim() + ""
             },
           });
         }
