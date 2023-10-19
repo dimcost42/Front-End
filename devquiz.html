@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .question-counter {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="quiz-container">
+         <div class="question-counter">
+            <span id="current-question"></span> / <span id="total-questions"></span>
+        </div>
+        <h1>Quiz App</h1>
+        
+        <button id="start-quiz-button">Start Quiz</button>
+        <div id="question-container" style="display: none;">
+            <p id="question"></p>
+            <label>
+                <input type="radio" name="answer" value="A"> <span id="answerA"></span><br>
+            </label>
+            <label>
+                <input type="radio" name="answer" value="B"> <span id="answerB"></span><br>
+            </label>
+            <label>
+                <input type="radio" name="answer" value="C"> <span id="answerC"></span><br>
+            </label>
+            <label>
+                <input type="radio" name="answer" value="D"> <span id="answerD"></span><br>
+            </label>
+        </div>
+        <div id="result-container" style="display: none;">
+            <h2>Quiz Results</h2>
+            <p>Correct Answers: <span id="correct-answers">0</span></p>
+            <p>Wrong Answers: <span id="wrong-answers">0</span></p>
+        </div>
+        <button id="next-button">Next</button>
+        <button id="finish-button" style="display: none;">Finish</button>
+    </div>
+
+    <script>
+        let questions = [];
+        let currentQuestion = 0;
+        let correctAnswers = 0;
+        let wrongAnswers = 0;
+
+        const startQuizButton = document.getElementById("start-quiz-button");
+        const questionContainer = document.getElementById("question-container");
+        const questionElement = document.getElementById("question");
+        const answerAElement = document.getElementById("answerA");
+        const answerBElement = document.getElementById("answerB");
+        const answerCElement = document.getElementById("answerC");
+        const answerDElement = document.getElementById("answerD");
+
+        const nextButton = document.getElementById("next-button");
+        const finishButton = document.getElementById("finish-button");
+
+        const resultContainer = document.getElementById("result-container");
+        const correctAnswersElement = document.getElementById("correct-answers");
+        const wrongAnswersElement = document.getElementById("wrong-answers");
+
+        function loadQuestion() {
+            if (currentQuestion < questions.length) {
+                const currentQuestionData = questions[currentQuestion];
+                questionElement.textContent = currentQuestionData.question;
+                answerAElement.textContent = currentQuestionData.answerA;
+                answerBElement.textContent = currentQuestionData.answerB;
+                answerCElement.textContent = currentQuestionData.answerC;
+                answerDElement.textContent = currentQuestionData.answerD;
+                  document.getElementById("current-question").innerHTML =(currentQuestion+1);
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function finishQuiz() {
+            questionContainer.style.display = "none";
+            nextButton.style.display = "none";
+            finishButton.style.display = "inline";
+            resultContainer.style.display = "block";
+            correctAnswersElement.textContent = correctAnswers;
+            wrongAnswersElement.textContent = wrongAnswers;
+        }
+
+        function checkAnswer() {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer) {
+                if (selectedAnswer.value === questions[currentQuestion].answerCorrect) {
+                    correctAnswers++;
+                } else {
+                    wrongAnswers++;
+                }
+                currentQuestion++;
+                selectedAnswer.checked = false;
+                loadQuestion();
+            }
+        }
+
+        function startQuiz() {
+            startQuizButton.style.display = "none";
+            questionContainer.style.display = "block";
+            nextButton.style.display = "inline";
+            fetchQuestions();
+        }
+
+        function fetchQuestions() {
+            fetch("https://dimcost42.github.io/Front-End/questionnaire.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    questions = data.questions;
+                    loadQuestion();
+                    document.getElementById("total-questions").innerHTML = questions.length;
+                })
+                .catch((error) => {
+                    console.error("Failed to fetch questions:", error);
+                });
+        }
+
+        startQuizButton.addEventListener("click", startQuiz);
+        nextButton.addEventListener("click", checkAnswer);
+        finishButton.addEventListener("click", finishQuiz);
+    </script>
+</body>
+</html>
