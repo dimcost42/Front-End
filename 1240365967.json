@@ -4,7 +4,7 @@
         "merchantCategoryCode": "5441",
         "merchantApplicationType": "0",
         "merchantPostalCode": "15236",
-        "merchantName": "ΚΑΥΚΑ",
+        "merchantName": "KAYKA",
         "merchantAddress": "MARINOY ANTYPA 41 45",
         "merchantTelephone": "2155352373",
         "merchantVatNumber": "139257543",
@@ -132,7 +132,7 @@
         "ecrSystemMode": 0,
         "ecrSystemProtocol": 0,
         "ecrVendor": "0",
-        "supportBonusPoolBlock": true
+        "supportBonusPoolBlock": false
     },
     "billPayment": {
         "useBillPayment": false,
