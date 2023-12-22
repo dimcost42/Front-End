@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f7f7f7; /* Deep Blue Background Color */
+        }
+
+        .snowflake {
+            position: absolute;
+            font-size: 30px;
+            color: #000000; /* Snowflake Color */
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+<div align="center" >
+  <img src="https://img.freepik.com/free-vector/christmas-poster-design-with-decorative-elements_1017-16718.jpg?w=996&t=st=1703249468~exp=1703250068~hmac=1ce4cadd74581c353608c8888b1e58858ea1ab46aae008a199a2eb4d42bc1be1"
+width="30%" style="padding: 50px;"/>
+<br/>
+    <img src="https://novidea.gr/wp-content/uploads/2022/12/Frame-2.png" style="background-color: #f7f7f7;"
+	width="20%"/>
+    </div>
+    
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.body;
+            const numberOfSnowflakes = 150;
+
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                createSnowflake();
+            }
+
+            function createSnowflake() {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.innerHTML = '❄';
+                container.appendChild(snowflake);
+
+                const animationDuration = Math.random() * 3 + 2; // Random duration between 2 and 5 seconds
+                const startPosition = Math.random() * window.innerWidth;
+                const startOpacity = Math.random();
+
+                snowflake.style.left = startPosition + 'px';
+                snowflake.style.top = '0'; // Start from the top
+                snowflake.style.opacity = startOpacity;
+
+                // Animation
+                snowflake.animate(
+                    [
+                        { transform: 'translateY(0px)', opacity: startOpacity },
+                        { transform: 'translateY(' + window.innerHeight + 'px)', opacity: 0 }
+                    ],
+                    {
+                        duration: animationDuration * 1000,
+                        iterations: Infinity,
+                        delay: Math.random() * animationDuration * 1000
+                    }
+                );
+            }
+        });
+    </script>
+
+</body>
+</html>
