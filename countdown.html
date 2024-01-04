@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20% 0;
+        }
+
+        #countdown {
+            font-size: 10em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown">10:00</div>
+
+    <marquee>Will be back soon</marquee>
+
+    <audio id="backgroundAudio" loop>
+        <source src="standby.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Set the countdown time in seconds (10 minutes)
+            let countdownTime = 10 * 60;
+
+            // Get the countdown element
+            const countdownElement = document.getElementById("countdown");
+
+            // Get the audio element
+            const backgroundAudio = document.getElementById("backgroundAudio");
+
+            // Function to play audio and update countdown
+            function playAudioAndUpdateCountdown() {
+                backgroundAudio.play();
+                // Update the countdown every second
+                const countdownInterval = setInterval(function () {
+                    const minutes = Math.floor(countdownTime / 60);
+                    const seconds = countdownTime % 60;
+
+                    countdownElement.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+                    if (countdownTime <= 0) {
+                        // Stop the countdown when it reaches zero
+                        clearInterval(countdownInterval);
+                        countdownElement.textContent = "00:00";
+                    } else {
+                        // Decrement the countdown time
+                        countdownTime--;
+                    }
+                }, 1000);
+            }
+
+            // Check if user interaction has occurred
+            const userHasInteracted = () => {
+                playAudioAndUpdateCountdown();
+                // Remove the event listener to avoid multiple plays
+                document.removeEventListener("click", userHasInteracted);
+            };
+
+            // Add an event listener to play audio when the user interacts with the page
+            document.addEventListener("click", userHasInteracted);
+        });
+    </script>
+</body>
+</html>
