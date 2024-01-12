@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepLink im30 Unattended Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 1px;
+            border-radius: 10px;
+            font-family: Consolas, monospace;
+            cursor: pointer;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>DeepLink im30 Unattended Documentation</h1>
+
+<h2>PreAuth Deeplink Request</h2>
+<p>In order to perform a deeplink request for preauth, create an Intent object as follows:</p>
+
+<pre><code onclick="openModal('PreAuthModal')">
+Intent intent = new Intent();
+intent.setComponent(new ComponentName("gr.cardlink.unattendedapplication", "gr.cardlink.unattendedapplication.activities.DeepLinkActivity"));
+intent.putExtra("pre_auth", preauthPaymentRequest());
+startActivityForResult(intent, PRE_AUTH);
+</code></pre>
+
+<div id="PreAuthModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('PreAuthModal')">&times;</span>
+        <h2>PreAuth Object</h2>
+        <pre><code>
+public class PreAuth {
+    private String type;
+    private String price;
+
+    // Getter and Setter methods
+}
+
+public class TransactionResult {
+    private String transactionId;
+    private String transactionDescriptionType;
+    private String merchantId;
+    private String customerId;
+    private String terminalId;
+    private long batchClosedDateMillis;
+    private boolean batchClosed;
+    private String appId;
+    private long transactionDateInMillis;
+    private Date transactionDate;
+    private String transactionType;
+    private String cardType;
+    private String panCard;
+    private int settled;
+    private String expiredDate;
+    private String amountOriginal;
+    private String amountTip;
+    private double amountTotal;
+    private String amountTotalString;
+    private String rnn;
+    private String version;
+    private String appCode;
+    private String bankId;
+    private int receiptNumber;
+    private int batchNumber;
+    private boolean isTransactionVoided;
+    private boolean isTransactionRefunded;
+    private boolean isTransactionPreAuth;
+    private boolean isTransactionPreAuthCompletion;
+    private int isSignatureVerificationRequiredTransaction;
+    private String finalCode;
+    private String merchantName;
+    private String merchantAddress;
+    private String merchantLocation;
+    private String deviceSn;
+    private String merchantTelephone;
+    private String applicationLabel;
+    private String applicationPreferredName;
+    private String applicationIdentifierTerminal;
+    private String applicationVersionNumberICC;
+    private String cardHolderName;
+    private String signature;
+    private String installments;
+    private String insuranceId;
+    private boolean verifiedbydevice;
+    private String rentRoomName;
+    private long preAuthFromDateInMillis;
+    private long preAuthToDateInMillis;
+    private String preAuthSequenceNumber;
+    private String preAuthApplicationCode;
+    private boolean preAuthIsSettled;
+    private String dccCurrencyCode;
+    private String dccRequestIdentifier;
+    private String dccRetrievalReferenceNumber;
+    private String dccExchangeRate;
+    private String dccMarkup;
+    private String dccEligibileIndicator;
+    private String dccCardHolderDccAmount;
+}
+
+</code></pre>
+    </div>
+</div>
+
+<p>Method to build the preauthPaymentRequest object:</p>
+
+<pre><code onclick="openModal('PreAuthModal')">
+private String preauthPaymentRequest() {
+    PreAuth payment = new PreAuth();
+    payment.setType("PRE_AUTH");
+    payment.setPrice(amountEditText.getText().toString());
+    return new Gson().toJson(payment, PreAuth.class);
+}
+</code></pre>
+
+<h2>PreAuth Completion Deeplink Request</h2>
+<p>In order to perform a deeplink request for preauth completion, create an Intent object as follows:</p>
+
+<pre><code onclick="openModal('PreAuthCompletionModal')">
+Intent intent = new Intent();
+intent.setComponent(new ComponentName("gr.cardlink.unattendedapplication", "gr.cardlink.unattendedapplication.activities.DeepLinkActivity"));
+intent.putExtra("pre_auth_completion", preauthCompletionPaymentRequest());
+startActivityForResult(intent, PRE_AUTH_COMPLETION_REQUEST);
+</code></pre>
+
+<div id="PreAuthCompletionModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('PreAuthCompletionModal')">&times;</span>
+        <h2>PreAuthCompletion Object</h2>
+        <pre><code>
+public class PreAuthCompletion {
+    private String posTransactionId;
+    private String price;
+    private int oneTap;
+
+    // Getter and Setter methods
+}
+
+public class TransactionResult {
+    private String transactionId;
+    private String transactionDescriptionType;
+    private String merchantId;
+    private String customerId;
+    private String terminalId;
+    private long batchClosedDateMillis;
+    private boolean batchClosed;
+    private String appId;
+    private long transactionDateInMillis;
+    private Date transactionDate;
+    private String transactionType;
+    private String cardType;
+    private String panCard;
+    private int settled;
+    private String expiredDate;
+    private String amountOriginal;
+    private String amountTip;
+    private double amountTotal;
+    private String amountTotalString;
+    private String rnn;
+    private String version;
+    private String appCode;
+    private String bankId;
+    private int receiptNumber;
+    private int batchNumber;
+    private boolean isTransactionVoided;
+    private boolean isTransactionRefunded;
+    private boolean isTransactionPreAuth;
+    private boolean isTransactionPreAuthCompletion;
+    private int isSignatureVerificationRequiredTransaction;
+    private String finalCode;
+    private String merchantName;
+    private String merchantAddress;
+    private String merchantLocation;
+    private String deviceSn;
+    private String merchantTelephone;
+    private String applicationLabel;
+    private String applicationPreferredName;
+    private String applicationIdentifierTerminal;
+    private String applicationVersionNumberICC;
+    private String cardHolderName;
+    private String signature;
+    private String installments;
+    private String insuranceId;
+    private boolean verifiedbydevice;
+    private String rentRoomName;
+    private long preAuthFromDateInMillis;
+    private long preAuthToDateInMillis;
+    private String preAuthSequenceNumber;
+    private String preAuthApplicationCode;
+    private boolean preAuthIsSettled;
+    private String dccCurrencyCode;
+    private String dccRequestIdentifier;
+    private String dccRetrievalReferenceNumber;
+    private String dccExchangeRate;
+    private String dccMarkup;
+    private String dccEligibileIndicator;
+    private String dccCardHolderDccAmount;
+}
+
+</code></pre>
+    </div>
+</div>
+
+<p>Method to build the preauthCompletionPaymentRequest object:</p>
+
+<pre><code onclick="openModal('PreAuthCompletionModal')">
+private String preauthCompletionPaymentRequest() {
+    PreAuthCompletion payment = new PreAuthCompletion();
+    payment.setPosTransactionId(latestTranscationdId);
+    payment.setPrice(amountEditText.getText().toString());
+    payment.setOneTap(1);
+    return new Gson().toJson(payment, PreAuthCompletion.class);
+}
+</code></pre>
+
+
+<h1>onActivityResult Method Documentation</h1>
+
+<p>The <code>onActivityResult</code> method is used to handle results returned from activities started with <code>startActivityForResult</code>.</p>
+
+<h2>Method Signature</h2>
+
+<pre><code>
+  @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == PRE_AUTH || requestCode == PRE_AUTH_COMPLETION_REQUEST) {
+            if (resultCode == RESULT_OK && data != null) {
+                String paymentResult = data.getStringExtra("data");
+
+                if (paymentResult != null) {
+                    try {
+                        TransactionResult transactionResult = new Gson().fromJson(paymentResult, TransactionResult.class);
+
+                        runOnUiThread(() -> {
+                            if (transactionResult != null) {
+                                latestTranscationdId = transactionResult.getTransactionId();
+                                transactionIdTextView.setText(transactionResult.getTransactionId());
+                            }
+
+                            if (requestCode == PRE_AUTH) {
+                                resultTextView.setText("Success PREAUTH");
+                                preauthCompletionButton.setEnabled(true);
+                            } else if (requestCode == PRE_AUTH_COMPLETION_REQUEST) {
+                                if (data.getBooleanExtra("PreAuthCompletionCanceled", false)) {
+                                    String description = data.getStringExtra("description");
+                                    if (description != null) {
+                                        resultTextView.setText(description);
+                                    }
+                                } else {
+                                    latestTranscationdId = null;
+                                    resultTextView.setText("Success PREAUTH_COMPLETION");
+                                    preauthCompletionButton.setEnabled(false);
+                                }
+                            }
+
+                            if (data.getStringExtra("payment") != null) {
+                                Toast.makeText(getApplicationContext(), data.getStringExtra("payment"), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                    } catch (JsonSyntaxException e) {
+                        runOnUiThread(() -> resultTextView.setText(data.getStringExtra("data")));
+                    }
+                }
+
+            } else if (resultCode == RESULT_CANCELED && data != null) {
+                runOnUiThread(() -> {
+                    String requestType = (requestCode == PRE_AUTH) ? "PREAUTH" : "PRE AUTH COMPLETION";
+                    String description = data.getStringExtra("description");
+                    String responseData = data.getStringExtra("data");
+
+                    resultTextView.setText(String.format(
+                            "Failed %s\nDescription: %s\nData: %s",
+                            requestType,
+                            (description != null) ? description : "",
+                            (responseData != null) ? responseData : ""
+                    ));
+                });
+            }
+        }
+    }
+</code></pre>
+
+<h2>Parameters</h2>
+
+<ul>
+    <li><code>int requestCode</code>: The integer request code originally supplied to <code>startActivityForResult</code>.</li>
+    <li><code>int resultCode</code>: The integer result code returned by the child activity through its setResult().</li>
+    <li><code>@Nullable Intent data</code>: An Intent, which can return result data to the caller (varies by requestCode).</li>
+</ul>
+
+<h2>Handling Results</h2>
+
+<p>The method checks the requestCode and resultCode to determine the action to be taken:</p>
+
+<ul>
+    <li>If the <code>requestCode</code> is <code>PRE_AUTH</code> or <code>PRE_AUTH_COMPLETION_REQUEST</code>:</li>
+    <ul>
+        <li>If the <code>resultCode</code> is <code>RESULT_OK</code>:
+            <ul>
+                <li>Extracts paymentResult from the intent data.</li>
+                <li>Parses paymentResult using Gson into a TransactionResult object.</li>
+                <li>Updates UI elements based on the request type and result.</li>
+                <li>Displays a Toast if payment data is present.</li>
+            </ul>
+        </li>
+        <li>If the <code>resultCode</code> is <code>RESULT_CANCELED</code>:
+            <ul>
+                <li>Updates UI with failure information including description and data.</li>
+            </ul>
+        </li>
+    </ul>
+</ul>
+
+
+
+<button onclick="openModal('codeExampleModal')">Code Example</button>
+<a href="https://drive.google.com/file/d/1CyfggyK6HGQ02f51M0lCoO8qPTQuo1qn/view?usp=sharing"/>DeeplinkPreauth.zip</a>
+<a href="https://dimcost42.github.io/Front-End/DeeplinkOneTapPreauth.apk">DeeplinkOneTapPreauth.apk</a>
+
+<div id="codeExampleModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('codeExampleModal')">&times;</span>
+        <h2>Code Example</h2>
+        <pre><code>
+
+import androidx.annotation.Nullable;
+
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.ComponentName;
+import android.content.Intent;
+import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
+
+import java.util.UUID;
+
+public class MainActivity extends AppCompatActivity {
+
+    private TextView clientTransactionIdTextView;
+    private TextView transactionIdTextView;
+    private EditText amountEditText;
+    private Button preauthButton;
+    private Button preauthCompletionButton;
+    private TextView resultTextView;
+
+    private Integer PRE_AUTH_COMPLETION_REQUEST = 102;
+    private Integer PRE_AUTH = 100;
+
+    private String latestTranscationdId = null;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        clientTransactionIdTextView = findViewById(R.id.clientTransactionIdTextView);
+        transactionIdTextView = findViewById(R.id.transactionIdTextView);
+        amountEditText = findViewById(R.id.amountEditText);
+        preauthButton = findViewById(R.id.preauthButton);
+        preauthCompletionButton = findViewById(R.id.preauthCompletionButton);
+        resultTextView = findViewById(R.id.resultTextView);
+
+        preauthButton.setEnabled(false);
+        preauthCompletionButton.setEnabled(false);
+        amountEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int start, int before, int count) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
+                // Check if amountEditText has at least one number
+                boolean hasNumber = charSequence.toString().matches(".*\\d+.*");
+
+                // Enable/disable buttons based on the condition
+                preauthButton.setEnabled(hasNumber);
+
+                if(latestTranscationdId != null) {
+                    preauthCompletionButton.setEnabled(hasNumber);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
+        preauthButton.setOnClickListener(v -> {
+            startPreauth();
+        });
+
+        preauthCompletionButton.setOnClickListener(v -> {
+            if (latestTranscationdId != null) {
+                startPreauthCompletion();
+            } else {
+                runOnUiThread(() -> {
+                    Toast.makeText(getApplicationContext(), "You need to complete a preauth first", Toast.LENGTH_SHORT).show();
+                });
+            }
+        });
+    }
+
+    private void startPreauthCompletion() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("gr.cardlink.unattendedapplication", "gr.cardlink.unattendedapplication.activities.DeepLinkActivity"));
+        intent.putExtra("pre_auth_completion", preauthCompletionPaymentRequest());
+        startActivityForResult(intent, PRE_AUTH_COMPLETION_REQUEST);
+    }
+
+    private void startPreauth() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("gr.cardlink.unattendedapplication", "gr.cardlink.unattendedapplication.activities.DeepLinkActivity"));
+        intent.putExtra("pre_auth", preauthPaymentRequest());
+        startActivityForResult(intent, PRE_AUTH);
+    }
+
+    private String preauthCompletionPaymentRequest() {
+        PreAuthCompletion payment = new PreAuthCompletion();
+        payment.setPosTransactionId(latestTranscationdId);
+        payment.setPrice(amountEditText.getText().toString());
+        payment.setOneTap(1);
+        return new Gson().toJson(payment, PreAuthCompletion.class);
+    }
+
+    private String preauthPaymentRequest() {
+        PreAuth payment = new PreAuth();
+        payment.setType("PRE_AUTH");
+        payment.setPrice(amountEditText.getText().toString());
+        return new Gson().toJson(payment, PreAuth.class);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == PRE_AUTH || requestCode == PRE_AUTH_COMPLETION_REQUEST) {
+            if (resultCode == RESULT_OK && data != null) {
+                String paymentResult = data.getStringExtra("data");
+
+                if (paymentResult != null) {
+                    try {
+                        TransactionResult transactionResult = new Gson().fromJson(paymentResult, TransactionResult.class);
+
+                        runOnUiThread(() -> {
+                            if (transactionResult != null) {
+                                latestTranscationdId = transactionResult.getTransactionId();
+                                transactionIdTextView.setText(transactionResult.getTransactionId());
+                            }
+
+                            if (requestCode == PRE_AUTH) {
+                                resultTextView.setText("Success PREAUTH");
+                                preauthCompletionButton.setEnabled(true);
+                            } else if (requestCode == PRE_AUTH_COMPLETION_REQUEST) {
+                                if (data.getBooleanExtra("PreAuthCompletionCanceled", false)) {
+                                    String description = data.getStringExtra("description");
+                                    if (description != null) {
+                                        resultTextView.setText(description);
+                                    }
+                                } else {
+                                    latestTranscationdId = null;
+                                    resultTextView.setText("Success PREAUTH_COMPLETION");
+                                    preauthCompletionButton.setEnabled(false);
+                                }
+                            }
+
+                            if (data.getStringExtra("payment") != null) {
+                                Toast.makeText(getApplicationContext(), data.getStringExtra("payment"), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                    } catch (JsonSyntaxException e) {
+                        runOnUiThread(() -> resultTextView.setText(data.getStringExtra("data")));
+                    }
+                }
+
+            } else if (resultCode == RESULT_CANCELED && data != null) {
+                runOnUiThread(() -> {
+                    String requestType = (requestCode == PRE_AUTH) ? "PREAUTH" : "PRE AUTH COMPLETION";
+                    String description = data.getStringExtra("description");
+                    String responseData = data.getStringExtra("data");
+
+                    resultTextView.setText(String.format(
+                            "Failed %s\nDescription: %s\nData: %s",
+                            requestType,
+                            (description != null) ? description : "",
+                            (responseData != null) ? responseData : ""
+                    ));
+                });
+            }
+        }
+    }
+
+}
+
+</code></pre>
+    </div>
+</div>
+
+
+<script>
+    function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "block";
+    }
+
+    function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        var modals = document.getElementsByClassName('modal');
+        for (var i = 0; i < modals.length; i++) {
+            var modal = modals[i];
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
