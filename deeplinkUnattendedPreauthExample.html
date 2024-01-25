@@ -182,6 +182,7 @@ public class PreAuthCompletion {
     private String posTransactionId;
     private String price;
     private int oneTap;
+    private String language;
 
     // Getter and Setter methods
 }
@@ -259,6 +260,7 @@ private String preauthCompletionPaymentRequest() {
     payment.setPosTransactionId(latestTranscationdId);
     payment.setPrice(amountEditText.getText().toString());
     payment.setOneTap(1);
+    payment.setLanguage(binding.languageSpinner.getSelectedItem().toString());
     return new Gson().toJson(payment, PreAuthCompletion.class);
 }
 </code></pre>
@@ -283,6 +285,7 @@ startActivityForResult(intent, FREE_REFUND_REQUEST);
         <pre><code>
 public class FreeRefund {
     private String price;
+    private String language;
 
     // Getter and Setter methods
 }
@@ -358,6 +361,7 @@ public class TransactionResult {
     private String freeRefundRequest() {
         FreeRefund payment = new FreeRefund();
         payment.setPrice(binding.amountEditText.getText().toString());
+        payment.setLanguage(binding.languageSpinner.getSelectedItem().toString());
         return new Gson().toJson(payment, FreeRefund.class);
     }
 </code></pre>
@@ -383,6 +387,7 @@ public class TransactionResult {
         <pre><code>
 public class Cancel {
     private String posTransactionId;
+    private String language;
 
     // Getter and Setter methods
 }
@@ -458,6 +463,7 @@ public class TransactionResult {
     private String cancelRequest() {
         Cancel payment = new Cancel();
         payment.setPosTransactionId(latestTranscationdId);
+        payment.setLanguage(binding.languageSpinner.getSelectedItem().toString());
         return new Gson().toJson(payment, Cancel.class);
     }
 </code></pre>
@@ -577,6 +583,7 @@ public class TransactionResult {
 public class Sale {
     private String type;
     private String price;
+    Private String language;
 
     // Getter and Setter methods
 }
@@ -653,6 +660,7 @@ public class TransactionResult {
         Sale payment = new Sale();
         payment.setType("SALE");
         payment.setPrice(binding.amountEditText.getText().toString());
+        payment.setLanguage(binding.languageSpinner.getSelectedItem().toString());
         return new Gson().toJson(payment, Sale.class);
     }
 </code></pre>
@@ -763,6 +771,34 @@ public class TransactionResult {
     startActivityForResult(intent, CLOSE_BATCH);
 </code></pre>
 
+
+<h2>Application Details Request</h2>
+<p>In order to get application details, create an Intent object as follows:</p>
+
+<pre><code onclick="openModal(&#39;ApplicationDetailsModal&#39;)">
+    Intent intent = new Intent();
+    intent.setComponent(new ComponentName("gr.cardlink.unattendedapplication", "gr.cardlink.unattendedapplication.activities.DeepLinkActivity"));
+    intent.putExtra("getApplicationDetails", "");
+    startActivityForResult(intent, APPLICATION_DETAILS);
+</code></pre>
+
+<div id="ApplicationDetailsModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(&#39;ApplicationDetailsModal&#39;)">×</span>
+        <h2>Application Details Response Object</h2>
+        <pre><code>
+public class GetApplicationDetails {
+    private String merchantId;
+    private String terminalId;
+    private String merchantName;
+    private String deviceSn;
+
+    // Getter and Setter Methods
+    }
+</code></pre>
+    </div>
+</div>
+
 <h1>onActivityResult Method Documentation</h1>
 
 <p>The <code>onActivityResult</code> method is used to handle results returned from activities started with <code>startActivityForResult</code>.</p>
@@ -774,7 +810,15 @@ public class TransactionResult {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == PRE_AUTH || requestCode == PRE_AUTH_COMPLETION_REQUEST || requestCode == FREE_REFUND_REQUEST || requestCode == CANCEL_REQUEST || requestCode == TRANSACTION_DETAILS_REQUEST) {
+        if (requestCode == PRE_AUTH ||
+                requestCode == PRE_AUTH_COMPLETION_REQUEST ||
+                requestCode == FREE_REFUND_REQUEST ||
+                requestCode == CANCEL_REQUEST ||
+                requestCode == TRANSACTION_DETAILS_REQUEST ||
+                requestCode == SALE_REQUEST ||
+                requestCode == REVERSAL_REQUEST ||
+                requestCode == CLOSE_BATCH ||
+                requestCode == APPLICATION_DETAILS) {
             if (resultCode == RESULT_OK && data != null) {
                 String paymentResult = data.getStringExtra("data");
 
@@ -786,6 +830,7 @@ public class TransactionResult {
                             if (transactionResult != null) {
                                 latestTranscationdId = transactionResult.getTransactionId();
                                 binding.transactionIdTextView.setText(transactionResult.getTransactionId());
+                                System.out.println(transactionResult);
                             }
 
                             if (requestCode == PRE_AUTH) {
@@ -798,17 +843,67 @@ public class TransactionResult {
                                         binding.resultTextView.setText(description);
                                     }
                                 } else {
-                                    latestTranscationdId = null;
                                     binding.resultTextView.setText("Success PREAUTH_COMPLETION");
                                     binding.preauthCompletionButton.setEnabled(false);
+                                    binding.cancelTransactionBtn.setEnabled(true);
                                 }
-                            } else if (requestCode== FREE_REFUND_REQUEST || requestCode == CANCEL_REQUEST || requestCode == TRANSACTION_DETAILS_REQUEST) {
-                                String description = data.getStringExtra("description");
-                                if (description != null) {
-                                    binding.resultTextView.setText(description);
+                            } else if (requestCode == TRANSACTION_DETAILS_REQUEST) {
+                                binding.resultTextView.setText(String.format("ID: %s\nType: %s\nAmount: €%s",
+                                        transactionResult.getTransactionId(),
+                                        transactionResult.getTransactionDescriptionType(),
+                                        transactionResult.getAmountTotalString()));
+                            } else if (requestCode == FREE_REFUND_REQUEST) {
+                                try {
+                                    String description = transactionResult.getTransactionDescriptionType();
+                                    if (description != null) {
+                                        binding.resultTextView.setText(String.format("%s Success", description));
+                                    }
+                                } catch (Exception e) {
+                                    binding.resultTextView.setText("Free refund Failed");
                                 }
-                            }
+                            } else if (requestCode == CANCEL_REQUEST) {
+                                try {
+                                    String description = transactionResult.getTransactionDescriptionType();
+                                    if (description != null) {
+                                        binding.resultTextView.setText(String.format("%s Success", description));
+                                    }
+                                } catch (Exception e) {
+                                    binding.resultTextView.setText("Cancel/Void Failed");
+                                }
+                            } else if (requestCode == SALE_REQUEST) {
+                                try {
+                                    String description = transactionResult.getTransactionDescriptionType();
+                                    if (description != null) {
+                                        binding.resultTextView.setText(String.format("%s Success", description));
+                                    }
+                                } catch (Exception e) {
+                                    binding.resultTextView.setText("Sale Failed");
+                                }
+                            } else if (requestCode == REVERSAL_REQUEST) {
+                                if (data.getStringExtra("payment") != null) {
+                                    binding.resultTextView.setText(String.format("%s Reversal, Success", data.getStringExtra("payment")));
+                                }
+                            } else if (requestCode == CLOSE_BATCH) {
+                                if (data.getStringExtra("payment") != null) {
+                                    binding.resultTextView.setText(String.format("%s Close batch, Success", data.getStringExtra("payment")));
+                                }
+                            } else if (requestCode == APPLICATION_DETAILS) {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                                Gson gson = new Gson();
+                                GetApplicationDetails getApplicationDetails = gson.fromJson(paymentResult, GetApplicationDetails.class);
 
+                                builder.setTitle("Application Details");
+
+                                builder.setMessage("Device SN: " + getApplicationDetails.getDeviceSn() +
+                                        "\nMerchant Id: " + getApplicationDetails.getMerchantId() +
+                                        "\nMerchant Name: " + getApplicationDetails.getMerchantName() +
+                                        "\nTerminal Id: " + getApplicationDetails.getTerminalId());
+
+                                builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+
+                                AlertDialog alertDialog = builder.create();
+                                alertDialog.show();
+                            }
                             if (data.getStringExtra("payment") != null) {
                                 Toast.makeText(getApplicationContext(), data.getStringExtra("payment"), Toast.LENGTH_SHORT).show();
                             }
@@ -821,7 +916,29 @@ public class TransactionResult {
 
             } else if (resultCode == RESULT_CANCELED && data != null) {
                 runOnUiThread(() -> {
-                    String requestType = (requestCode == PRE_AUTH) ? "PREAUTH" : "PRE AUTH COMPLETION";
+                    String requestType;
+                    if (requestCode == PRE_AUTH) {
+                        requestType = "PRE AUTH";
+                    } else if (requestCode == PRE_AUTH_COMPLETION_REQUEST) {
+                        requestType = "PRE AUTH COMPLETION";
+                    } else if (requestCode == FREE_REFUND_REQUEST) {
+                        requestType = "FREE REFUND";
+                    } else if (requestCode == CANCEL_REQUEST) {
+                        requestType = "CANCEL";
+                    } else if (requestCode == TRANSACTION_DETAILS_REQUEST) {
+                        requestType = "TRANSACTION DETAILS";
+                    } else if (requestCode == SALE_REQUEST) {
+                        requestType = "SALE";
+                    } else if (requestCode == REVERSAL_REQUEST) {
+                        requestType = "REVERSAL";
+                    } else if (requestCode == CLOSE_BATCH) {
+                        requestType = "CLOSE BATCH";
+                    } else if (requestCode == APPLICATION_DETAILS) {
+                        requestType = "APPLICATION DETAILS";
+                    } else {
+                        requestType = "Unknown";
+                    }
+
                     String description = data.getStringExtra("description");
                     String responseData = data.getStringExtra("data");
 
@@ -834,7 +951,6 @@ public class TransactionResult {
                 });
             }
         }
-    }
 </code></pre>
 
 <h2>Parameters</h2>
@@ -867,6 +983,12 @@ public class TransactionResult {
             </ul>
         </li>
     </ul>
+    <li>
+        <ul>
+            <li>If the <code>requestCode</code> is <code>APPLICATION_DETAILS</code></li>
+            <li>We get the application details from the <code>paymentResult</code> aka intent's String extra <code>data</code></li>
+        </ul>
+    </li>
 </ul>
 
 
@@ -881,88 +1003,159 @@ public class TransactionResult {
         <h2>Code Example</h2>
         <pre><code>
 
-import androidx.annotation.Nullable;
-
-import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ComponentName;
 import android.content.Intent;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
-import java.util.UUID;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+import gr.novidea.deeplinkonetappreauth.databinding.ActivityMainBinding;
+import gr.novidea.deeplinkonetappreauth.requests.Cancel;
+import gr.novidea.deeplinkonetappreauth.requests.FreeRefund;
+import gr.novidea.deeplinkonetappreauth.requests.GetApplicationDetails;
+import gr.novidea.deeplinkonetappreauth.requests.GetTransactionDetails;
+import gr.novidea.deeplinkonetappreauth.requests.PreAuth;
+import gr.novidea.deeplinkonetappreauth.requests.PreAuthCompletion;
+import gr.novidea.deeplinkonetappreauth.requests.Reversal;
+import gr.novidea.deeplinkonetappreauth.requests.Sale;
 
 public class MainActivity extends AppCompatActivity {
+    private ActivityMainBinding binding;
+    private final Integer PRE_AUTH = 100;
+    private final Integer PRE_AUTH_COMPLETION_REQUEST = 101;
+    private final Integer FREE_REFUND_REQUEST = 102;
+    private final Integer CANCEL_REQUEST = 103;
+    private final Integer TRANSACTION_DETAILS_REQUEST = 104;
+    private final Integer SALE_REQUEST = 105;
+    private final Integer REVERSAL_REQUEST = 106;
+    private final Integer CLOSE_BATCH = 107;
+    private final Integer APPLICATION_DETAILS = 108;
 
-    private TextView clientTransactionIdTextView;
-    private TextView transactionIdTextView;
-    private EditText amountEditText;
-    private Button preauthButton;
-    private Button preauthCompletionButton;
-    private TextView resultTextView;
-
-    private Integer PRE_AUTH_COMPLETION_REQUEST = 102;
-    private Integer PRE_AUTH = 100;
-
-    private String latestTranscationdId = null;
+    static String latestTranscationdId = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        clientTransactionIdTextView = findViewById(R.id.clientTransactionIdTextView);
-        transactionIdTextView = findViewById(R.id.transactionIdTextView);
-        amountEditText = findViewById(R.id.amountEditText);
-        preauthButton = findViewById(R.id.preauthButton);
-        preauthCompletionButton = findViewById(R.id.preauthCompletionButton);
-        resultTextView = findViewById(R.id.resultTextView);
+        List<String> languages = new ArrayList<>();
+        languages.add("EL");
+        languages.add("EN");
 
-        preauthButton.setEnabled(false);
-        preauthCompletionButton.setEnabled(false);
-        amountEditText.addTextChangedListener(new TextWatcher() {
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, languages);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        binding.languageSpinner.setAdapter(dataAdapter);
+
+        binding.amountEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int start, int before, int count) {
             }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                // Check if amountEditText has at least one number
+
                 boolean hasNumber = charSequence.toString().matches(".*\\d+.*");
+                binding.preauthButton.setEnabled(hasNumber);
+                binding.freeRefundBtn.setEnabled(hasNumber);
+                binding.simpleSaleBtn.setEnabled(hasNumber);
 
-                // Enable/disable buttons based on the condition
-                preauthButton.setEnabled(hasNumber);
-
-                if(latestTranscationdId != null) {
-                    preauthCompletionButton.setEnabled(hasNumber);
+                if (latestTranscationdId != null) {
+                    binding.preauthCompletionButton.setEnabled(hasNumber);
                 }
             }
 
             @Override
             public void afterTextChanged(Editable editable) {
+
             }
-        });
 
-        preauthButton.setOnClickListener(v -&gt; {
-            startPreauth();
         });
+        binding.preauthButton.setOnClickListener(v -> startPreauth());
 
-        preauthCompletionButton.setOnClickListener(v -&gt; {
+        binding.preauthCompletionButton.setOnClickListener(v -> {
             if (latestTranscationdId != null) {
                 startPreauthCompletion();
             } else {
-                runOnUiThread(() -&gt; {
-                    Toast.makeText(getApplicationContext(), "You need to complete a preauth first", Toast.LENGTH_SHORT).show();
-                });
+                runOnUiThread(() -> Toast.makeText(getApplicationContext(), "You need to complete a preauth first", Toast.LENGTH_SHORT).show());
+            }
+        });
+
+        binding.getTransactionDetailsBtn.setOnClickListener(click -> {
+            if (latestTranscationdId != null) {
+                startGetTransactionDetails();
+            } else {
+                runOnUiThread(() -> Toast.makeText(getApplicationContext(), "You need to complete a transaction first", Toast.LENGTH_SHORT).show());
+            }
+        });
+
+        binding.freeRefundBtn.setOnClickListener(click -> startFreeRefund());
+
+        binding.cancelTransactionBtn.setOnClickListener(click -> {
+            if (latestTranscationdId != null) {
+                startCancel();
+            }
+        });
+
+        binding.simpleSaleBtn.setOnClickListener(click -> startSale());
+
+        binding.reversalBtn.setOnClickListener(click -> {
+            if (latestTranscationdId != null) {
+                startReversal();
+            }
+        });
+
+        binding.closeBatchBtn.setOnClickListener(click -> startCloseBatch());
+
+        binding.getApplicationDetailsBtn.setOnClickListener(click -> startApplicationDetails());
+
+        binding.languageSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (binding.languageSpinner.getSelectedItem().toString().equals("EL")){
+                    binding.amountEditText.setHint("Εισάγετε Ποσό");
+                    binding.simpleSaleBtn.setText("Αγορά");
+                    binding.preauthButton.setText("Προέγκριση");
+                    binding.preauthCompletionButton.setText("Ολοκλήρωση Προέγκρισης");
+                    binding.freeRefundBtn.setText("Επιστροφή");
+                    binding.getTransactionDetailsBtn.setText("Λεπτομέριες Συναλλαγής");
+                    binding.getApplicationDetailsBtn.setText("Λεπτομέριες Εφαρμογής");
+                    binding.cancelTransactionBtn.setText("Ακύρωση Συναλλαγής");
+                    binding.reversalBtn.setText("Αντιστροφή Συναλλαγής");
+                    binding.closeBatchBtn.setText("Κλείσιμο Πακέτου");
+                } else if (binding.languageSpinner.getSelectedItem().toString().equals("EN")) {
+                    binding.amountEditText.setHint("Enter Amount");
+                    binding.simpleSaleBtn.setText("Sale");
+                    binding.preauthButton.setText("Pre-auth");
+                    binding.preauthCompletionButton.setText("Pre-auth Completion");
+                    binding.freeRefundBtn.setText("Free Refund");
+                    binding.getTransactionDetailsBtn.setText("Get Transaction Details");
+                    binding.getApplicationDetailsBtn.setText("Get Application Details");
+                    binding.cancelTransactionBtn.setText("Cancel Transaction");
+                    binding.reversalBtn.setText("Reversal Transaction");
+                    binding.closeBatchBtn.setText("Close Batch");
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
             }
         });
     }
@@ -981,19 +1174,103 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, PRE_AUTH);
     }
 
+    private void startGetTransactionDetails() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("gr.cardlink.unattendedapplication", "gr.cardlink.unattendedapplication.activities.DeepLinkActivity"));
+        intent.putExtra("getTransactionDetails", transactionDetailsRequest());
+        startActivityForResult(intent, TRANSACTION_DETAILS_REQUEST);
+    }
+
+    private void startFreeRefund() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("gr.cardlink.unattendedapplication", "gr.cardlink.unattendedapplication.activities.DeepLinkActivity"));
+        intent.putExtra("free_refund", freeRefundRequest());
+        startActivityForResult(intent, FREE_REFUND_REQUEST);
+    }
+
+    private void startCancel() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("gr.cardlink.unattendedapplication", "gr.cardlink.unattendedapplication.activities.DeepLinkActivity"));
+        intent.putExtra("cancel", cancelRequest());
+        startActivityForResult(intent, CANCEL_REQUEST);
+    }
+
+    private void startSale() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("gr.cardlink.unattendedapplication", "gr.cardlink.unattendedapplication.activities.DeepLinkActivity"));
+        intent.putExtra("payment", saleRequest());
+        startActivityForResult(intent, SALE_REQUEST);
+    }
+
+    private void startReversal() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("gr.cardlink.unattendedapplication", "gr.cardlink.unattendedapplication.activities.DeepLinkActivity"));
+        intent.putExtra("reversal", reversalRequest());
+        startActivityForResult(intent, REVERSAL_REQUEST);
+    }
+
+    private void startCloseBatch() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("gr.cardlink.unattendedapplication", "gr.cardlink.unattendedapplication.activities.DeepLinkActivity"));
+        intent.putExtra("closeBatch", "");
+        startActivityForResult(intent, CLOSE_BATCH);
+    }
+
+    private void startApplicationDetails() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("gr.cardlink.unattendedapplication", "gr.cardlink.unattendedapplication.activities.DeepLinkActivity"));
+        intent.putExtra("getApplicationDetails", "");
+        startActivityForResult(intent, APPLICATION_DETAILS);
+    }
+
     private String preauthCompletionPaymentRequest() {
         PreAuthCompletion payment = new PreAuthCompletion();
         payment.setPosTransactionId(latestTranscationdId);
-        payment.setPrice(amountEditText.getText().toString());
+        payment.setPrice(binding.amountEditText.getText().toString());
         payment.setOneTap(1);
+        payment.setLanguage(binding.languageSpinner.getSelectedItem().toString());
         return new Gson().toJson(payment, PreAuthCompletion.class);
     }
 
     private String preauthPaymentRequest() {
         PreAuth payment = new PreAuth();
         payment.setType("PRE_AUTH");
-        payment.setPrice(amountEditText.getText().toString());
+        payment.setPrice(binding.amountEditText.getText().toString());
         return new Gson().toJson(payment, PreAuth.class);
+    }
+
+    private String transactionDetailsRequest() {
+        GetTransactionDetails payment = new GetTransactionDetails();
+        payment.setOldClientTransactionId(latestTranscationdId);
+        return new Gson().toJson(payment, GetTransactionDetails.class);
+    }
+
+    private String freeRefundRequest() {
+        FreeRefund payment = new FreeRefund();
+        payment.setPrice(binding.amountEditText.getText().toString());
+        payment.setLanguage(binding.languageSpinner.getSelectedItem().toString());
+        return new Gson().toJson(payment, FreeRefund.class);
+    }
+
+    private String cancelRequest() {
+        Cancel payment = new Cancel();
+        payment.setPosTransactionId(latestTranscationdId);
+        payment.setLanguage(binding.languageSpinner.getSelectedItem().toString());
+        return new Gson().toJson(payment, Cancel.class);
+    }
+
+    private String saleRequest() {
+        Sale payment = new Sale();
+        payment.setType("SALE");
+        payment.setPrice(binding.amountEditText.getText().toString());
+        payment.setLanguage(binding.languageSpinner.getSelectedItem().toString());
+        return new Gson().toJson(payment, Sale.class);
+    }
+
+    private String reversalRequest() {
+        Reversal payment = new Reversal();
+        payment.setOldClientTransactionId(latestTranscationdId);
+        return new Gson().toJson(payment, Reversal.class);
     }
 
     @Override
@@ -1007,7 +1284,8 @@ public class MainActivity extends AppCompatActivity {
                 requestCode == TRANSACTION_DETAILS_REQUEST ||
                 requestCode == SALE_REQUEST ||
                 requestCode == REVERSAL_REQUEST ||
-                requestCode == CLOSE_BATCH) {
+                requestCode == CLOSE_BATCH ||
+                requestCode == APPLICATION_DETAILS) {
             if (resultCode == RESULT_OK && data != null) {
                 String paymentResult = data.getStringExtra("data");
 
@@ -1019,6 +1297,7 @@ public class MainActivity extends AppCompatActivity {
                             if (transactionResult != null) {
                                 latestTranscationdId = transactionResult.getTransactionId();
                                 binding.transactionIdTextView.setText(transactionResult.getTransactionId());
+                                System.out.println(transactionResult);
                             }
 
                             if (requestCode == PRE_AUTH) {
@@ -1031,9 +1310,9 @@ public class MainActivity extends AppCompatActivity {
                                         binding.resultTextView.setText(description);
                                     }
                                 } else {
-                                    latestTranscationdId = null;
                                     binding.resultTextView.setText("Success PREAUTH_COMPLETION");
                                     binding.preauthCompletionButton.setEnabled(false);
+                                    binding.cancelTransactionBtn.setEnabled(true);
                                 }
                             } else if (requestCode == TRANSACTION_DETAILS_REQUEST) {
                                 binding.resultTextView.setText(String.format("ID: %s\nType: %s\nAmount: €%s",
@@ -1041,28 +1320,56 @@ public class MainActivity extends AppCompatActivity {
                                         transactionResult.getTransactionDescriptionType(),
                                         transactionResult.getAmountTotalString()));
                             } else if (requestCode == FREE_REFUND_REQUEST) {
-                                String description = transactionResult.getTransactionDescriptionType();
-                                if (description != null) {
-                                    binding.resultTextView.setText(String.format("%s Success", description));
+                                try {
+                                    String description = transactionResult.getTransactionDescriptionType();
+                                    if (description != null) {
+                                        binding.resultTextView.setText(String.format("%s Success", description));
+                                    }
+                                } catch (Exception e) {
+                                    binding.resultTextView.setText("Free refund Failed");
                                 }
                             } else if (requestCode == CANCEL_REQUEST) {
-                                String description = transactionResult.getTransactionDescriptionType();
-                                if (description != null) {
-                                    binding.resultTextView.setText(String.format("%s Success", description));
+                                try {
+                                    String description = transactionResult.getTransactionDescriptionType();
+                                    if (description != null) {
+                                        binding.resultTextView.setText(String.format("%s Success", description));
+                                    }
+                                } catch (Exception e) {
+                                    binding.resultTextView.setText("Cancel/Void Failed");
                                 }
                             } else if (requestCode == SALE_REQUEST) {
-                                String description = transactionResult.getTransactionDescriptionType();
-                                if (description != null) {
-                                    binding.resultTextView.setText(String.format("%s Success", description));
+                                try {
+                                    String description = transactionResult.getTransactionDescriptionType();
+                                    if (description != null) {
+                                        binding.resultTextView.setText(String.format("%s Success", description));
+                                    }
+                                } catch (Exception e) {
+                                    binding.resultTextView.setText("Sale Failed");
                                 }
                             } else if (requestCode == REVERSAL_REQUEST) {
-                                if (data.getStringExtra("payment") != null){
+                                if (data.getStringExtra("payment") != null) {
                                     binding.resultTextView.setText(String.format("%s Reversal, Success", data.getStringExtra("payment")));
                                 }
-                            }else if (requestCode == CLOSE_BATCH) {
-                                if (data.getStringExtra("payment") != null){
+                            } else if (requestCode == CLOSE_BATCH) {
+                                if (data.getStringExtra("payment") != null) {
                                     binding.resultTextView.setText(String.format("%s Close batch, Success", data.getStringExtra("payment")));
                                 }
+                            } else if (requestCode == APPLICATION_DETAILS) {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                                Gson gson = new Gson();
+                                GetApplicationDetails getApplicationDetails = gson.fromJson(paymentResult, GetApplicationDetails.class);
+
+                                builder.setTitle("Application Details");
+
+                                builder.setMessage("Device SN: " + getApplicationDetails.getDeviceSn() +
+                                        "\nMerchant Id: " + getApplicationDetails.getMerchantId() +
+                                        "\nMerchant Name: " + getApplicationDetails.getMerchantName() +
+                                        "\nTerminal Id: " + getApplicationDetails.getTerminalId());
+
+                                builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+
+                                AlertDialog alertDialog = builder.create();
+                                alertDialog.show();
                             }
                             if (data.getStringExtra("payment") != null) {
                                 Toast.makeText(getApplicationContext(), data.getStringExtra("payment"), Toast.LENGTH_SHORT).show();
@@ -1091,8 +1398,10 @@ public class MainActivity extends AppCompatActivity {
                         requestType = "SALE";
                     } else if (requestCode == REVERSAL_REQUEST) {
                         requestType = "REVERSAL";
-                    } else if (requestCode == CLOSE_BATCH){
+                    } else if (requestCode == CLOSE_BATCH) {
                         requestType = "CLOSE BATCH";
+                    } else if (requestCode == APPLICATION_DETAILS) {
+                        requestType = "APPLICATION DETAILS";
                     } else {
                         requestType = "Unknown";
                     }
@@ -1109,7 +1418,13 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         }
+
+        binding.cancelTransactionBtn.setEnabled(latestTranscationdId != null);
+        binding.getTransactionDetailsBtn.setEnabled(latestTranscationdId != null);
+        binding.reversalBtn.setEnabled(latestTranscationdId != null);
     }
+
+}
 
 </code></pre>
     </div>
