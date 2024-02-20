@@ -83,6 +83,7 @@ startActivityForResult(intent, PRE_AUTH);
 public class PreAuth {
     private String type;
     private String price;
+    private String language;
 
     // Getter and Setter methods
 }
@@ -159,6 +160,7 @@ private String preauthPaymentRequest() {
     PreAuth payment = new PreAuth();
     payment.setType("PRE_AUTH");
     payment.setPrice(amountEditText.getText().toString());
+    payment.setLanguage(binding.languageSpinner.getSelectedItem().toString());
     return new Gson().toJson(payment, PreAuth.class);
 }
 </code></pre>
