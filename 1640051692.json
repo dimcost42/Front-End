@@ -2,7 +2,7 @@
   "merchant" : {
     "merchantCity" : "PATRAI",
     "merchantCategoryCode" : "5411",
-    "merchantApplicationType" : "2",
+    "merchantApplicationType" : "0",
     "merchantPostalCode" : "26221",
     "merchantName": "DEMO TEST CARDLINK",
     "merchantAddress": "AGIOY KONSTANTINOY 50  MAROYSI",
