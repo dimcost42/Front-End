@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.10.3/swagger-ui.css" >
+    <style>
+        html {
+            box-sizing: border-box;
+            overflow: -moz-scrollbars-vertical;
+            overflow-y: scroll;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        body {
+            margin: 0;
+            background: #fafafa;
+        }
+    </style>
+</head>
+<body>
+    <div id="swagger-ui"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.10.3/swagger-ui-bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.10.3/swagger-ui-standalone-preset.js"></script>
+    <script>
+        window.onload = function() {
+            const swaggerJson = {
+                "openapi": "3.0.0",
+                "info": {
+                    "title": "Movies API",
+                    "version": "1.0.0"
+                },
+                "servers": [
+                    {
+                        "url": "http://dimcost421.ddns.net:9200/api/v1"
+                    }
+                ],
+                "paths": {
+                    "/movies": {
+                        "get": {
+                            "summary": "Get all movies",
+                            "responses": {
+                                "200": {
+                                    "description": "A list of movies",
+                                    "content": {
+                                        "application/json": {
+                                            "schema": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$ref": "#/components/schemas/Movie"
+                                                }
+                                            },
+                                            "examples": {
+                                                "moviesList": {
+                                                    "summary": "An array of movies",
+                                                    "value": [
+                                                        {
+                                                            "id": "69996a5b-44be-4e4a-a8b6-fcc038d18faf",
+                                                            "title": "Memento",
+                                                            "director": "Christopher Nolan",
+                                                            "plot": "A man with short-term memory loss attempts to track down his wife's murderer."
+                                                        },
+                                                        {
+                                                            "id": "e805fec9-d504-408d-88a7-809b311a3472",
+                                                            "title": "Melancholia",
+                                                            "director": "Lars von Trier",
+                                                            "plot": "Two sisters find their already strained relationship challenged as a mysterious new planet threatens to collide with Earth."
+                                                        },
+                                                        {
+                                                            "id": "e3d8ca99-6405-49d4-b4d6-1ef38b23e3af",
+                                                            "title": "Angel's Egg",
+                                                            "director": "Mamoru Oshii",
+                                                            "plot": "A mysterious young girl wanders a desolate, otherworldly landscape, carrying a large egg."
+                                                        },
+                                                        {
+                                                            "id": "1738019d-6a24-4f2d-a9ea-ab6f797331f4",
+                                                            "title": "Maestro",
+                                                            "director": "Papakaliatis",
+                                                            "plot": "Klama"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "post": {
+                            "summary": "Add a new movie",
+                            "requestBody": {
+                                "description": "The movie to create",
+                                "required": true,
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/MovieInput"
+                                        }
+                                    }
+                                }
+                            },
+                            "responses": {
+                                "200": {
+                                    "description": "Movie added successfully"
+                                }
+                            }
+                        }
+                    },
+                    "/movies/{id}": {
+                        "put": {
+                            "summary": "Update a movie",
+                            "parameters": [
+                                {
+                                    "name": "id",
+                                    "in": "path",
+                                    "required": true,
+                                    "schema": {
+                                        "type": "string"
+                                    }
+                                }
+                            ],
+                            "requestBody": {
+                                "description": "The movie to update",
+                                "required": true,
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/MovieInput"
+                                        }
+                                    }
+                                }
+                            },
+                            "responses": {
+                                "200": {
+                                    "description": "Movie updated successfully"
+                                }
+                            }
+                        },
+                        "delete": {
+                            "summary": "Delete a movie",
+                            "parameters": [
+                                {
+                                    "name": "id",
+                                    "in": "path",
+                                    "required": true,
+                                    "schema": {
+                                        "type": "string"
+                                    }
+                                }
+                            ],
+                            "responses": {
+                                "200": {
+                                    "description": "Movie deleted successfully"
+                                }
+                            }
+                        },
+                        "get": {
+                            "summary": "Get a specific movie",
+                            "parameters": [
+                                {
+                                    "name": "id",
+                                    "in": "path",
+                                    "required": true,
+                                    "schema": {
+                                        "type": "string"
+                                    }
+                                }
+                            ],
+                            "responses": {
+                                "200": {
+                                    "description": "A specific movie",
+                                    "content": {
+                                        "application/json": {
+                                            "schema": {
+                                                "$ref": "#/components/schemas/Movie"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "/movies/loadmovies": {
+                        "get": {
+                            "summary": "Load some hardcoded movies",
+                            "responses": {
+                                "200": {
+                                    "description": "Movies loaded successfully"
+                                }
+                            }
+                        }
+                    },
+                    "/movies/whatsnext": {
+                        "get": {
+                            "summary": "Load a random movie",
+                            "responses": {
+                                "200": {
+                                    "description": "A random movie",
+                                    "content": {
+                                        "application/json": {
+                                            "schema": {
+                                                "$ref": "#/components/schemas/Movie"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "components": {
+                    "schemas": {
+                        "Movie": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "title": {
+                                    "type": "string"
+                                },
+                                "director": {
+                                    "type": "string"
+                                },
+                                "plot": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "MovieInput": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "type": "string"
+                                },
+                                "director": {
+                                    "type": "string"
+                                },
+                                "plot": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            const ui = SwaggerUIBundle({
+                spec: swaggerJson,
+                dom_id: '#swagger-ui',
+                deepLinking: true,
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset
+                ],
+                layout: "StandaloneLayout"
+            });
+            window.ui = ui;
+        };
+    </script>
+</body>
+</html>
