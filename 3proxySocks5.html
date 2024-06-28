@@ -30,26 +30,26 @@
 </head>
 <body>
     <h1>3Proxy Socks 5</h1>
-    
+
     <h2>Project</h2>
     <p><a href="https://github.com/3proxy/3proxy">3proxy - tiny free proxy server (github.com)</a></p>
-    
+
     <h2>UI Interface</h2>
     <ul>
         <li><strong>URL:</strong> <a href="http://192.168.5.50:8080/">http://192.168.5.50:8080/</a></li>
         <li><strong>Username:</strong> admin</li>
         <li><strong>Password:</strong> password</li>
     </ul>
-    
+
     <h2>Setup on Raspberry Pi</h2>
     <p>Installed 3proxy with IP x.x.x.50</p>
-    
+
     <h3>Adding a User</h3>
     <pre>
 sudo chmod +x /usr/local/3proxy/conf/add3proxyuser.sh
 sudo /usr/local/3proxy/conf/add3proxyuser.sh admin password
     </pre>
-    
+
     <h3>Edit Configuration File</h3>
     <pre>
 sudo nano /etc/3proxy/3proxy.cfg
@@ -68,10 +68,10 @@ proxy -p9090
 # SOCKS proxy
 socks -p1080
     </pre>
-    
+
     <h2>Firewall Configuration</h2>
     <p>Blocked all internet access for the IP address of the POS device (x.x.x.77) from the firewall.</p>
-    
+
     <h2>POS Device Network Configuration</h2>
     <ol>
         <li>Navigate to: <strong>Settings</strong> → <strong>Network & Internet</strong> → <strong>Ethernet</strong> → <strong>Ethernet Configuration</strong></li>
@@ -90,7 +90,7 @@ socks -p1080
             </ul>
         </li>
     </ol>
-    
+
     <h2>Maxstore Client Configuration</h2>
     <ol>
         <li>Navigate to: <strong>Settings</strong> → <strong>Proxy Configuration</strong> → <strong>Socks5</strong></li>
@@ -103,5 +103,24 @@ socks -p1080
             </ul>
         </li>
     </ol>
+
+    <h2>Testing URL Resolution with curl</h2>
+    <h3>SOCKS Proxy</h3>
+    <pre>
+curl -x socks5h://192.168.5.50:1080 http://worldtimeapi.org/api/timezone/Europe/Athens
+    </pre>
+    <p>Expected output:</p>
+    <pre>
+{"abbreviation":"EEST","client_ip":"xxx.xxx.xxx.xxx","datetime":"2024-06-28T15:38:27.848345+03:00","day_of_week":5,"day_of_year":180,"dst":true,"dst_from":"2024-03-31T01:00:00+00:00","dst_offset":3600,"dst_until":"2024-10-27T01:00:00+00:00","raw_offset":7200,"timezone":"Europe/Athens","unixtime":1719578307,"utc_datetime":"2024-06-28T12:38:27.848345+00:00","utc_offset":"+03:00","week_number":26}
+    </pre>
+
+    <h3>HTTP Proxy</h3>
+    <pre>
+curl -x 192.168.5.50:9090 http://worldtimeapi.org/api/timezone/Europe/Athens
+    </pre>
+    <p>Expected output:</p>
+    <pre>
+{"abbreviation":"EEST","client_ip":"xxx.xxx.xxx.xxx","datetime":"2024-06-28T15:39:53.749573+03:00","day_of_week":5,"day_of_year":180,"dst":true,"dst_from":"2024-03-31T01:00:00+00:00","dst_offset":3600,"dst_until":"2024-10-27T01:00:00+00:00","raw_offset":7200,"timezone":"Europe/Athens","unixtime":1719578393,"utc_datetime":"2024-06-28T12:39:53.749573+00:00","utc_offset":"+03:00","week_number":26}
+    </pre>
 </body>
 </html>
