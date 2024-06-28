@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3Proxy Socks 5 Configuration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>3Proxy Socks 5</h1>
+    
+    <h2>Project</h2>
+    <p><a href="https://github.com/3proxy/3proxy">3proxy - tiny free proxy server (github.com)</a></p>
+    
+    <h2>UI Interface</h2>
+    <ul>
+        <li><strong>URL:</strong> <a href="http://192.168.5.50:8080/">http://192.168.5.50:8080/</a></li>
+        <li><strong>Username:</strong> admin</li>
+        <li><strong>Password:</strong> password</li>
+    </ul>
+    
+    <h2>Setup on Raspberry Pi</h2>
+    <p>Installed 3proxy with IP x.x.x.50</p>
+    
+    <h3>Adding a User</h3>
+    <pre>
+sudo chmod +x /usr/local/3proxy/conf/add3proxyuser.sh
+sudo /usr/local/3proxy/conf/add3proxyuser.sh admin password
+    </pre>
+    
+    <h3>Edit Configuration File</h3>
+    <pre>
+sudo nano /etc/3proxy/3proxy.cfg
+    </pre>
+    <p>Update the configuration file as follows:</p>
+    <pre>
+#!/bin/3proxy
+#daemon
+chroot /usr/local/3proxy proxy proxy
+include /conf/3proxy.cfg
+
+# HTTP proxy
+auth none
+proxy -p9090
+
+# SOCKS proxy
+socks -p1080
+    </pre>
+    
+    <h2>Firewall Configuration</h2>
+    <p>Blocked all internet access for the IP address of the POS device (x.x.x.77) from the firewall.</p>
+    
+    <h2>POS Device Network Configuration</h2>
+    <ol>
+        <li>Navigate to: <strong>Settings</strong> → <strong>Network & Internet</strong> → <strong>Ethernet</strong> → <strong>Ethernet Configuration</strong></li>
+        <li>Set the following:
+            <ul>
+                <li><strong>IP Address:</strong> x.x.x.77</li>
+                <li><strong>Netmask:</strong> 255.255.255.0</li>
+                <li><strong>Gateway:</strong> x.x.x.x</li>
+                <li><strong>DNS1:</strong> 8.8.8.8</li>
+            </ul>
+        </li>
+        <li>Set Proxy:
+            <ul>
+                <li><strong>Hostname:</strong> x.x.x.50</li>
+                <li><strong>Port:</strong> 9090 (HTTP proxy port of 3proxy)</li>
+            </ul>
+        </li>
+    </ol>
+    
+    <h2>Maxstore Client Configuration</h2>
+    <ol>
+        <li>Navigate to: <strong>Settings</strong> → <strong>Proxy Configuration</strong> → <strong>Socks5</strong></li>
+        <li>Set the following:
+            <ul>
+                <li><strong>Address:</strong> x.x.x.50</li>
+                <li><strong>Port:</strong> 1080</li>
+                <li><strong>Username:</strong> admin</li>
+                <li><strong>Password:</strong> password</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>
