@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAT Debug Application Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        code {
+            display: block;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 1em;
+        }
+        .important {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>UAT Debug Application 1155</h1>
+
+    <p>You can download the UAT debug application with fake approval (provided the QR code is UAT) based on version 7.2.2 from the link below:</p>
+
+    <p><a href="https://drive.google.com/file/d/1tpBXgVZu9o86RQ4powf8jDOkwazEGikO/view?usp=sharing">Download UAT Debug Application</a></p>
+
+    <h2>Provider Signature Creation</h2>
+    
+    <p>To create the provider's signature, an HTTP request needs to be made as shown in the following example:</p>
+
+    <code>
+        POST https://virtualpos.services.novidea.gr/api/signdata<br>-h 
+        uniqueIntegratorId: 0d5d981171e44065b0e2e377feb4aacf <br><br>
+        {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"documentIdentifier": "7AA88EE1CDD6BEAEDC395F138957D531AB8AE7D7",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"uniqueEntryNumber": "0",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"signatureDatetime": "20240902142732",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"amountPayable": "12400",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"netValue": "2400",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"vat": "10000",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"totalDocumentValue": "12400",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"posId": "87366847",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"providerId": 1122<br>
+        }
+    </code>
+
+    <h3>Response Example</h3>
+
+    <p>The above request returns the following response:</p>
+
+    <code>
+        {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"signedData": "7AA88EE1CDD6BEAEDC395F138957D531AB8AE7D7;0;20240902142732;2400;10000;12400;12400;87366847",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"signature": "MEUCIHRceJYSk1Cb6OsXDKJO/EPRxwqHzKKy9iXmxSstyozTAiEAk5SqoqWgKCCajGZqeOMwP6zm5vJzJnb5jQNHAdLmPPY=",<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"signedDataFieldsNames": "documentIdentifier;uniqueEntryNumber;signatureDatetime;netValue;vat;totalDocumentValue;amountPayable;posId"<br>
+        }
+    </code>
+
+    <p>The response is then used in the Deeplink Request, where the fields are filled accordingly.</p>
+
+    <h3>Important Notes</h3>
+
+    <p class="important">ATTENTION!!</p>
+    <p>The fields <code>"amountPayable": "12400"</code>, <code>"netValue": "2400"</code>, <code>"vat": "10000"</code>, and <code>"totalDocumentValue": "12400"</code> must be in integer format, with the amounts multiplied by 100.</p>
+
+    <p>For example, for €1, you should input <code>100</code>.</p>
+
+</body>
+</html>
