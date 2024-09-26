@@ -61,7 +61,7 @@
 <script>
     // First WebSocket for Log Stream 1
     const logContainer1 = document.getElementById('log-container1');
-    const ws1 = new WebSocket('ws://192.168.5.50:5050');
+    const ws1 = new WebSocket('ws://91.138.235.186:4218');
 
     ws1.onmessage = function(event) {
         const logEntry = document.createElement('div');
@@ -81,7 +81,7 @@
 
     // Second WebSocket for Log Stream 2
     const logContainer2 = document.getElementById('log-container2');
-    const ws2 = new WebSocket('ws://192.168.5.50:5049'); // Change to your second WebSocket URL
+    const ws2 = new WebSocket('ws://91.138.235.186:4219'); // Change to your second WebSocket URL
 
     ws2.onmessage = function(event) {
         const logEntry = document.createElement('div');
