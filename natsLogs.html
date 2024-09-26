@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Log Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        #container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .log-box {
+            width: 50%;
+            margin: 10px auto;
+        }
+        #log-container1, #log-container2 {
+            max-width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            height: 800px;
+            overflow-y: scroll;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .log-entry {
+            padding: 5px 0;
+            border-bottom: 1px solid #333;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Live Logs</h1>
+
+<div id="container">
+    <div class="log-box">
+        <h2>Nats Server</h2>
+        <div id="log-container1"></div>
+    </div>
+    <div class="log-box">
+        <h2>Ecr Web Api</h2>
+        <div id="log-container2"></div>
+    </div>
+</div>
+
+<script>
+    // First WebSocket for Log Stream 1
+    const logContainer1 = document.getElementById('log-container1');
+    const ws1 = new WebSocket('ws://192.168.5.50:5050');
+
+    ws1.onmessage = function(event) {
+        const logEntry = document.createElement('div');
+        logEntry.className = 'log-entry';
+        logEntry.textContent = event.data;
+        logContainer1.appendChild(logEntry);
+        logContainer1.scrollTop = logContainer1.scrollHeight; // Auto-scroll to bottom
+    };
+
+    ws1.onerror = function(event) {
+        console.error('WebSocket error on stream 1:', event);
+    };
+
+    ws1.onclose = function(event) {
+        console.log('WebSocket connection closed on stream 1:', event);
+    };
+
+    // Second WebSocket for Log Stream 2
+    const logContainer2 = document.getElementById('log-container2');
+    const ws2 = new WebSocket('ws://192.168.5.50:5049'); // Change to your second WebSocket URL
+
+    ws2.onmessage = function(event) {
+        const logEntry = document.createElement('div');
+        logEntry.className = 'log-entry';
+        logEntry.textContent = event.data;
+        logContainer2.appendChild(logEntry);
+        logContainer2.scrollTop = logContainer2.scrollHeight; // Auto-scroll to bottom
+    };
+
+    ws2.onerror = function(event) {
+        console.error('WebSocket error on stream 2:', event);
+    };
+
+    ws2.onclose = function(event) {
+        console.log('WebSocket connection closed on stream 2:', event);
+    };
+</script>
+
+</body>
+</html>
