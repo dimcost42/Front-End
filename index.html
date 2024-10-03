@@ -3,63 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacking Simulation</title>
+    <title>Endless Hacking Simulation</title>
     <style>
         body {
             margin: 0;
-            height: 100vh;
+            padding: 0;
             background-color: black;
             color: #00ff00;
             font-family: 'Courier New', Courier, monospace;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            height: 100vh;
+            overflow: hidden;
         }
 
         .hacking-screen {
-            background: black;
-            padding: 20px;
-            width: 80%;
-            height: 80%;
-            box-shadow: 0 0 10px #00ff00;
-            overflow-y: auto;
-            border-radius: 10px;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateY(100%);
-            }
-            100% {
-                transform: translateY(-100%);
-            }
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
         }
 
         .code-line {
             white-space: nowrap;
-        }
-
-        .animated-code {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            animation: scroll 10s linear infinite;
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
-    <div class="hacking-screen">
-        <div class="animated-code" id="code-output"></div>
-    </div>
+    <div class="hacking-screen" id="code-output"></div>
 
     <script>
         const codeOutput = document.getElementById('code-output');
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()[]{}<>/\\';
-        
+
         function generateRandomCode() {
             let randomCode = '';
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 100; i++) {
                 randomCode += characters.charAt(Math.floor(Math.random() * characters.length));
             }
             return randomCode;
@@ -70,23 +50,19 @@
             codeLine.classList.add('code-line');
             codeLine.textContent = generateRandomCode();
             codeOutput.appendChild(codeLine);
-        }
 
-        function populateScreen() {
-            for (let i = 0; i < 100; i++) {
-                addCodeLine();
-            }
-        }
-
-        // Continuously add new code lines every 100 milliseconds
-        setInterval(() => {
-            addCodeLine();
+            // Remove old lines to prevent memory issues
             if (codeOutput.children.length > 100) {
                 codeOutput.removeChild(codeOutput.firstChild);
             }
-        }, 100);
 
-        populateScreen();
+            // Auto-scroll to bottom for endless effect
+            codeOutput.scrollTop = codeOutput.scrollHeight;
+        }
+
+        // Continuously add new code lines every 100 milliseconds
+        setInterval(addCodeLine, 100);
+
     </script>
 </body>
 </html>
