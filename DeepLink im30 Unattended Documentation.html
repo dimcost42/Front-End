@@ -673,7 +673,7 @@ public class TransactionResult {
         <h2>Reversal Object</h2>
         <pre><code>
 public class Reversal {
-    private String oldClientTransactionId;
+    private String posTransactionId;
 
     // Getter and Setter methods
 }
@@ -748,7 +748,7 @@ public class TransactionResult {
 <pre><code onclick="openModal(&#39;ReversalModal&#39;)">
     private String reversalRequest() {
         Reversal payment = new Reversal();
-        payment.setOldClientTransactionId(latestTranscationdId);
+        payment.setPosTransactionId(latestTranscationdId);
         return new Gson().toJson(payment, Reversal.class);
     }
 </code></pre>
